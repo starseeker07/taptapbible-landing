@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <meta name="author" content="TapTapBible">
-  <link rel="icon" type="image/png" href="/assets/logo.png">
-  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <link rel="apple-touch-icon" href="../assets/logo.png">
   <title>TapTapBible — El hábito diario de transcribir la Biblia</title>
   <meta name="description" content="Transcribe la Biblia letra a letra con TapTapBible. Empieza sin iniciar sesión, registra tu progreso y tu racha diaria, y graba la Palabra cada día. Sin conexión, descarga gratuita para Android.">
   <meta name="keywords" content="TapTapBible, transcripción bíblica, escribir la Biblia, meditación bíblica, app Biblia, devocional, lectura bíblica, app transcripción">
@@ -327,12 +327,9 @@
       transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .3s; box-shadow: 0 1px 2px rgba(22,32,46,.04);
     }
     .step:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(22,32,46,.1); }
-    .step-ill {
-      height: 150px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
-      background: linear-gradient(135deg, var(--primary-tint) 0%, #fff 100%);
-      color: var(--primary-hover); font-size: 54px;
-    }
-    .step-ill .bigverse { position: absolute; right: -8px; bottom: -18px; font-family: var(--font-serif); font-size: 90px; font-weight: 700; color: rgba(33,150,243,.1); }
+    .step-ill { height: 190px; overflow: hidden; position: relative; background: #EDF2F8; }
+    .step-ill img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .step-ill::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 -44px 38px -32px rgba(22,32,46,.14); pointer-events: none; }
     .step-body { padding: 26px 28px 30px; }
     .step-num {
       display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%;
@@ -373,18 +370,18 @@
     .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
     /* ─── PHONE MOCKUP (실제 스크린샷) ─── */
     .phone {
-      position: relative; width: 256px; background: #0E141B; border-radius: 40px; padding: 9px;
-      box-shadow: 0 30px 60px rgba(22,32,46,.24), 0 10px 22px rgba(22,32,46,.12);
-      transform: rotate(-4deg); transition: transform .45s cubic-bezier(.16,1,.3,1); z-index: 1;
+      position: relative; width: 258px; background: #0D1117; border-radius: 44px; padding: 11px;
+      box-shadow: 0 40px 80px rgba(22,32,46,.30), 0 14px 28px rgba(22,32,46,.14);
+      transform: rotate(-4deg); transition: transform .5s cubic-bezier(.16,1,.3,1); z-index: 1;
     }
-    .phone::after { content:''; position:absolute; top:18px; left:50%; transform:translateX(-50%); width:46px; height:5px; border-radius:9px; background:rgba(255,255,255,.25); z-index:2; }
-    .phone:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone:hover { transform: rotate(0deg) translateY(-8px); }
     .phone.tilt-r { transform: rotate(4deg); }
-    .phone.tilt-r:hover { transform: rotate(0deg) translateY(-6px); }
-    .phone-screen { aspect-ratio: 1080 / 2240; border-radius: 32px; overflow: hidden; background: #fff; }
-    .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-    .hero-phone { width: 304px; transform: rotate(-5deg); }
-    .hero-phone:hover { transform: rotate(-2deg) translateY(-6px); }
+    .phone.tilt-r:hover { transform: rotate(0deg) translateY(-8px); }
+    .phone-screen { position: relative; aspect-ratio: 600 / 1208; border-radius: 34px; overflow: hidden; background: #fff; }
+    .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+    .phone-screen::before { content: ''; position: absolute; top: 9px; left: 50%; transform: translateX(-50%); width: 80px; height: 23px; border-radius: 13px; background: #0D1117; z-index: 3; }
+    .hero-phone { width: 322px; transform: rotate(-5deg); }
+    .hero-phone:hover { transform: rotate(-2deg) translateY(-8px); }
 
     /* ─── SPECS ─── */
     .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
@@ -528,7 +525,7 @@
 <!-- ─── NAV ─── -->
 <nav class="nav">
   <a href="/es/" class="nav-logo">
-    <img src="/assets/logo.png" alt="TapTapBible logo">
+    <img src="../assets/logo.png" alt="TapTapBible logo">
     <span>TapTapBible</span>
   </a>
   <div class="nav-right">
@@ -566,7 +563,7 @@
     <p class="hero-note">Android · Gratis · Sin conexión disponible</p>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="hero-stage"><div class="phone hero-phone"><div class="phone-screen"><img src="/assets/shots/es/transcription.jpg" alt=""></div></div></div>
+    <div class="hero-stage"><div class="phone hero-phone"><div class="phone-screen"><img src="../assets/shots/es/transcription.jpg" alt=""></div></div></div>
   </div>
 </section>
 
@@ -606,7 +603,7 @@
     </div>
     <div class="steps">
       <div class="step" data-animate data-delay="1">
-        <div class="step-ill"><iconify-icon icon="solar:book-bookmark-bold"></iconify-icon><span class="bigverse">1</span></div>
+        <div class="step-ill"><img src="../assets/shots/es/home.jpg" alt=""></div>
         <div class="step-body">
           <div class="step-num">1</div>
           <h3>Elige un versículo</h3>
@@ -614,7 +611,7 @@
         </div>
       </div>
       <div class="step" data-animate data-delay="2">
-        <div class="step-ill"><iconify-icon icon="solar:pen-new-square-bold"></iconify-icon><span class="bigverse">2</span></div>
+        <div class="step-ill"><img src="../assets/shots/es/transcription.jpg" alt=""></div>
         <div class="step-body">
           <div class="step-num">2</div>
           <h3>Transcribe letra a letra</h3>
@@ -622,7 +619,7 @@
         </div>
       </div>
       <div class="step" data-animate data-delay="3">
-        <div class="step-ill"><iconify-icon icon="solar:graph-up-bold"></iconify-icon><span class="bigverse">3</span></div>
+        <div class="step-ill"><img src="../assets/shots/es/group.jpg" alt=""></div>
         <div class="step-body">
           <div class="step-num">3</div>
           <h3>Acumula tu progreso</h3>
@@ -654,14 +651,14 @@
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="phone"><div class="phone-screen"><img src="/assets/shots/es/transcription.jpg" alt=""></div></div>
+        <div class="phone"><div class="phone-screen"><img src="../assets/shots/es/transcription.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F2 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/es/home.jpg" alt=""></div></div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="../assets/shots/es/home.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
@@ -683,14 +680,14 @@
         <p class="feat-desc">Marca como favorito los versículos que más te impacten durante la meditación y añade tus propias notas. Puedes volver a ellos cuando quieras para releerlos.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="phone"><div class="phone-screen"><img src="/assets/shots/es/bookmark.jpg" alt=""></div></div>
+        <div class="phone"><div class="phone-screen"><img src="../assets/shots/es/bookmark.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F4 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/es/more.jpg" alt=""></div></div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="../assets/shots/es/more.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
@@ -712,7 +709,7 @@
         <p class="feat-desc">Crea un grupo con tu familia o comunidad y transcribid la Biblia juntos. Animaros mutuamente os ayudará a mantener el hábito durante más tiempo que solos.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="phone"><div class="phone-screen"><img src="/assets/shots/es/group.jpg" alt=""></div></div>
+        <div class="phone"><div class="phone-screen"><img src="../assets/shots/es/group.jpg" alt=""></div></div>
       </div>
     </div>
   </div>
@@ -739,7 +736,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <span class="footer-logo"><img src="/assets/logo.png" alt="TapTapBible logo"><span>TapTapBible</span></span>
+      <span class="footer-logo"><img src="../assets/logo.png" alt="TapTapBible logo"><span>TapTapBible</span></span>
       <div class="footer-lang">
         <a href="/">한국어</a><span class="sep">|</span>
         <a href="/en/">English</a><span class="sep">|</span>
