@@ -14,22 +14,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--secondary:#10367D;--canvas:#FFFFFF;--surface:#F9FAFB;--surface2:#F2F4F6;--hairline:#E5E8EB;--ink:#191F28;--ink-strong:#333D4B;--ink-muted:#4E5968;--ink-subtle:#8B95A1;--font-pre:'Pretendard Variable','Pretendard','Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif}
+:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--canvas:#FFFFFF;--surface:#F5F8FC;--surface2:#EDF2F8;--hairline:#E3E9F0;--ink:#16202E;--ink-strong:#2C3A4B;--ink-muted:#5E6E80;--ink-subtle:#8A98A8;--font-pre:'Pretendard Variable','Pretendard','Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif}
 html{scroll-behavior:smooth}
 body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
-a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+a{color:var(--primary-hover);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
 .nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
-.nav-right{display:flex;align-items:center;gap:14px}
+.nav-right{display:flex;align-items:center;gap:12px}
 .nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
-.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
-.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
-.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
-.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.lang-select{font-family:var(--font-pre);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface2);border:1px solid var(--hairline);border-radius:9px;padding:7px 30px 7px 12px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E6E80' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:13px}
 .doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
-.doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
-.doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(33,150,243,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
 .content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
 .content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
 .content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
@@ -41,17 +36,15 @@ img{max-width:100%;display:block}
 .content strong{font-weight:700;color:var(--ink)}
 .content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
 .content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
-.content a{color:var(--primary)}
 .tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
 .content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
 .content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
 .content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
-.content tbody tr:last-child td{border-bottom:none}
-.content tbody tr:nth-child(even){background:var(--surface)}
+.content tbody tr:last-child td{border-bottom:none}.content tbody tr:nth-child(even){background:var(--surface)}
 .footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
 .footer-inner{max-width:840px;margin:0 auto}
 .footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
-.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary-hover)}
 .footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
 .footer-copy{font-size:12px;color:var(--ink-subtle)}
 @media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
@@ -62,91 +55,126 @@ img{max-width:100%;display:block}
   <a href="/ja/" class="nav-logo"><img src="/assets/logo.png" alt="TapTapBible"><span>タップタップバイブル</span></a>
   <div class="nav-right">
     <a href="/ja/" class="nav-back">ホーム</a>
-    <div class="lang-toggle"><a href="/">한국어</a><span class="lang-sep">|</span><a href="/en/">English</a><span class="lang-sep">|</span><span class="active">日本語</span></div>
+    <select class="lang-select" onchange="if(this.value)location.href=this.value" aria-label="Language"><option value="/terms.html">한국어</option><option value="/en/terms.html">English</option><option value="/ja/terms.html" selected>日本語</option><option value="/zh-CN/terms.html">简体中文</option><option value="/zh-TW/terms.html">繁體中文</option><option value="/es/terms.html">Español</option><option value="/fr/terms.html">Français</option><option value="/de/terms.html">Deutsch</option></select>
   </div>
 </nav>
-<main class="doc">
-  <div class="content">
-<h1>タップタップバイブル 利用規約</h1>
-<p>最終更新日: 2026年6月19日</p>
-<p>施行日: 2026年6月19日</p>
-<p>本利用規約（以下「規約」）は、kukuDev（以下「運営者」）が提供するタップタップバイブル（TapTapBible）モバイルアプリケーション（以下「アプリ」または「サービス」）の利用条件を定めるものです。ユーザーがアプリをインストールまたはご利用になった場合、本規約に同意したものとみなします。</p>
-<hr>
-<h2>1. サービスの内容</h2>
+<main class="doc"><div class="content">
+<h1>TapTap Bible サービス利用規約</h1>
+<p>最終更新日: 2025年9月24日</p>
+<p>施行日: 2025年9月24日</p>
+<p>本利用規約（以下「本規約」）は、TapTap Bibleモバイルアプリケーション（以下「本アプリ」または「本サービス」）の利用に適用されます。本規約は、個人開発者である kukuDev（以下「運営者」）とお客様（以下「ユーザー」または「お客様」）との間で法的拘束力のある契約を構成します。本サービスを利用することにより、お客様は本規約を読み、理解し、同意したものとみなされます。本規約に同意しない場合は、本サービスにアクセスしたり、利用したりしないでください</p>
 <ol>
-<li>アプリは聖書本文を一文字ずつなぞって書く<strong>聖書書き写し</strong>機能と、進捗・継続記録・統計、ブックマーク、グループ書き写しなどの機能を提供します。</li>
-<li>アプリは<strong>ログイン不要のゲストモード</strong>と、バックアップ・同期・グループ機能のための<strong>アカウントログインモード</strong>を提供します。</li>
-<li>運営者はサービスの内容を改善したり、一部の機能を追加・変更・停止したりすることができます。</li>
+<li>サービス紹介</li>
 </ol>
-<h2>2. アカウント</h2>
+<p>TapTap Bibleは、聖書の一節を筆写し、個人のブックマークを保存し、他のユーザーとグループで筆写活動を共有し、進捗状況を追跡できるように設計されたアプリケーションです。本サービスは、お客様の霊的成長を支援し、聖書をより深く黙想することを目的としています。</p>
 <ol>
-<li>アカウントログインはGoogle またはApple 認証を通じて行われます。</li>
-<li>ユーザーは自身のアカウントおよびログイン手段を安全に管理する責任を負い、アカウントを通じた活動に関する責任はユーザーにあります。</li>
+<li>規約への同意および年齢制限</li>
 </ol>
-<h2>3. ゲストモードとデータ</h2>
+<p>2.1. 本サービスを利用することにより、お客様は本規約およびプライバシーポリシーに同意したものとみなされます。本サービスを利用するには、満16歳以上である必要があります。本サービスを利用することにより、お客様は自身が満16歳以上であり、本規約を締結する法的能力を有していることを表明し、保証するものとします。</p>
+<p>2.2. お客様が会社またはその他の法人を代表して本サービスにアクセスまたは利用する場合、お客様は当該法人を本規約に拘束する権限を有していることを表明し、保証するものとします。その場合、「お客様」という用語は当該法人を指します。</p>
 <ol>
-<li>ゲストモードで作成したすべてのデータは、ユーザーのデバイスにのみ保存されます。</li>
-<li>アプリの削除、アプリデータの消去、デバイスの初期化、デバイスの紛失などの場合、ゲストモードのデータは復元することができません。</li>
-<li>ログイン時にデバイスに保存されていたデータは、アカウントへ移行・統合される場合があります。</li>
+<li>ユーザーアカウントとニックネーム</li>
 </ol>
-<h2>4. グループ書き写し</h2>
-<ol>
-<li>グループ書き写し機能をご利用になると、表示名（ニックネーム）や書き写しの進行状況などの一部情報が、同じグループのメンバーに共有されることがあります。</li>
-<li>ユーザーはグループ内で他のユーザーを誹謗中傷したり不適切な内容を共有したりするなど、他のユーザーの権利を侵害する行為をしてはなりません。</li>
-<li>運営者は規約または関連法令に違反するグループ・コンテンツに対して、利用を制限することができます。</li>
-</ol>
-<h2>5. 聖書本文およびコンテンツ</h2>
-<ol>
-<li>アプリで提供する聖書本文の著作権は各翻訳版の権利者に帰属しており、ユーザーは個人的な黙想・書き写しを目的とした範囲で本文を利用することができます。</li>
-<li>ユーザーはアプリが提供する本文を無断で複製・配布・商業的に利用してはなりません。</li>
-</ol>
-<h2>6. 料金および広告</h2>
-<ol>
-<li>アプリは無料で提供されており、広告を含んでいます。</li>
-<li>広告はGoogle AdMob を通じて配信され、広告の内容は運営者がコントロールできない場合があります。</li>
-</ol>
-<h2>7. 禁止行為</h2>
-<p>ユーザーは以下の行為をしてはなりません。</p>
-<ol>
-<li>アプリをリバースエンジニアリング・改ざんしたり、不正な方法でアクセスしたりする行為</li>
-<li>サーバーまたは他のユーザーの正常な利用を妨害する行為</li>
-<li>他人のアカウントを不正使用したり、権利を侵害したりする行為</li>
-<li>関連法令または本規約に違反する行為</li>
-</ol>
-<h2>8. データおよびバックアップに関する責任</h2>
-<ol>
-<li>ユーザーは重要な記録を保護するため、アカウントログインによるバックアップのご利用を推奨します。</li>
-<li>デバイスの故障、紛失、アプリの削除、OS の初期化などによるローカルデータの損失について、運営者は責任を負いません（運営者の故意または重大な過失は除きます）。</li>
-</ol>
-<h2>9. サービスの終了および退会</h2>
-<ol>
-<li>ユーザーはいつでもアプリを削除したり、アカウントを削除したりすることができます。</li>
-<li>アカウントを削除した場合、サーバーに保存されたデータは永久に削除され、復元することはできません。</li>
-<li>運営者はやむを得ない事情によりサービスの全部または一部を終了することができ、その場合は事前にお知らせします。</li>
-</ol>
-<h2>10. 免責</h2>
-<ol>
-<li>運営者は、天災地変、サードパーティサービス（クラウド・広告・認証など）の障害、ユーザーのデバイス環境など、運営者のコントロールを超えた事由による損害について責任を負いません。</li>
-<li>アプリは信仰生活を支援するための補助ツールであり、宗教的な解釈や判断に関する責任はユーザーにあります。</li>
-</ol>
-<h2>11. 規約の変更</h2>
-<p>運営者は必要に応じて本規約を改定することができ、重要な変更がある場合はアプリまたは本ページを通じて事前にお知らせします。</p>
-<h2>12. 準拠法</h2>
-<p>本規約は大韓民国の法律に従って解釈され、サービスの利用に関する紛争は関連法令が定める手続きに従います。</p>
-<h2>13. お問い合わせ</h2>
+<p>3.1. アカウント作成: 本サービスの一部機能（例：グループ機能、データ同期）を利用するには、アカウントを作成する必要があります。アカウントは、GoogleまたはAppleのソーシャルログインを通じて作成できます。登録時には、正確かつ完全な情報を提供する必要があります。</p>
+<p>3.2. ニックネーム: アカウント作成後またはグループ機能利用時にニックネームを設定する必要があります。このニックネームは、グループ内でお客様を識別するために使用されます。</p>
 <ul>
-<li>運営者: kukuDev</li>
-<li>メール: support@kukudev.com</li>
+<li>ニックネームは2文字以上12文字以下である必要があります。</li>
+<li>ニックネームは韓国語、英語などの1種類の言語と数字の組み合わせのみで構成でき、言語の混用は許可されません。</li>
+<li>ニックネームには特殊文字や空白を含めることはできません。</li>
+<li>ニックネームには悪口、誹謗中傷、宗教的冒涜、政治的表現など、不適切な内容を含めることはできません。</li>
+<li>ニックネームは他のユーザーと重複することはできません。</li>
+<li>ニックネームは一度設定すると変更できません。 慎重に選択してください。</li>
 </ul>
-  </div>
-</main>
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/ja/privacy.html">プライバシーポリシー</a><a href="/ja/terms.html">利用規約</a><a href="https://kukudev.com/ja/" target="_blank" rel="noopener">kukuDev</a></div>
-    <div class="footer-biz">kukuDev（ククデブ） &nbsp;|&nbsp; 代表者: O Jaeseok &nbsp;|&nbsp; 事業者登録番号: 390-68-00863<br>通信販売業届出番号: 2026-Incheon Yeonsu-gu-1196<br>住所: 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号<br>メール: <span id="contact-email"></span></div>
-    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
-  </div>
-</footer>
-<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('contact-email');if(el)el.textContent=u+'\x40'+d;})();</script>
+<p>3.3. アカウント情報の正確性: お客様は、ソーシャルアカウントから提供される情報の正確性を維持する責任があります。虚偽の情報提供によって生じる問題について、運営者は責任を負いません。</p>
+<p>3.4. アカウントのセキュリティ: お客様は、自身のデバイスおよびソーシャルアカウントのセキュリティを維持する責任があり、お客様のアカウントで発生するすべての活動に対して全責任を負います。不正利用やその他のセキュリティ侵害が発生した場合は、直ちに運営者に通知する必要があります。</p>
+<p>3.5. ゲストモード: アカウントを作成せずにゲストモードで本サービスを利用できます。ゲストモードでは、筆写記録はデバイスのローカルにのみ保存され、グループ機能、データ同期などの一部機能は制限されます。ゲストモードのデータは、デバイスの紛失やアプリの削除などにより永久に失われる可能性があります。</p>
+<ol>
+<li>サービスの利用</li>
+</ol>
+<p>4.1. 許可された利用: お客様は、本サービスを個人的かつ非商業的な目的でのみ利用できます。お客様は、本規約および適用されるすべての法律、規制を遵守して本サービスを利用する必要があります。</p>
+<p>4.2. 禁止行為: お客様は、本サービスの利用に関連して以下の行為を行ってはなりません。</p>
+<ul>
+<li>本サービスまたはその一部を修正、翻案、翻訳、リバースエンジニアリング、逆コンパイル、逆アセンブル、またはその他の方法で派生物を作成しようとする行為。</li>
+<li>運営者の書面による明示的な同意なしに、本サービスまたはその一部をコピー、配布、販売、ライセンス供与、譲渡、公に表示、公に実演、公開、送信する行為。</li>
+<li>本サービスを違法または不正な目的で利用する行為。</li>
+<li>コンピュータウイルス、ワーム、トロイの木馬など、本サービスの機能を損なうまたは妨害する可能性のある悪意のあるコードを含む資料をアップロードまたは送信する行為。</li>
+<li>他のユーザーにスパムを送信する、嫌がらせをする、いじめる、またはその他の方法で妨害する行為。</li>
+<li>他のユーザーの個人情報を収集または保存する行為。</li>
+<li>本サービスのセキュリティ関連機能を回避または無効化しようとする行為。</li>
+<li>本サービスに過度または不均衡な負荷をかける行為。</li>
+<li>運営者の名誉を毀損する、またはサービスの運営を妨害する行為。</li>
+<li>その他、関連する法律または本規約に違反する行為。</li>
+</ul>
+<p>4.3. グループ機能:</p>
+<ul>
+<li>グループの作成と参加: ユーザーは、定められた数（現在最大5つ）のグループを作成または参加できます。</li>
+<li>グループコンテンツ: グループ内で共有されるすべての筆写記録、活動タイムラインなどは「ユーザーコンテンツ」とみなされ、本規約第5条に従って規制されます。</li>
+<li>グループ管理: グループ内のすべてのメンバーは同等の権限を持ちますが、グループ情報の変更および削除はグループ作成者のみが可能です。グループからの脱退は、すべてのメンバーが可能です。</li>
+</ul>
+<p>4.4. 広告: 本サービスは、お客様に広告を表示することがあります。お客様は、かかる広告が本サービスの一部であり、サービスの提供に不可欠であることを認め、同意するものとします。</p>
+<p>4.5. セキュリティチェック: 本サービスは、お客様のデバイスがルート化/脱獄されているか、またはその他のセキュリティ上の脆弱性があるかどうかを判断するためにセキュリティチェックを実行することがあります。セキュリティ上のリスクが検出された場合、お客様の個人情報およびデータを保護するために、サービスの利用が制限されることがあります。</p>
+<ol>
+<li>ユーザーコンテンツ</li>
+</ol>
+<p>5.1. 所有権: お客様が本サービスを通じて作成、提出、投稿、または送信するすべてのコンテンツ（筆写記録、ブックマークのメモなど）（以下「ユーザーコンテンツ」）に関するすべての権利は、お客様に帰属します。</p>
+<p>5.2. ライセンスの付与: お客様がユーザーコンテンツを本サービスに提出することにより、お客様は運営者に対し、本規約およびプライバシーポリシーに従って本サービスを運営、改善、宣伝し、他のユーザーに表示するために必要な、非独占的、ロイヤリティフリー、全世界的、譲渡可能、サブライセンス可能なライセンスを付与します。このライセンスは、お客様がアカウントを削除するか、サービスからコンテンツを削除するまで有効です。</p>
+<p>5.3. コンテンツの責任: お客様は、自身のユーザーコンテンツ、およびその投稿または送信によって生じるすべての結果について単独で責任を負います。お客様は、自身のユーザーコンテンツが第三者の権利（著作権、商標権、プライバシー権など）を侵害しないことを表明し、保証します。</p>
+<p>5.4. コンテンツの監視: 運営者は、ユーザーコンテンツを事前に審査する義務を負いませんが、本規約に違反する、または違法もしくは不適切であると判断したユーザーコンテンツを監視、編集、または削除する権利（義務ではありません）を留保します。</p>
+<ol>
+<li>第三者のサービスとコンテンツ</li>
+</ol>
+<p>6.1. 本サービスは、Firebase（認証、データベース、クラウド機能、メッセージング）、Google AdMob（広告）、Googleサインイン、Appleサインインなど、第三者が提供するサービスおよび機能と統合されることがあります。お客様がこれらの第三者のサービスを利用する場合、お客様は当該第三者の利用規約およびプライバシーポリシーに従うものとします。運営者は、第三者のサービスについて一切の責任を負いません。</p>
+<p>6.2. 本サービスは、他のウェブサイト、アプリケーション、またはサービスへのリンクを含むことがあります。運営者は、これらの第三者のウェブサイト、アプリケーション、またはサービスのコンテンツ、プライバシーポリシー、または慣行について管理権を持たず、一切の責任を負いません。</p>
+<ol>
+<li>著作権および知的財産権</li>
+</ol>
+<p>7.1. 本サービス（すべてのソフトウェア、デザイン、テキスト、グラフィック、画像、ロゴ、オーディオおよびビデオコンテンツを含む）は、kukuDevまたはそのライセンサーの所有物であり、適用される著作権法、商標法、およびその他の知的財産法によって保護されています。</p>
+<p>7.2. 本サービス内で提供される聖書テキストはパブリックドメインにあり、著作権が失効した翻訳版（例：KJV、개역한글など）を使用しています。運営者は、パブリックドメインの聖書テキストに対する所有権を主張しません。</p>
+<p>7.3. お客様は、運営者の書面による明示的な同意なしに、本規約で明示的に許可されている以外の方法で本サービスのいかなる部分も使用または複製することはできません。</p>
+<ol>
+<li>プライバシーポリシー</li>
+</ol>
+<p>当社がお客様の個人情報を収集、使用、開示する方法については、当社のプライバシーポリシーをご参照ください。本サービスを利用することにより、お客様は当社のプライバシーポリシーに従ってお客様の情報を収集および使用することに同意するものとします。</p>
+<ol>
+<li>免責事項</li>
+</ol>
+<p>本サービスは「現状有姿」および「利用可能な限り」で提供されます。運営者は、本サービスが中断されないこと、エラーがないこと、安全であること、または特定の目的に適合することを、明示的または黙示的を問わず、いかなる種類の保証も行いません。</p>
+<ol>
+<li>責任の制限</li>
+</ol>
+<p>適用法が許容する最大限の範囲において、運営者は、お客様の本サービスの利用または利用不能に起因または関連して生じるいかなる間接的、付随的、特別、懲罰的、または結果的損害についても、一切の責任を負わないものとします。お客様に対する運営者の総責任額は、お客様が本サービスを利用するために支払った金額（もしあれば）を超えないものとします。</p>
+<ol>
+<li>補償</li>
+</ol>
+<p>お客様は、お客様の本サービスの利用、本規約の違反、または第三者の権利の侵害に起因または関連して生じるすべての請求、損失、損害、責任、費用（合理的な弁護士費用を含む）について、kukuDevを補償し、免責することに同意します。</p>
+<ol>
+<li>規約の変更</li>
+</ol>
+<p>運営者は、いつでも独自の裁量により本規約を修正または置換する権利を留保します。重大な変更については、新しい規約が発効する少なくとも30日前に、アプリ内通知またはその他の合理的な方法で通知します。改訂された規約に同意しない場合は、本サービスの利用を中止してください。</p>
+<ol>
+<li>サービスの終了</li>
+</ol>
+<p>運営者は、お客様による本規約の違反を含むがこれに限定されない、いかなる理由であれ、事前の通知の有無にかかわらず、お客様の本サービスへのアクセスを直ちに終了または一時停止することができます。終了と同時に、お客様の本サービス利用権は直ちに失効します。</p>
+<ol>
+<li>準拠法および紛争解決</li>
+</ol>
+<p>本規約は、大韓民国の法律に準拠し、同法に従って解釈されるものとします。本規約に関連して生じるいかなる紛争も、大韓民国の裁判所が専属的管轄権を有するものとします。</p>
+<ol>
+<li>雑則</li>
+</ol>
+<p>15.1. 可分性: 本規約のいずれかの条項が無効または執行不能であると判断された場合、当該条項は必要最小限の範囲で制限または削除され、本規約の残りの条項は完全な効力を維持します。</p>
+<p>15.2. 譲渡: お客様は、運営者の事前の書面による同意なしに、本規約に基づく権利または義務を譲渡または移転することはできません。運営者は、通知なしに本規約に基づく権利または義務を自由に譲渡することができます。</p>
+<p>15.3. 完全合意: 本規約は、本サービスに関するお客様と運営者との間の完全な合意を構成し、以前または同時に行われた口頭または書面によるすべての通信、提案、表明に優先します。</p>
+<ol>
+<li>お問い合わせ</li>
+</ol>
+<p>本規約に関するご質問は、以下までご連絡ください：support@kukudev.com</p>
+</div></main>
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-links"><a href="/ja/privacy.html">プライバシーポリシー</a><a href="/ja/terms.html">利用規約</a><a href="https://kukudev.com/" target="_blank" rel="noopener">kukuDev</a></div>
+  <div class="footer-biz">kukuDev（ククデブ） &nbsp;|&nbsp; 代表者: O Jaeseok &nbsp;|&nbsp; 事業者登録番号: 390-68-00863<br>通信販売業届出番号: 2026-Incheon Yeonsu-gu-1196<br>住所: 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号<br>メール: <span id="ce"></span></div>
+  <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+</div></footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('ce');if(el)el.textContent=u+'\x40'+d;})();</script>
 </body>
 </html>

@@ -14,22 +14,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--secondary:#10367D;--canvas:#FFFFFF;--surface:#F9FAFB;--surface2:#F2F4F6;--hairline:#E5E8EB;--ink:#191F28;--ink-strong:#333D4B;--ink-muted:#4E5968;--ink-subtle:#8B95A1;--font-pre:'Pretendard Variable','Pretendard','Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif}
+:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--canvas:#FFFFFF;--surface:#F5F8FC;--surface2:#EDF2F8;--hairline:#E3E9F0;--ink:#16202E;--ink-strong:#2C3A4B;--ink-muted:#5E6E80;--ink-subtle:#8A98A8;--font-pre:'Pretendard Variable','Pretendard','Noto Sans JP',-apple-system,BlinkMacSystemFont,sans-serif}
 html{scroll-behavior:smooth}
 body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
-a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+a{color:var(--primary-hover);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
 .nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
-.nav-right{display:flex;align-items:center;gap:14px}
+.nav-right{display:flex;align-items:center;gap:12px}
 .nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
-.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
-.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
-.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
-.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.lang-select{font-family:var(--font-pre);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface2);border:1px solid var(--hairline);border-radius:9px;padding:7px 30px 7px 12px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E6E80' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:13px}
 .doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
-.doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
-.doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(33,150,243,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
 .content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
 .content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
 .content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
@@ -41,17 +36,15 @@ img{max-width:100%;display:block}
 .content strong{font-weight:700;color:var(--ink)}
 .content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
 .content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
-.content a{color:var(--primary)}
 .tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
 .content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
 .content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
 .content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
-.content tbody tr:last-child td{border-bottom:none}
-.content tbody tr:nth-child(even){background:var(--surface)}
+.content tbody tr:last-child td{border-bottom:none}.content tbody tr:nth-child(even){background:var(--surface)}
 .footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
 .footer-inner{max-width:840px;margin:0 auto}
 .footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
-.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary-hover)}
 .footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
 .footer-copy{font-size:12px;color:var(--ink-subtle)}
 @media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
@@ -62,110 +55,113 @@ img{max-width:100%;display:block}
   <a href="/ja/" class="nav-logo"><img src="/assets/logo.png" alt="TapTapBible"><span>タップタップバイブル</span></a>
   <div class="nav-right">
     <a href="/ja/" class="nav-back">ホーム</a>
-    <div class="lang-toggle"><a href="/">한국어</a><span class="lang-sep">|</span><a href="/en/">English</a><span class="lang-sep">|</span><span class="active">日本語</span></div>
+    <select class="lang-select" onchange="if(this.value)location.href=this.value" aria-label="Language"><option value="/privacy.html">한국어</option><option value="/en/privacy.html">English</option><option value="/ja/privacy.html" selected>日本語</option><option value="/zh-CN/privacy.html">简体中文</option><option value="/zh-TW/privacy.html">繁體中文</option><option value="/es/privacy.html">Español</option><option value="/fr/privacy.html">Français</option><option value="/de/privacy.html">Deutsch</option></select>
   </div>
 </nav>
-<main class="doc">
-  <div class="content">
-<h1>タップタップバイブル プライバシーポリシー</h1>
-<p>最終更新日: 2026年6月19日</p>
-<p>施行日: 2026年6月19日</p>
-<p>kukuDev（以下「運営者」）は、タップタップバイブル（TapTapBible）モバイルアプリケーション（以下「アプリ」または「サービス」）をご利用いただくユーザーの個人情報を重視しています。本プライバシーポリシーは、サービスのご利用を通じて、どのような情報がデバイス内に保存され、どのような情報が運営またはサードパーティのサービス提供のために送信・処理されるかを説明するものです。</p>
-<hr>
-<h2>1. 基本方針</h2>
-<ol>
-<li>アプリは<strong>ログイン不要のゲストモード</strong>を提供しており、ゲストモードで作成した書き写し記録・ブックマーク・統計データは、<strong>ユーザーのデバイス（ローカル）にのみ保存</strong>され、運営者サーバーへは送信されません。</li>
-<li>ユーザーがバックアップ・同期・グループ書き写しなどのアカウント機能を利用するためにログインした場合、該当データは運営者が利用するクラウドサーバー（Google Firebase）へ送信・保管されます。</li>
-<li>運営者はサービス提供に必要な最小限の情報のみを処理し、広告などの一部の機能は各提供者のポリシーに従って動作します。</li>
-</ol>
-<h2>2. 収集する情報</h2>
-<h3>2.1. ゲストモード（ログインなし）</h3>
+<main class="doc"><div class="content">
+<h1>TapTap Bible プライバシーポリシー</h1>
+<p>最終更新日: 2025年9月24日</p>
+<p>施行日: 2025年9月24日</p>
+<p>個人開発者であるkukuDev（以下「運営者」）は、TapTap Bibleモバイルアプリケーション（以下「本アプリ」または「本サービス」）のユーザー（以下「お客様」）のプライバシー保護を非常に重要視しています。本プライバシーポリシーは、私がお客様の情報を収集、使用、開示、保護する方法について説明するものです。本サービスを利用することにより、お客様は本プライバシーポリシーに記載されている慣行に同意したものとみなされます。</p>
+<h2>1. 収集する情報</h2>
+<p>運営者は、お客様が本サービスを利用する際に様々な種類の情報を収集します。</p>
+<h3>1.1. お客様が直接提供する情報</h3>
+<p>お客様がゲストモードではなく、ログインした状態でサービスを利用する場合にのみ、以下の情報がサーバーに収集および保存されます。</p>
 <ul>
-<li>書き写し記録、ブックマークとメモ、統計、継続記録、アプリ設定は<strong>デバイス内のローカルデータベースにのみ保存</strong>され、運営者サーバーへは送信されません。</li>
-</ul>
-<h3>2.2. アカウントログイン時</h3>
+<li><strong>アカウント情報:</strong> お客様がGoogleまたはAppleのソーシャルログインを通じてアカウントを作成する際に収集される情報です。これには、お客様のメールアドレス、氏名（Google/Appleアカウントから提供される場合）、プロフィール写真のURL、FirebaseユーザーID（UID）が含まれます。本アプリは、別途プロフィール写真をアップロードする機能を提供していません。</li>
+<li><strong>プロフィール情報:</strong> お客様が設定するニックネームが含まれます。ニックネームは、グループ活動でお客様を識別するために使用されます。</li>
+<li><strong>ユーザーコンテンツ:</strong></li>
 <ul>
-<li><strong>アカウント識別情報</strong>: Google またはApple でログインする際に提供されるアカウント固有識別子（UID）とメールアドレス。Apple Sign In の場合、ユーザーはメールアドレスの非公開を選択できます。</li>
-<li><strong>サービス利用データ</strong>: 書き写し記録、ブックマークとメモ、統計、継続記録など、ユーザーが作成したデータがアカウントに紐付けられ、クラウド（Firebase）に保存・同期されます。</li>
-<li><strong>グループ書き写しデータ</strong>: グループを作成または参加した場合、表示名（ニックネーム）や書き写しの進行状況などの一部情報が、同じグループのメンバーに共有されることがあります。</li>
+<li><strong>筆写記録:</strong> お客様が筆写した聖書の一節のバージョンコード、聖書コード、章、節、初回筆写日時、最終筆写日時、総筆写回数が含まれます。</li>
+<li><strong>ブックマーク:</strong> お客様がブックマークした一節のバージョンコード、聖書コード、章、節、個人メモ、作成日時、更新日時が含まれます。</li>
+<li><strong>設定情報:</strong> テーマ、言語、通知設定（リマインダー時間を含む）、筆写フォント/行間など、お客様がアプリ内で設定する個人設定が含まれます。</li>
+<li><strong>同意記録:</strong> 個人情報保護関連法（例：GDPR、CCPA、韓国個人情報保護法）を遵守するため、お客様のサービス利用規約およびプライバシーポリシーへの同意の有無、同意日時、同意バージョン、IPアドレス、ユーザーエージェント情報が記録されます。IPアドレスは、法的な同意記録の証明のためにのみ収集され、他の目的では使用されません。</li>
 </ul>
-<h3>2.3. 広告および診断情報</h3>
+</ul>
+<h3>1.2. 自動的に収集される情報</h3>
 <ul>
-<li><strong>広告識別子（Ad ID）</strong>: アプリはGoogle AdMob を通じて広告を配信しており、その過程で広告識別子がGoogle 広告ネットワークへ送信されます。</li>
-<li><strong>診断・利用情報</strong>: アプリの安定した運営および不正利用防止のため、デバイス・アプリのバージョン情報、クラッシュ記録、App Check トークンなどが処理される場合があります。</li>
+<li><strong>利用データ:</strong> お客様がアプリにアクセスし、利用する方法に関する情報（例：アクセス日時、利用した機能、閲覧したページ、アプリのクラッシュレポート）。</li>
+<li><strong>デバイス情報:</strong> お客様がアプリにアクセスするために使用するデバイスに関する情報（例：デバイスモデル、オペレーティングシステム、デバイス識別子、アプリバージョン）。</li>
+<li><strong>ログデータ:</strong> エラー、警告、デバッグメッセージなど、アプリ利用中に発生するシステムログ情報が含まれます。</li>
+<li><strong>デバイスのセキュリティ状態:</strong> お客様のデバイスがルート化/脱獄されているか、開発者モードが有効になっているか、エミュレータを使用しているかなどのセキュリティチェック結果が収集されます。</li>
 </ul>
-<h2>3. 収集しない情報</h2>
+<h3>1.3. 第三者から収集される情報</h3>
 <ul>
-<li>運営者は別途の会員登録フォームを通じて、氏名・電話番号・住所などを直接収集しません（ログインはGoogle・Apple の認証プロバイダーを通じて行われます）。</li>
-<li>ゲストモードユーザーの書き写し本文・記録は運営者サーバーへ送信されません。</li>
+<li>お客様がGoogleまたはAppleアカウントを通じてログインする場合、運営者は当該サービスからお客様の氏名、メールアドレス、プロフィール写真のURLなど、アカウント作成に必要な情報を受け取ることがあります。</li>
 </ul>
-<h2>4. 情報の利用目的</h2>
+<h2>2. 収集した情報の利用目的</h2>
+<p>運営者は、収集した情報を以下の目的で利用します。</p>
+<h3>2.1. サービスの提供および運営</h3>
+<p>アプリの中核機能（聖書筆写、ブックマーク、グループ活動）を提供し、アカウント管理および技術サポートを行うため。</p>
+<h3>2.2. サービスの改善および開発</h3>
+<p>利用パターンを分析し、アプリの機能、性能、ユーザー体験を改善し、新しい機能を開発するため。</p>
+<h3>2.3. パーソナライズされた体験の提供</h3>
+<p>お客様の設定（テーマ、フォントなど）および利用履歴（進行状況）に応じて、カスタマイズされたコンテンツおよび体験を提供するため。</p>
+<h3>2.4. コミュニケーション</h3>
+<p>重要なサービス関連の通知、更新、セキュリティアラート、カスタマーサポートへの問い合わせに対する回答などを提供するため。</p>
+<h3>2.5. グループ機能の有効化</h3>
+<p>グループ内の他のメンバーとの協力および進行状況の共有を可能にするため（ニックネーム、筆写記録の一部、活動タイムライン）。</p>
+<h3>2.6. 広告</h3>
+<p>Google AdMobなどの第三者広告パートナーを通じて、非パーソナライズ広告またはパーソナライズ広告を提供するため。</p>
+<h3>2.7. セキュリティおよび不正行為の防止</h3>
+<p>サービスのセキュリティを維持し、詐欺および不正行為を検知・防止し、デバイスのセキュリティ上の脆弱性（ルート化/脱獄など）を特定し、対応するため。</p>
+<h3>2.8. 法的義務の遵守</h3>
+<p>関連する法律、規制、または法的手続き（例：同意記録の保管）を遵守するため。</p>
+<h3>2.9. 統計および分析</h3>
+<p>サービス利用に関する包括的な統計および分析を行い、市場動向を理解し、ビジネス上の意思決定を支援するため。</p>
+<h2>3. 情報の共有および開示</h2>
+<p>運営者は、以下の場合にのみ、お客様の個人情報を共有または開示することがあります。</p>
+<h3>3.1. お客様の同意</h3>
+<p>お客様が個人情報の共有に明示的に同意した場合。</p>
+<h3>3.2. グループメンバー</h3>
+<p>お客様がグループに参加する場合、お客様のニックネーム、筆写の進行状況（総筆写節数、連続筆写日数など）、グループ内の活動（タイムラインイベント）は、当該グループの他のメンバーに公開されます。お客様の個人メモはグループ内で共有されません。</p>
+<h3>3.3. サービスプロバイダー</h3>
+<p>運営者の事業運営を支援するために、以下の第三者サービスプロバイダーと情報を共有することがあります。これらのプロバイダーは、運営者に代わってサービスを実行するために必要な範囲でのみ情報にアクセスでき、厳格な機密保持義務に従います。</p>
 <ul>
-<li>聖書書き写し機能および進捗・統計・継続記録の提供</li>
-<li>アカウントに基づくバックアップと複数デバイス間の同期</li>
-<li>グループ書き写し機能の提供</li>
-<li>広告の配信およびサービスの運営</li>
-<li>エラー分析、セキュリティ、不正利用防止</li>
+<li><strong>Firebase:</strong> ユーザー認証、データベース（Cloud Firestore）、サーバーホスティング（Cloud Functions）、クラッシュレポートなど、サービスのコアインフラを提供します。</li>
+<li><strong>Google AdMob:</strong> 広告配信。</li>
 </ul>
-<h2>5. サードパーティサービスおよび処理の委託</h2>
-<p>サービス提供のために以下のサードパーティサービスを利用しています。各提供者は自社のプライバシーポリシーに従って情報を処理します。</p>
-<div class="tbl-wrap"><table>
-<thead><tr><th style="text-align:left">提供者</th><th style="text-align:left">利用目的</th><th style="text-align:left">処理される情報</th></tr></thead>
-<tbody>
-<tr><td style="text-align:left">Google Firebase (Authentication, Firestore, Functions, App Check)</td><td style="text-align:left">ログイン・データ同期・サーバー処理・不正利用防止</td><td style="text-align:left">アカウント識別子、同期データ、診断情報</td></tr>
-<tr><td style="text-align:left">Google AdMob</td><td style="text-align:left">広告の配信</td><td style="text-align:left">広告識別子、デバイス情報</td></tr>
-<tr><td style="text-align:left">Google Sign-In</td><td style="text-align:left">Google アカウントログイン</td><td style="text-align:left">アカウント識別子、メールアドレス</td></tr>
-<tr><td style="text-align:left">Apple Sign In</td><td style="text-align:left">Apple アカウントログイン</td><td style="text-align:left">アカウント識別子、メールアドレス（非公開可）</td></tr>
-</tbody></table></div>
-<h2>6. 広告について</h2>
-<ul>
-<li>アプリは無料で提供されており、広告を含んでいます。</li>
-<li>広告識別子はGoogle 広告ネットワークへ送信され、広告またはマーケティングの目的で利用・共有されることがあります。</li>
-<li>ユーザーはデバイスの設定から広告識別子をリセットしたり、パーソナライズ広告を制限したりすることができます。</li>
-</ul>
-<h2>7. 国外への移転</h2>
-<p>運営者が利用するFirebase などのクラウドサービスのサーバーは、日本国外に所在する場合があります。アカウントログイン時に同期されるデータは、当該サーバーに保存・処理される場合があります。</p>
-<h2>8. 保管および削除</h2>
-<ol>
-<li>ゲストモードのデータは、ユーザーがアプリを削除またはデバイスデータを消去した際に合わせて削除されます。</li>
-<li>アカウントに紐付けられたデータは、ユーザーがアカウントを削除した場合にサーバーから永久に削除され、復元することはできません。</li>
-<li>広告・診断情報は、各サードパーティサービスの保管ポリシーおよび運営者の設定に従って保管されます。</li>
-<li>法令により保管が必要な情報は、当該法令に定める期間保管した後に削除します。</li>
-</ol>
-<h2>9. ユーザーの権利と行使方法</h2>
-<ol>
-<li>ユーザーはアプリ内の機能を通じて、書き写し記録・ブックマーク・統計などの自分のデータを直接管理することができます。</li>
-<li>ユーザーはアプリの削除またはデバイスのアプリデータ消去により、ローカルデータを削除することができます。</li>
-<li>ログインユーザーはアプリ内のアカウント削除機能を通じて、アカウントおよびサーバーに保存されたデータの削除を申請することができます。</li>
-<li>広告識別子のリセット・パーソナライズ広告の制限はデバイスの設定から管理することができます。</li>
-</ol>
-<h2>10. 子どもの個人情報</h2>
-<p>本サービスは一般のユーザーを対象としており、運営者は14歳未満の子どもの個人情報を意図的に収集しません。保護者は子どものサービス利用を管理することができ、子どもの情報が収集されたことが確認された場合は、速やかに削除します。</p>
-<h2>11. セキュリティ</h2>
-<ul>
-<li>ローカルに保存される機密性の高い設定値は、デバイスのセキュアストレージ（Keystore/Keychain）によって保護されます。</li>
-<li>サーバーとの通信は暗号化されたチャネルを通じて行われ、App Check などにより不正なアクセスをブロックしています。</li>
-<li>ただし、いかなる方式も絶対的なセキュリティを保証するものではありません。</li>
-</ul>
-<h2>12. 聖書本文について</h2>
-<p>アプリで提供する聖書本文の著作権は各翻訳版の権利者に帰属しており、アプリはユーザーの個人的な黙想および書き写しを目的とした範囲で本文を提供しています。</p>
-<h2>13. ポリシーの変更</h2>
-<p>本プライバシーポリシーは、法令またはサービスの変更に伴い改定される場合があります。重要な変更がある場合は、アプリまたは本ページを通じて事前にお知らせします。</p>
-<h2>14. お問い合わせ</h2>
-<p>個人情報の取り扱いに関するお問い合わせは、下記までご連絡ください。</p>
-<ul>
-<li>運営者: kukuDev</li>
-<li>メール: support@kukudev.com</li>
-</ul>
-  </div>
-</main>
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/ja/privacy.html">プライバシーポリシー</a><a href="/ja/terms.html">利用規約</a><a href="https://kukudev.com/ja/" target="_blank" rel="noopener">kukuDev</a></div>
-    <div class="footer-biz">kukuDev（ククデブ） &nbsp;|&nbsp; 代表者: O Jaeseok &nbsp;|&nbsp; 事業者登録番号: 390-68-00863<br>通信販売業届出番号: 2026-Incheon Yeonsu-gu-1196<br>住所: 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号<br>メール: <span id="contact-email"></span></div>
-    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
-  </div>
-</footer>
-<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('contact-email');if(el)el.textContent=u+'\x40'+d;})();</script>
+<h3>3.4. 法的要件</h3>
+<p>法律、規制、法的手続き（例：裁判所の命令または召喚状）によって要求される場合、または運営者の権利、財産、または安全を保護するために必要であると判断される場合。</p>
+<h3>3.5. 事業譲渡</h3>
+<p>合併、買収、資産売却、または破産などの事業取引に関連して、お客様の情報が移転されることがあります。</p>
+<h3>3.6. 匿名化または集計された情報</h3>
+<p>個人を特定できない匿名化または集計された情報を、パートナー、研究者、またはその他の第三者と共有することがあります。</p>
+<h2>4. データの保存および保持期間</h2>
+<h3>4.1.</h3>
+<p>運営者は、お客様がアカウントを有効にし、サービスを利用している間、お客様の個人情報を保持します。</p>
+<h3>4.2.</h3>
+<p>お客様がアカウントを削除する場合、筆写記録、ブックマーク、グループ活動記録など、すべての個人識別可能な情報は、適用される法律によって要求される場合を除き、遅滞なく永久に削除されます。</p>
+<h3>4.3.</h3>
+<p>同意記録など、法的義務を遵守するために必要な特定の情報は、適用される法律で定められた期間、安全に保管されることがあります。</p>
+<h2>5. データセキュリティ</h2>
+<p>運営者は、お客様の個人情報を不正なアクセス、開示、改ざん、または破壊から保護するために、合理的なセキュリティ対策を実施します。これには、Firebaseのセキュリティ機能、データ暗号化、アクセス制御などが含まれます。ただし、インターネットまたは電子的な保存方法は100%安全ではないため、運営者は客様の情報の絶対的なセキュリティを保証することはできません。</p>
+<h2>6. お客様の権利</h2>
+<p>お客様は、ご自身の個人情報に関して以下の権利を有します。</p>
+<h3>6.1. アクセスおよび修正</h3>
+<p>お客様は、ご自身のアカウント情報にアクセスし、修正する権利を有します。ニックネームは一度設定すると変更できませんので、慎重に選択してください。</p>
+<h3>6.2. 削除</h3>
+<p>お客様は、アカウントを削除することにより、すべての個人識別可能な情報を永久に削除できます。アカウントを削除すると、筆写記録やブックマークを含むすべてのデータは、復元不可能な形で削除されます。</p>
+<h3>6.3. データアクセス権</h3>
+<p>お客様は、ご自身のデータがサーバーに同期され、保存される権利を有します。本アプリは別途「データエクスポート」機能を提供していませんが、ログイン後に「データ同期」機能を通じてサーバーにデータを保存し、複数のデバイスからアクセスできます。</p>
+<h3>6.4. 通知設定</h3>
+<p>お客様は、アプリ内の設定メニューを通じて、筆写リマインダー通知の受信の有無および時間を自由に制御できます。本アプリは、マーケティング目的の通知を送信しません。</p>
+<h3>6.5. 苦情の申し立て</h3>
+<p>お客様は、ご自身の管轄区域の関連するデータ保護当局に苦情を申し立てる権利を有します。</p>
+<h2>7. 子供のプライバシー</h2>
+<p>本サービスは、満16歳未満の子供を対象としていません。運営者は、満16歳未満の子供から故意に個人識別情報を収集することはありません。満16歳未満の子供が運営者に個人情報を提供したことが判明した場合、運営者は当該情報を記録から削除するための措置を講じます。</p>
+<h2>8. 国際的なデータ転送</h2>
+<p>お客様の情報は、お客様の国、地方、州、またはその他の政府管轄区域外にあるコンピューターに保存および処理されることがあります。お客様が韓国以外の地域にお住まいの場合、運営者が情報を収集、転送、処理するデータ保護法がお客様の管轄区域と異なる場合があることをご了承ください。本プライバシーポリシーに同意し、情報を提出することにより、お客様はそのような転送に同意するものとします。運営者は、お客様のデータが本プライバシーポリシーに従って安全に取り扱われるように、合理的に必要なすべての措置を講じます。</p>
+<h2>9. 本プライバシーポリシーの変更</h2>
+<p>運営者は、随時本プライバシーポリシーを更新することがあります。重大な変更がある場合は、変更が有効になる少なくとも30日前に、アプリ内通知、メール、またはその他の合理的な方法でお客様に通知します。軽微な変更（例：誤字の修正）は、別途通知なく更新されることがあります。本ページ上部の「最終更新日」を定期的に確認してください。</p>
+<h2>10. お問い合わせ</h2>
+<p>本プライバシーポリシーに関するご質問は、以下までご連絡ください：support@kukudev.com</p>
+</div></main>
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-links"><a href="/ja/privacy.html">プライバシーポリシー</a><a href="/ja/terms.html">利用規約</a><a href="https://kukudev.com/" target="_blank" rel="noopener">kukuDev</a></div>
+  <div class="footer-biz">kukuDev（ククデブ） &nbsp;|&nbsp; 代表者: O Jaeseok &nbsp;|&nbsp; 事業者登録番号: 390-68-00863<br>通信販売業届出番号: 2026-Incheon Yeonsu-gu-1196<br>住所: 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号<br>メール: <span id="ce"></span></div>
+  <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+</div></footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('ce');if(el)el.textContent=u+'\x40'+d;})();</script>
 </body>
 </html>

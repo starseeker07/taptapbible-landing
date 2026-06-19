@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +7,41 @@
   <meta name="author" content="TapTapBible">
   <link rel="icon" type="image/png" href="/assets/logo.png">
   <link rel="apple-touch-icon" href="/assets/logo.png">
-  <title>タップタップバイブル — 一文字ずつ写す聖書 書き写しアプリ</title>
-  <meta name="description" content="一文字ずつ聖書を書き写すアプリ、タップタップバイブル。ログイン不要ですぐ始められ、進捗や連続記録で毎日みことばを心に刻めます。オフライン対応、Android 無料。">
-  <meta name="keywords" content="タップタップバイブル, TapTapBible, 聖書 書き写し, 聖書アプリ, 写経, みことば, デボーション, 聖書 暗唱">
+  <title>TapTapBible — 每日一節聖經抄寫習慣</title>
+  <meta name="description" content="逐字抄寫聖經的App，TapTapBible。無需登入即可立即開始，透過進度與連續記錄每天銘記話語。支援離線使用，Android免費下載。">
+  <meta name="keywords" content="TapTapBible, 聖經抄寫, 抄寫聖經, 靈修, 聖經App, 每日靈修, 讀經, 繁體中文聖經">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TapTapBible">
-  <meta property="og:title" content="タップタップバイブル — 一文字ずつ写す聖書 書き写しアプリ">
-  <meta property="og:description" content="一文字ずつ聖書を書き写し。ログイン不要ですぐ始めて、毎日みことばを心に刻みましょう。">
-  <meta property="og:image" content="https://taptapbible.kukudev.com/assets/images/og_ja.png">
+  <meta property="og:title" content="TapTapBible — 每日一節聖經抄寫習慣">
+  <meta property="og:description" content="逐字抄寫聖經。無需登入即可立即開始，每天銘記話語。">
+  <meta property="og:image" content="https://taptapbible.kukudev.com/assets/images/og_zh-TW.png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="500">
-  <meta property="og:url" content="https://taptapbible.kukudev.com/ja/">
-  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://taptapbible.kukudev.com/zh-TW/">
+  <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="タップタップバイブル — 一文字ずつ写す聖書 書き写しアプリ">
-  <meta name="twitter:description" content="一文字ずつ聖書を書き写し。ログイン不要ですぐ始めましょう。">
-  <meta name="twitter:image" content="https://taptapbible.kukudev.com/assets/images/og_ja.png">
+  <meta name="twitter:title" content="TapTapBible — 每日一節聖經抄寫習慣">
+  <meta name="twitter:description" content="逐字抄寫聖經。無需登入即可立即開始。">
+  <meta name="twitter:image" content="https://taptapbible.kukudev.com/assets/images/og_zh-TW.png">
 
   <!-- hreflang -->
   <link rel="alternate" hreflang="ko" href="https://taptapbible.kukudev.com/">
   <link rel="alternate" hreflang="en" href="https://taptapbible.kukudev.com/en/">
   <link rel="alternate" hreflang="ja" href="https://taptapbible.kukudev.com/ja/">
   <link rel="alternate" hreflang="x-default" href="https://taptapbible.kukudev.com/">
-  <link rel="canonical" href="https://taptapbible.kukudev.com/ja/">
+  <link rel="canonical" href="https://taptapbible.kukudev.com/zh-TW/">
 
   <!-- CSP -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://code.iconify.design; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https://api.iconify.design; connect-src https://api.iconify.design https://cdn.jsdelivr.net;">
 
-  <!-- Fonts: Pretendard (UI) + Noto Serif JP (みことば) -->
+  <!-- Fonts: Pretendard (UI) + Noto Sans TC / Noto Serif TC (聖經經文) -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Iconify Solar -->
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" crossorigin="anonymous"></script>
@@ -65,8 +65,8 @@
       --ink-muted: #5E6E80;
       --ink-subtle: #8A98A8;
       --todo: #C9D4E0;
-      --font-pre: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-serif: 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --font-pre: 'Pretendard Variable', 'Pretendard', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Noto Serif TC', Georgia, serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -190,13 +190,13 @@
       background: radial-gradient(circle, rgba(33,150,243,.18) 0%, transparent 68%);
     }
 
-    /* ─── MOCKUP CARDS (スクリーンショット代替) ─── */
+    /* ─── MOCKUP CARDS (스크린샷 대체) ─── */
     .mock { position: relative; z-index: 1; }
     .card {
       background: #fff; border: 1px solid var(--hairline); border-radius: 24px;
       box-shadow: 0 24px 60px rgba(22,32,46,.12), 0 6px 16px rgba(22,32,46,.05);
     }
-    /* 書き写しデモ */
+    /* 필사 데모 */
     .m-trans { width: 376px; max-width: 86vw; padding: 30px 30px 26px; }
     .m-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
     .m-ref { color: var(--primary-hover); font-weight: 800; font-size: 14px; letter-spacing: .02em; display: inline-flex; align-items: center; gap: 6px; }
@@ -214,7 +214,7 @@
     .m-meta { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--ink-muted); }
     .m-meta b { color: var(--ink-strong); }
 
-    /* 統計カード */
+    /* 통계 카드 */
     .m-stats { width: 360px; max-width: 86vw; padding: 28px 30px; }
     .m-ring { display: flex; align-items: center; gap: 22px; }
     .ring {
@@ -232,7 +232,7 @@
     .m-statgrid .s .n { font-size: 20px; font-weight: 800; color: var(--primary-hover); }
     .m-statgrid .s .l { font-size: 12.5px; color: var(--ink-muted); margin-top: 2px; }
 
-    /* 節カード (ブックマーク) */
+    /* 구절 카드 (북마크) */
     .m-verse-card { width: 360px; max-width: 86vw; padding: 0; overflow: hidden; }
     .m-vc-top {
       padding: 28px 28px 24px; color: #fff; position: relative;
@@ -245,7 +245,7 @@
     .m-vc-memo iconify-icon { color: var(--accent); font-size: 18px; margin-top: 2px; flex: 0 0 auto; }
     .m-vc-memo p { font-size: 14px; color: var(--ink-muted); line-height: 1.6; }
 
-    /* 同期カード */
+    /* 동기화 카드 */
     .m-sync { width: 360px; max-width: 86vw; padding: 30px; text-align: center; }
     .m-sync-row { display: flex; align-items: center; justify-content: center; gap: 14px; }
     .m-dev {
@@ -264,7 +264,7 @@
     .m-sync-cap { margin-top: 20px; font-size: 14px; color: var(--ink-muted); }
     .m-sync-cap b { color: var(--ink-strong); }
 
-    /* グループカード */
+    /* 그룹 카드 */
     .m-group { width: 360px; max-width: 86vw; padding: 28px 30px; }
     .m-group-h { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
     .m-group-ic { width: 46px; height: 46px; border-radius: 14px; background: var(--primary-tint); color: var(--primary-hover); display: flex; align-items: center; justify-content: center; font-size: 24px; flex: 0 0 auto; }
@@ -499,11 +499,11 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "TapTapBible",
-    "alternateName": "タップタップバイブル",
+    "alternateName": "TapTapBible",
     "operatingSystem": "Android",
     "applicationCategory": "LifestyleApplication",
-    "description": "一文字ずつ聖書を書き写すアプリ。ログイン不要ですぐ始められ、進捗や連続記録で毎日みことばを心に刻めます。",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+    "description": "逐字抄寫聖經的App。無需登入即可立即開始，透過進度與連續記錄每天銘記話語。",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
     "installUrl": "https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible",
     "author": { "@type": "Organization", "name": "kukuDev" }
   }
@@ -513,29 +513,29 @@
 
 <!-- ─── NAV ─── -->
 <nav class="nav">
-  <a href="/ja/" class="nav-logo">
-    <img src="/assets/logo.png" alt="タップタップバイブル ロゴ">
-    <span>タップタップバイブル</span>
+  <a href="/zh-TW/" class="nav-logo">
+    <img src="/assets/logo.png" alt="TapTapBible 標誌">
+    <span>TapTapBible</span>
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#about">聖書 書き写し</a>
-      <a href="#how">使い方</a>
-      <a href="#features">主な機能</a>
+      <a href="#about">抄寫聖經</a>
+      <a href="#how">使用方法</a>
+      <a href="#features">主要功能</a>
     </div>
     <select class="lang-select" onchange="if(this.value)location.href=this.value" aria-label="Language">
       <option value="/">한국어</option>
       <option value="/en/">English</option>
-      <option value="/ja/" selected>日本語</option>
+      <option value="/ja/">日本語</option>
       <option value="/zh-CN/">简体中文</option>
-      <option value="/zh-TW/">繁體中文</option>
+      <option value="/zh-TW/" selected>繁體中文</option>
       <option value="/es/">Español</option>
       <option value="/fr/">Français</option>
       <option value="/de/">Deutsch</option>
     </select>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-nav" target="_blank" rel="noopener">
       <iconify-icon icon="solar:smartphone-bold" style="font-size:15px"></iconify-icon>
-      <span class="btn-nav-text">ダウンロード</span>
+      <span class="btn-nav-text">下載</span>
     </a>
   </div>
 </nav>
@@ -543,25 +543,25 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> 毎日一節 聖書 書き写し</span>
-    <h1 class="hero-title">みことばを指先で<br><span class="hi">一文字ずつ刻む</span></h1>
-    <p class="hero-sub">タップタップバイブルで聖書をそのまま書き写しましょう。<br>ログイン不要ですぐ始められ、進捗と連続記録で毎日続けられます。</p>
+    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> 每日一節聖經抄寫</span>
+    <h1 class="hero-title">用指尖銘刻<br><span class="hi">逐字默寫聖言</span></h1>
+    <p class="hero-sub">與 TapTapBible 一起，一字一字地抄寫聖經。<br>無需登入即可立即開始，透過進度與連續記錄，每天持之以恆。</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
-      Google Play でダウンロード
+      在 Google Play 下載
     </a>
-    <p class="hero-note">Android · 無料 · オフライン対応</p>
+    <p class="hero-note">Android · 免費安裝 · 支援離線使用</p>
   </div>
   <div class="hero-right" aria-hidden="true">
     <div class="hero-stage">
       <div class="mock card m-trans">
         <div class="m-head">
-          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> ヨハネ 3:16</span>
-          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12日 連続</span>
+          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> 約翰福音 3:16</span>
+          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 連續12天</span>
         </div>
-        <p class="m-verse"><span class="done">神はそのひとり子を賜わったほどに、世を愛して下さった。それは御子を信じる者がひとりも滅びないで</span><span class="m-cursor"></span><span class="todo"> 永遠の命を得るためである。</span></p>
+        <p class="m-verse"><span class="done">神愛世人，甚至將他的獨生子賜給他們</span><span class="m-cursor"></span><span class="todo">叫一切信他的，不致滅亡</span></p>
         <div class="m-bar"><i></i></div>
-        <div class="m-meta"><span>今日 <b>3</b>節目を書き写し中</span><span><b>64%</b> 完了</span></div>
+        <div class="m-meta"><span>今日抄寫第 <b>3</b> 節</span><span><b>64%</b> 完成</span></div>
       </div>
     </div>
   </div>
@@ -571,24 +571,24 @@
 <section class="privacy" id="about">
   <div class="privacy-inner">
     <div class="privacy-head" data-animate>
-      <h2>気軽に始めて、記録は<span style="color:#90CAF9">安全に</span></h2>
-      <p>ログイン不要のゲストモードで今すぐ書き写しを始められます。アカウントを作ると、すべての書き写し記録・ブックマーク・統計が安全にバックアップされ、複数の端末でそのまま続けられます。</p>
+      <h2>輕鬆開始，記錄<span style="color:#90CAF9">安全保存</span></h2>
+      <p>以訪客模式無需登入即可立即開始抄寫。建立帳號後，所有抄寫記錄、書籤與統計資料將安全備份，並可在多部裝置上無縫接續。</p>
     </div>
     <div class="privacy-grid">
       <div class="privacy-card" data-animate data-delay="1">
         <div class="pc-icon"><iconify-icon icon="solar:bolt-bold"></iconify-icon></div>
-        <h3>ログイン不要ですぐ開始</h3>
-        <p>ゲストモードでインストール直後から書き写しを始められます。すべての記録はデバイスに安全に保存されます。</p>
+        <h3>無需登入即可立即開始</h3>
+        <p>以訪客模式安裝後即可馬上開始個人抄寫。所有記錄安全儲存於您的裝置中。</p>
       </div>
       <div class="privacy-card" data-animate data-delay="2">
         <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
-        <h3>オフラインでも書き写し</h3>
-        <p>インターネットがなくても聖書の書き写しは続けられます。オンラインに戻ると、それまでの記録が自動で安全に同期されます。</p>
+        <h3>離線也能持續抄寫</h3>
+        <p>即使沒有網路，聖經抄寫照常進行。重新連線後，期間的記錄會自動安全同步。</p>
       </div>
       <div class="privacy-card" data-animate data-delay="3">
         <div class="pc-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-        <h3>安全なバックアップ・同期</h3>
-        <p>ログインすると書き写し記録・ブックマーク・統計がアカウントに安全にバックアップされ、機種変更後も続きから始められます。</p>
+        <h3>安全備份與同步</h3>
+        <p>登入後，抄寫記錄、書籤與統計資料將安全備份至帳號，換手機也能繼續使用。</p>
       </div>
     </div>
   </div>
@@ -598,32 +598,32 @@
 <section class="how" id="how">
   <div class="how-outer">
     <div class="how-head" data-animate>
-      <span class="section-tag">使い方</span>
-      <h2 class="section-title">3ステップで始められます</h2>
+      <span class="section-tag">使用方法</span>
+      <h2 class="section-title">三個步驟就夠了</h2>
     </div>
     <div class="steps">
       <div class="step" data-animate data-delay="1">
         <div class="step-ill"><iconify-icon icon="solar:book-bookmark-bold"></iconify-icon><span class="bigverse">1</span></div>
         <div class="step-body">
           <div class="step-num">1</div>
-          <h3>節を選びます</h3>
-          <p>66巻の聖書から今日黙想したい節を選んでください。お好みの翻訳でみことばを読めます。</p>
+          <h3>選擇經節</h3>
+          <p>從舊約到新約共66卷中，選出今日要默想的經節，以您喜歡的譯本閱讀話語。</p>
         </div>
       </div>
       <div class="step" data-animate data-delay="2">
         <div class="step-ill"><iconify-icon icon="solar:pen-new-square-bold"></iconify-icon><span class="bigverse">2</span></div>
         <div class="step-body">
           <div class="step-num">2</div>
-          <h3>一文字ずつ書き写します</h3>
-          <p>画面のみことばをそのまま入力します。正しければ文字が埋まり、間違いはすぐに知らせてくれます。</p>
+          <h3>逐字跟著抄寫</h3>
+          <p>照著畫面上的話語逐字輸入。答對即填入，答錯立即提示。</p>
         </div>
       </div>
       <div class="step" data-animate data-delay="3">
         <div class="step-ill"><iconify-icon icon="solar:graph-up-bold"></iconify-icon><span class="bigverse">3</span></div>
         <div class="step-body">
           <div class="step-num">3</div>
-          <h3>記録が積み重なります</h3>
-          <p>進捗・連続記録・統計が自動で蓄積され、毎日みことばを刻む習慣が生まれます。</p>
+          <h3>記錄不斷累積</h3>
+          <p>進度、連續天數與統計自動累積，幫助您養成每天銘記話語的習慣。</p>
         </div>
       </div>
     </div>
@@ -634,31 +634,31 @@
 <section class="features" id="features">
   <div class="features-outer">
     <div class="features-head" data-animate>
-      <span class="section-tag">主な機能</span>
-      <h2 class="section-title">タップタップバイブルが特別な理由</h2>
+      <span class="section-tag">主要功能</span>
+      <h2 class="section-title">TapTapBible 之所以與眾不同</h2>
     </div>
 
     <!-- F1 -->
     <div class="frow">
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:pen-new-square-bold"></iconify-icon></div>
-        <h3 class="feat-title">一文字ずつ<span class="hi">正確に</span>書き写す</h3>
-        <p class="feat-desc">画面のみことばをそのまま入力すると、正誤をリアルタイムで知らせてくれます。ゆっくり一文字ずつ刻むことで、自然にみことばへ集中できます。</p>
+        <h3 class="feat-title">逐字<span class="hi">精準</span>抄寫</h3>
+        <p class="feat-desc">照著畫面上的話語逐字輸入，即時判斷對錯。慢慢一字一字地銘刻，自然而然地專注於話語之中。</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> リアルタイム正誤フィードバック</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 複数の翻訳に対応</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 再び黙想できる再書き写し</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 即時正誤回饋</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 支援多種譯本</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 再次默想的重抄功能</li>
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
         <div class="mock card m-trans">
           <div class="m-head">
             <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> 詩篇 119:105</span>
-            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12日 連続</span>
+            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 連續12天</span>
           </div>
-          <p class="m-verse"><span class="done">あなたのみ言葉はわが足のともしび</span><span class="m-cursor"></span><span class="todo"> わが道の光です</span></p>
+          <p class="m-verse"><span class="done">你的話是我腳前的燈</span><span class="m-cursor"></span><span class="todo">是我路上的光</span></p>
           <div class="m-bar"><i></i></div>
-          <div class="m-meta"><span>一文字ずつ書き写し中</span><span><b>64%</b></span></div>
+          <div class="m-meta"><span>逐字抄寫中</span><span><b>64%</b></span></div>
         </div>
       </div>
     </div>
@@ -669,24 +669,24 @@
         <div class="mock card m-stats">
           <div class="m-ring">
             <div class="ring"><span>23<small>%</small></span></div>
-            <div class="ring-label"><b>聖書全体の進捗</b>1,189 / 31,102節 完了</div>
+            <div class="ring-label"><b>全本聖經進度</b>已完成 1,189 / 31,102 節</div>
           </div>
           <div class="m-statgrid">
-            <div class="s"><div class="n">12日</div><div class="l">連続記録</div></div>
-            <div class="s"><div class="n">1,240節</div><div class="l">書き写した節</div></div>
-            <div class="s"><div class="n">38時間</div><div class="l">累計時間</div></div>
-            <div class="s"><div class="n">27巻</div><div class="l">始めた書</div></div>
+            <div class="s"><div class="n">連續12天</div><div class="l">連續抄寫</div></div>
+            <div class="s"><div class="n">1,240節</div><div class="l">累計抄寫節數</div></div>
+            <div class="s"><div class="n">38小時</div><div class="l">累計抄寫時間</div></div>
+            <div class="s"><div class="n">27卷</div><div class="l">已開始的書卷</div></div>
           </div>
         </div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
-        <h3 class="feat-title">進捗と<span class="hi">連続記録</span>で続けられる</h3>
-        <p class="feat-desc">聖書全体の進捗、連続日数、書き写した節数と時間が一目でわかります。毎日の小さな黙想が目に見える習慣になります。</p>
+        <h3 class="feat-title">用進度與<span class="hi">連續記錄</span>持之以恆</h3>
+        <p class="feat-desc">全本聖經進度、連續天數、累計抄寫節數與時間一目了然。每天小小的默想，化為清晰可見的習慣。</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 聖書全体の進捗表示</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 連続記録（ストリーク）</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 書き写した節・時間の統計</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 全本聖經進度</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 連續記錄（streak）</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 抄寫節數與時間統計</li>
         </ul>
       </div>
     </div>
@@ -695,19 +695,19 @@
     <div class="frow">
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:bookmark-bold"></iconify-icon></div>
-        <h3 class="feat-title">心に響いた節を<span class="hi">大切に</span>保存</h3>
-        <p class="feat-desc">黙想中に心に残った節はブックマークに保存し、自分だけのメモを添えられます。いつでも開いて繰り返し味わうことができます。</p>
+        <h3 class="feat-title"><span class="hi">珍藏</span>觸動心靈的經節</h3>
+        <p class="feat-desc">默想時感動人心的經節可以加入書籤收藏，並附上個人筆記。隨時重新翻閱，反覆思想。</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
         <div class="mock card m-verse-card">
           <div class="m-vc-top">
             <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
-            <p class="m-vc-q">主はわたしの牧者であって、わたしには乏しいことがない</p>
+            <p class="m-vc-q">耶和華是我的牧者，我必不致缺乏</p>
             <p class="m-vc-ref">詩篇 23:1</p>
           </div>
           <div class="m-vc-memo">
             <iconify-icon icon="solar:pen-bold"></iconify-icon>
-            <p>不安なときにいつも開く節。今日もこの約束にすがることにした。</p>
+            <p>每當心中不安時，就翻開這節經文。今天也要緊握這個應許。</p>
           </div>
         </div>
       </div>
@@ -718,23 +718,23 @@
       <div class="feat-mock" data-animate data-delay="1">
         <div class="mock card m-sync">
           <div class="m-sync-row">
-            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>スマホ</small></div>
+            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>手機</small></div>
             <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
             <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
             <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>タブレット</small></div>
+            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>平板</small></div>
           </div>
-          <p class="m-sync-cap"><b>どの端末でも続けられる。</b><br>記録は安全に同期されます。</p>
+          <p class="m-sync-cap"><b>在所有裝置上無縫接續。</b><br>抄寫記錄安全同步。</p>
         </div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-        <h3 class="feat-title">ログイン不要で開始、<span class="hi">ログインで同期</span></h3>
-        <p class="feat-desc">ゲストモードで気軽に始めましょう。バックアップや複数端末での同期が必要になったらログインするだけで、端末上の記録が安全にアカウントへ移行されます。</p>
+        <h3 class="feat-title">無需登入即可開始，<span class="hi">登入後同步</span></h3>
+        <p class="feat-desc">以訪客模式輕鬆開始。需要備份或多裝置同步時再登入，裝置上的記錄會安全地轉移至帳號。</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google・Apple かんたんログイン</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 複数端末で続きから再開</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 既存記録の自動マージ</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google·Apple 快速登入</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 多裝置無縫接續</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 既有記錄自動合併</li>
         </ul>
       </div>
     </div>
@@ -743,24 +743,24 @@
     <div class="frow">
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-        <h3 class="feat-title">みんなで<span class="hi">グループ書き写し</span></h3>
-        <p class="feat-desc">家族やコミュニティとグループを作り、一緒にみことばを書き写しましょう。お互いの継続を応援しながら、一人よりも長く続けられます。</p>
+        <h3 class="feat-title">一起進行的<span class="hi">群組抄寫</span></h3>
+        <p class="feat-desc">與家人或團契建立群組，一同抄寫話語。互相為彼此的堅持加油，比獨自一人更能持之以恆。</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
         <div class="mock card m-group">
           <div class="m-group-h">
             <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-            <div class="t"><b>夜明けの黙想会</b><span>一緒に詩篇を書き写し中</span></div>
+            <div class="t"><b>晨禱默想小組</b><span>正一起抄寫詩篇</span></div>
           </div>
           <div class="m-avatars">
-            <i style="background:#42A5F5">恵</i>
-            <i style="background:#E91E63">花</i>
-            <i style="background:#66BB6A">純</i>
-            <i style="background:#FFA726">聖</i>
+            <i style="background:#42A5F5">恩</i>
+            <i style="background:#E91E63">雅</i>
+            <i style="background:#66BB6A">峻</i>
+            <i style="background:#FFA726">書</i>
             <i class="more">+8</i>
           </div>
           <div class="m-group-bar"><i></i></div>
-          <p class="m-group-cap">今日 <b>12人</b>が一緒に書き写しました</p>
+          <p class="m-group-cap">今天共有 <b>12 位</b>一起抄寫</p>
         </div>
       </div>
     </div>
@@ -771,10 +771,10 @@
 <div class="specs-outer">
   <div class="specs-card" data-animate>
     <div class="specs-list">
-      <div class="row"><div class="k">対応OS</div><div class="v">Android</div></div>
-      <div class="row"><div class="k">価格</div><div class="v">無料（広告あり）</div></div>
-      <div class="row"><div class="k">オフライン</div><div class="v">書き写し対応</div></div>
-      <div class="row"><div class="k">対応言語</div><div class="v">8言語</div></div>
+      <div class="row"><div class="k">作業系統</div><div class="v">Android</div></div>
+      <div class="row"><div class="k">價格</div><div class="v">免費（含廣告）</div></div>
+      <div class="row"><div class="k">離線</div><div class="v">支援抄寫</div></div>
+      <div class="row"><div class="k">支援語言</div><div class="v">8 種語言</div></div>
     </div>
   </div>
 </div>
@@ -783,12 +783,12 @@
 <div class="cta-outer">
   <div class="cta-card" data-animate>
     <div class="cta-text">
-      <h2>今日の一節、今すぐ始めましょう</h2>
-      <p>タップタップバイブルで毎日みことばを指先に刻んでいきましょう。</p>
+      <h2>今日一節，現在就開始</h2>
+      <p>與 TapTapBible 一起，每天用指尖銘刻話語。</p>
     </div>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta-light" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
-      Google Play で無料ダウンロード
+      在 Google Play 免費下載
     </a>
   </div>
 </div>
@@ -797,27 +797,28 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <span class="footer-logo"><img src="/assets/logo.png" alt="タップタップバイブル ロゴ"><span>タップタップバイブル</span></span>
+      <span class="footer-logo"><img src="/assets/logo.png" alt="TapTapBible 標誌"><span>TapTapBible</span></span>
       <div class="footer-lang">
         <a href="/">한국어</a><span class="sep">|</span>
         <a href="/en/">English</a><span class="sep">|</span>
-        <span class="active">日本語</span><span class="sep">|</span>
+        <a href="/ja/">日本語</a><span class="sep">|</span>
         <a href="/zh-CN/">简体中文</a><span class="sep">|</span>
-        <a href="/zh-TW/">繁體中文</a><span class="sep">|</span>
+        <span class="active">繁體中文</span><span class="sep">|</span>
         <a href="/es/">Español</a><span class="sep">|</span>
         <a href="/fr/">Français</a><span class="sep">|</span>
         <a href="/de/">Deutsch</a>
       </div>
     </div>
     <div class="footer-links">
-      <a href="/privacy.html">プライバシーポリシー</a>
-      <a href="/terms.html">利用規約</a>
+      <a href="/zh-TW/privacy.html">隱私權政策</a>
+      <a href="/zh-TW/terms.html">服務條款</a>
       <a href="https://kukudev.com/">kukuDev</a>
     </div>
     <div class="footer-biz">
-      kukuDev（ククデブ）&nbsp;·&nbsp; 代表 オ・ジェソク &nbsp;·&nbsp; 事業者登録番号 390-68-00863<br>
-      通信販売業 2026-Incheon Yeonsu-gu-1196 &nbsp;·&nbsp; 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号<br>
-      メール: <span id="contact-email"></span>
+      Business Name: kukuDev &nbsp;|&nbsp; Representative: Jaeseok Oh &nbsp;|&nbsp; Business Registration No.: 390-68-00863<br>
+      Mail-Order Business Report No.: 2026-Incheon Yeonsu-gu-1196<br>
+      Address: 6649, 6F, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea<br>
+      Email: <span id="contact-email"></span>
     </div>
     <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
   </div>

@@ -14,22 +14,17 @@
 
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--secondary:#10367D;--canvas:#FFFFFF;--surface:#F9FAFB;--surface2:#F2F4F6;--hairline:#E5E8EB;--ink:#191F28;--ink-strong:#333D4B;--ink-muted:#4E5968;--ink-subtle:#8B95A1;--font-pre:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
+:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--canvas:#FFFFFF;--surface:#F5F8FC;--surface2:#EDF2F8;--hairline:#E3E9F0;--ink:#16202E;--ink-strong:#2C3A4B;--ink-muted:#5E6E80;--ink-subtle:#8A98A8;--font-pre:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
 html{scroll-behavior:smooth}
 body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
-a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+a{color:var(--primary-hover);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 .nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
 .nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
-.nav-right{display:flex;align-items:center;gap:14px}
+.nav-right{display:flex;align-items:center;gap:12px}
 .nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
-.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
-.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
-.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
-.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.lang-select{font-family:var(--font-pre);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface2);border:1px solid var(--hairline);border-radius:9px;padding:7px 30px 7px 12px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E6E80' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:13px}
 .doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
-.doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
-.doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(33,150,243,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
 .content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
 .content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
 .content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
@@ -41,17 +36,15 @@ img{max-width:100%;display:block}
 .content strong{font-weight:700;color:var(--ink)}
 .content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
 .content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
-.content a{color:var(--primary)}
 .tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
 .content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
 .content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
 .content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
-.content tbody tr:last-child td{border-bottom:none}
-.content tbody tr:nth-child(even){background:var(--surface)}
+.content tbody tr:last-child td{border-bottom:none}.content tbody tr:nth-child(even){background:var(--surface)}
 .footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
 .footer-inner{max-width:840px;margin:0 auto}
 .footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
-.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary-hover)}
 .footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
 .footer-copy{font-size:12px;color:var(--ink-subtle)}
 @media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
@@ -62,110 +55,113 @@ img{max-width:100%;display:block}
   <a href="/en/" class="nav-logo"><img src="/assets/logo.png" alt="TapTapBible"><span>TapTapBible</span></a>
   <div class="nav-right">
     <a href="/en/" class="nav-back">Home</a>
-    <div class="lang-toggle"><a href="/">한국어</a><span class="lang-sep">|</span><span class="active">English</span><span class="lang-sep">|</span><a href="/ja/">日本語</a></div>
+    <select class="lang-select" onchange="if(this.value)location.href=this.value" aria-label="Language"><option value="/privacy.html">한국어</option><option value="/en/privacy.html" selected>English</option><option value="/ja/privacy.html">日本語</option><option value="/zh-CN/privacy.html">简体中文</option><option value="/zh-TW/privacy.html">繁體中文</option><option value="/es/privacy.html">Español</option><option value="/fr/privacy.html">Français</option><option value="/de/privacy.html">Deutsch</option></select>
   </div>
 </nav>
-<main class="doc">
-  <div class="content">
-<h1>TapTapBible Privacy Policy</h1>
-<p>Last updated: June 19, 2026</p>
-<p>Effective date: June 19, 2026</p>
-<p>kukuDev ("Operator") takes the privacy of TapTapBible users seriously. This Privacy Policy explains what information is stored on your device and what information is transmitted or processed by the Operator or third-party services in the course of using the Service.</p>
-<hr>
-<h2>1. Core Principles</h2>
-<ol>
-<li>The app offers a <strong>guest mode that requires no login</strong>. Transcription records, bookmarks, and statistics created in guest mode are stored <strong>only on your device (locally)</strong> and are never transmitted to the Operator's servers.</li>
-<li>If you sign in to use account-based features such as backup, sync, or group transcription, that data is transmitted to and stored on the cloud servers (Google Firebase) used by the Operator.</li>
-<li>The Operator processes only the minimum information necessary to provide the Service. Some features, such as advertising, operate under the policies of their respective providers.</li>
-</ol>
-<h2>2. Information We Collect</h2>
-<h3>2.1. Guest Mode (used without signing in)</h3>
+<main class="doc"><div class="content">
+<h1>TapTap Bible Privacy Policy</h1>
+<p>Last Updated: September 24, 2025</p>
+<p>Effective Date: September 24, 2025</p>
+<p>Solo developer kukuDev ("Operator") takes the privacy of users ("you") of the TapTap Bible mobile application ("App" or "Service") very seriously. This Privacy Policy describes how I collect, use, disclose, and protect your information. By using the Service, you consent to the practices described in this Privacy Policy.</p>
+<h2>1. Information We Collect</h2>
+<p>The Operator collects various types of information when you use the Service.</p>
+<h3>1.1. Information You Provide Directly</h3>
+<p>The following information is collected and stored on the server only when you use the Service in a logged-in state (i.e., not in guest mode).</p>
 <ul>
-<li>Transcription records, bookmarks and notes, statistics, streaks, and app settings are <strong>stored only in the local database on your device</strong> and are never transmitted to the Operator's servers.</li>
-</ul>
-<h3>2.2. When Signed In</h3>
+<li><strong>Account Information:</strong> Information collected when you create an account via Google or Apple social login. This includes your email address, name (if provided by your Google/Apple account), profile picture URL, and Firebase User ID (UID). This App does not provide a separate profile picture upload feature.</li>
+<li><strong>Profile Information:</strong> This includes the nickname you set. The nickname is used to identify you in group activities.</li>
+<li><strong>User Content:</strong></li>
 <ul>
-<li><strong>Account identification</strong>: The unique account identifier (UID) and email address provided when signing in with Google or Apple. When using Apple Sign In, users may choose to hide their email address.</li>
-<li><strong>Service usage data</strong>: Data created by the user — such as transcription records, bookmarks and notes, statistics, and streaks — is linked to the account and stored and synced in the cloud (Firebase).</li>
-<li><strong>Group transcription data</strong>: When creating or joining a group, certain information such as your display name (nickname) and transcription progress may be shared with other members of the same group.</li>
+<li><strong>Transcription Records:</strong> Includes the version code, Bible code, chapter, verse, first transcription time, last transcription time, and total transcription count of the Bible verses you have transcribed.</li>
+<li><strong>Bookmarks:</strong> Includes the version code, Bible code, chapter, verse, personal memo, creation time, and update time of the verses you have bookmarked.</li>
+<li><strong>Settings Information:</strong> Includes your personalized preferences set within the App, such as theme, language, notification settings (including reminder time), and transcription font/line spacing.</li>
+<li><strong>Consent Records:</strong> To comply with data protection laws (e.g., GDPR, CCPA, Korean Personal Information Protection Act), your consent to the Terms of Service and Privacy Policy, the time of consent, the version of consent, IP address, and user agent information are recorded. The IP address is collected solely for the purpose of legal proof of consent and is not used for any other purpose.</li>
 </ul>
-<h3>2.3. Advertising and Diagnostic Information</h3>
+</ul>
+<h3>1.2. Information Collected Automatically</h3>
 <ul>
-<li><strong>Advertising identifier (Ad ID)</strong>: The app serves ads through Google AdMob, and in doing so the advertising identifier is transmitted to the Google advertising network.</li>
-<li><strong>Diagnostic and usage information</strong>: To ensure stable operation and prevent misuse, information such as device and app version details, crash logs, and App Check tokens may be processed.</li>
+<li><strong>Usage Data:</strong> Information about how you access and use the App (e.g., access dates and times, features used, pages visited, app crash reports).</li>
+<li><strong>Device Information:</strong> Information about the device you use to access the App (e.g., device model, operating system, device identifiers, app version).</li>
+<li><strong>Log Data:</strong> System log information generated during app usage, such as errors, warnings, and debug messages.</li>
+<li><strong>Device Security Status:</strong> Security check results are collected, such as whether your device is rooted/jailbroken, whether developer mode is enabled, and whether an emulator is being used.</li>
 </ul>
-<h2>3. Information We Do Not Collect</h2>
+<h3>1.3. Information Collected from Third Parties</h3>
 <ul>
-<li>The Operator does not directly collect names, phone numbers, addresses, or similar information through a separate sign-up form (sign-in is handled through Google or Apple authentication providers).</li>
-<li>The transcription content and records of guest mode users are never transmitted to the Operator's servers.</li>
+<li>If you log in via a Google or Apple account, the Operator may receive necessary information for account creation from that service, such as your name, email address, and profile picture URL.</li>
 </ul>
-<h2>4. Purposes of Processing</h2>
+<h2>2. How We Use Your Information</h2>
+<p>The Operator uses the collected information for the following purposes:</p>
+<h3>2.1. To Provide and Operate the Service</h3>
+<p>To provide the core features of the App (Bible transcription, bookmarks, group activities), and to offer account management and technical support.</p>
+<h3>2.2. To Improve and Develop the Service</h3>
+<p>To analyze usage patterns to improve the App's features, performance, user experience, and develop new features.</p>
+<h3>2.3. To Provide a Personalized Experience</h3>
+<p>To provide customized content and experiences based on your settings (theme, font, etc.) and usage history (progress).</p>
+<h3>2.4. Communication</h3>
+<p>To provide important service-related announcements, updates, security alerts, and responses to customer support requests.</p>
+<h3>2.5. To Enable Group Features</h3>
+<p>To enable collaboration and progress sharing with other members within a group (nickname, parts of transcription records, activity timeline).</p>
+<h3>2.6. Advertising</h3>
+<p>To provide non-personalized or personalized ads through third-party advertising partners like Google AdMob.</p>
+<h3>2.7. Security and Fraud Prevention</h3>
+<p>To maintain the security of the Service, detect and prevent fraud and unauthorized activities, and identify and respond to device security vulnerabilities (e.g., rooting/jailbreaking).</p>
+<h3>2.8. To Comply with Legal Obligations</h3>
+<p>To comply with applicable laws, regulations, or legal processes (e.g., retaining consent records).</p>
+<h3>2.9. Statistics and Analysis</h3>
+<p>To perform aggregate statistical analysis of service usage to understand market trends and support business decisions.</p>
+<h2>3. Sharing and Disclosure of Information</h2>
+<p>The Operator may share or disclose your personal information only in the following cases:</p>
+<h3>3.1. With Your Consent</h3>
+<p>When you have explicitly consented to the sharing of your personal information.</p>
+<h3>3.2. Group Members</h3>
+<p>If you participate in a group, your nickname, transcription progress (total transcribed verses, consecutive days, etc.), and in-group activities (timeline events) will be disclosed to other members of that group. Your personal memos are not shared within the group.</p>
+<h3>3.3. Service Providers</h3>
+<p>We may share information with the following third-party service providers that support our business operations. These providers may only access information to the extent necessary to perform services on behalf of the Operator and are subject to strict confidentiality obligations:</p>
 <ul>
-<li>Providing the Bible transcription feature along with progress tracking, statistics, and streak records</li>
-<li>Account-based backup and cross-device synchronization</li>
-<li>Providing the group transcription feature</li>
-<li>Serving advertisements and operating the Service</li>
-<li>Error analysis, security, and prevention of misuse</li>
+<li><strong>Firebase:</strong> Provides core infrastructure for the service, including user authentication, database (Cloud Firestore), server hosting (Cloud Functions), crash reports, etc.</li>
+<li><strong>Google AdMob:</strong> Ad delivery.</li>
 </ul>
-<h2>5. Third-Party Services and Data Processing</h2>
-<p>The following third-party services are used to provide the Service. Each provider processes information in accordance with its own privacy policy.</p>
-<div class="tbl-wrap"><table>
-<thead><tr><th style="text-align:left">Provider</th><th style="text-align:left">Purpose</th><th style="text-align:left">Information processed</th></tr></thead>
-<tbody>
-<tr><td style="text-align:left">Google Firebase (Authentication, Firestore, Functions, App Check)</td><td style="text-align:left">Sign-in, data synchronization, server-side processing, abuse prevention</td><td style="text-align:left">Account identifier, synced data, diagnostic information</td></tr>
-<tr><td style="text-align:left">Google AdMob</td><td style="text-align:left">Serving advertisements</td><td style="text-align:left">Advertising identifier, device information</td></tr>
-<tr><td style="text-align:left">Google Sign-In</td><td style="text-align:left">Google account sign-in</td><td style="text-align:left">Account identifier, email address</td></tr>
-<tr><td style="text-align:left">Apple Sign In</td><td style="text-align:left">Apple account sign-in</td><td style="text-align:left">Account identifier, email address (may be hidden)</td></tr>
-</tbody></table></div>
-<h2>6. About Advertising</h2>
-<ul>
-<li>The app is provided free of charge and includes advertisements.</li>
-<li>The advertising identifier is transmitted to the Google advertising network and may be used and shared for advertising or marketing purposes.</li>
-<li>Users can reset their advertising identifier or limit personalized ads through their device settings.</li>
-</ul>
-<h2>7. International Data Transfers</h2>
-<p>The servers of cloud services used by the Operator, such as Firebase, may be located outside of South Korea. Data synced upon account sign-in may be stored and processed on those servers.</p>
-<h2>8. Retention and Deletion</h2>
-<ol>
-<li>Guest mode data is deleted when the user uninstalls the app or clears the app's data on their device.</li>
-<li>Data linked to an account is permanently deleted from the servers when the user deletes their account and cannot be recovered.</li>
-<li>Advertising and diagnostic information is retained in accordance with the retention policies of each third-party service and the Operator's configuration.</li>
-<li>Information required to be retained by applicable law is retained for the period specified by that law and then destroyed.</li>
-</ol>
-<h2>9. User Rights and How to Exercise Them</h2>
-<ol>
-<li>Users can manage their own data — including transcription records, bookmarks, and statistics — directly through in-app features.</li>
-<li>Users can delete their local data by uninstalling the app or clearing the app's data on their device.</li>
-<li>Signed-in users can request the deletion of their account and all data stored on the servers through the account deletion feature within the app.</li>
-<li>Resetting the advertising identifier or limiting personalized ads can be managed through device settings.</li>
-</ol>
-<h2>10. Children's Privacy</h2>
-<p>This Service is intended for general users. The Operator does not knowingly collect personal information from children under the age of 14. Parents and guardians may supervise their child's use of the Service, and if it is confirmed that a child's information has been collected, it will be deleted without delay.</p>
-<h2>11. Security</h2>
-<ul>
-<li>Sensitive configuration values stored locally are protected through the device's secure storage (Keystore/Keychain).</li>
-<li>Communications with servers are conducted over encrypted channels, and unauthorized access is blocked through measures such as App Check.</li>
-<li>However, no security measure can guarantee absolute protection.</li>
-</ul>
-<h2>12. About Bible Text</h2>
-<p>The copyright of the Bible text provided in the app belongs to the rights holders of each respective translation. The app provides text solely for users' personal meditation and transcription purposes.</p>
-<h2>13. Changes to This Policy</h2>
-<p>This Privacy Policy may be revised in response to changes in law or the Service. In the event of material changes, notice will be provided in advance through the app or this page.</p>
-<h2>14. Contact</h2>
-<p>For inquiries regarding the processing of personal information, please contact us at:</p>
-<ul>
-<li>Operator: kukuDev</li>
-<li>Email: support@kukudev.com</li>
-</ul>
-  </div>
-</main>
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-links"><a href="/en/privacy.html">Privacy Policy</a><a href="/en/terms.html">Terms of Service</a><a href="https://kukudev.com/en/" target="_blank" rel="noopener">kukuDev</a></div>
-    <div class="footer-biz">kukuDev &nbsp;|&nbsp; Representative: O Jaeseok &nbsp;|&nbsp; Business registration no.: 390-68-00863<br>Mail-order business report no.: 2026-Incheon Yeonsu-gu-1196<br>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea<br>Email: <span id="contact-email"></span></div>
-    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
-  </div>
-</footer>
-<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('contact-email');if(el)el.textContent=u+'\x40'+d;})();</script>
+<h3>3.4. Legal Requirements</h3>
+<p>When required by law, regulation, or legal process (e.g., court order or subpoena), or when deemed necessary to protect the rights, property, or safety of the Operator.</p>
+<h3>3.5. Business Transfers</h3>
+<p>Your information may be transferred in connection with a business transaction such as a merger, acquisition, asset sale, or bankruptcy.</p>
+<h3>3.6. Anonymized or Aggregated Information</h3>
+<p>We may share anonymized or aggregated information that cannot be used to identify an individual with partners, researchers, or other third parties.</p>
+<h2>4. Data Storage and Retention Period</h2>
+<h3>4.1.</h3>
+<p>The Operator retains your personal information for as long as you maintain an active account and use the Service.</p>
+<h3>4.2.</h3>
+<p>If you delete your account, all personally identifiable information, including your transcription records, bookmarks, and group activity records, will be promptly and permanently deleted, except where required by applicable law.</p>
+<h3>4.3.</h3>
+<p>Certain information, such as consent records, necessary for compliance with legal obligations may be securely stored for the period specified by applicable law.</p>
+<h2>5. Data Security</h2>
+<p>The Operator implements reasonable security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. These include Firebase's security features, data encryption, and access controls. However, no method of transmission over the internet or electronic storage is 100% secure, so the Operator cannot guarantee the absolute security of your information.</p>
+<h2>6. Your Rights</h2>
+<p>You have the following rights regarding your personal information:</p>
+<h3>6.1. Access and Correction</h3>
+<p>You have the right to access and correct your account information. Please note that nicknames cannot be changed once set, so choose carefully.</p>
+<h3>6.2. Deletion</h3>
+<p>You can permanently delete all your personally identifiable information by deleting your account. When you delete your account, all data, including your transcription records and bookmarks, will be irretrievably deleted.</p>
+<h3>6.3. Data Access</h3>
+<p>You have the right to have your data synchronized and stored on the server. This App does not provide a separate 'data export' feature, but you can save your data to the server and access it from multiple devices by using the 'Data Sync' feature after logging in.</p>
+<h3>6.4. Notification Settings</h3>
+<p>You can freely control the receipt and timing of transcription reminder notifications through the in-app settings menu. This App does not send notifications for marketing purposes.</p>
+<h3>6.5. Filing a Complaint</h3>
+<p>You have the right to file a complaint with the relevant data protection authority in your jurisdiction.</p>
+<h2>7. Children's Privacy</h2>
+<p>The Service is not intended for children under the age of 16. The Operator does not knowingly collect personally identifiable information from children under 16. If we become aware that a child under 16 has provided us with personal information, we will take steps to delete such information from our records.</p>
+<h2>8. International Data Transfer</h2>
+<p>Your information may be stored and processed on computers located outside of your country, province, state, or other governmental jurisdiction. If you reside outside the Republic of Korea, please be aware that the data protection laws governing the collection, transfer, and processing of information by the Operator may differ from those in your jurisdiction. By agreeing to this Privacy Policy and submitting your information, you consent to this transfer. The Operator will take all reasonably necessary steps to ensure that your data is treated securely and in accordance with this Privacy Policy.</p>
+<h2>9. Changes to this Privacy Policy</h2>
+<p>The Operator may update this Privacy Policy from time to time. If there are material changes, we will notify you through an in-app notice, email, or other reasonable means at least 30 days before the changes take effect. Minor changes (e.g., typo corrections) may be updated without separate notice. Please review the "Last Updated" date at the top of this page periodically.</p>
+<h2>10. Contact</h2>
+<p>If you have any questions about this Privacy Policy, please contact me at: support@kukudev.com</p>
+</div></main>
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-links"><a href="/en/privacy.html">Privacy Policy</a><a href="/en/terms.html">Terms of Service</a><a href="https://kukudev.com/" target="_blank" rel="noopener">kukuDev</a></div>
+  <div class="footer-biz">kukuDev &nbsp;|&nbsp; Representative: O Jaeseok &nbsp;|&nbsp; Business registration no.: 390-68-00863<br>Mail-order business report no.: 2026-Incheon Yeonsu-gu-1196<br>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea<br>Email: <span id="ce"></span></div>
+  <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+</div></footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('ce');if(el)el.textContent=u+'\x40'+d;})();</script>
 </body>
 </html>

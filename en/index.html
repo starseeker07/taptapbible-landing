@@ -132,6 +132,14 @@
     .lang-dropdown-item:hover { background: var(--surface); color: var(--ink); }
     .lang-dropdown-item.active { color: var(--primary-hover); font-weight: 700; }
 
+    .lang-select {
+      font-family: var(--font-pre); font-size: 13px; font-weight: 600; color: var(--ink);
+      background: var(--surface2); border: 1px solid var(--hairline); border-radius: 9px;
+      padding: 7px 30px 7px 12px; cursor: pointer; appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E6E80' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 9px center; background-size: 13px;
+    }
+
     .btn-nav {
       display: inline-flex; align-items: center; gap: 6px;
       background: linear-gradient(135deg, var(--primary), var(--primary-hover));
@@ -436,8 +444,7 @@
     /* ─── MOBILE ─── */
     @media (max-width: 768px) {
       .nav { padding: 0 18px; height: 56px; }
-      .nav-section-links, .lang-toggle { display: none; }
-      .lang-dropdown { display: block; }
+      .nav-section-links { display: none; }
       .nav-right { gap: 10px; }
       .btn-nav .btn-nav-text { display: none; }
 
@@ -516,19 +523,16 @@
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
     </div>
-    <div class="lang-toggle">
-      <a href="/">한국어</a><span class="lang-sep">|</span>
-      <span class="active">English</span><span class="lang-sep">|</span>
-      <a href="/ja/">日本語</a>
-    </div>
-    <div class="lang-dropdown">
-      <button class="lang-dropdown-btn" onclick="toggleLang(event)">English <iconify-icon icon="solar:alt-arrow-down-bold" style="font-size:11px;opacity:.7"></iconify-icon></button>
-      <div class="lang-dropdown-menu" id="langMenu">
-        <a href="/" class="lang-dropdown-item">한국어</a>
-        <a href="/en/" class="lang-dropdown-item active">English</a>
-        <a href="/ja/" class="lang-dropdown-item">日本語</a>
-      </div>
-    </div>
+    <select class="lang-select" onchange="if(this.value)location.href=this.value" aria-label="Language">
+      <option value="/">한국어</option>
+      <option value="/en/" selected>English</option>
+      <option value="/ja/">日本語</option>
+      <option value="/zh-CN/">简体中文</option>
+      <option value="/zh-TW/">繁體中文</option>
+      <option value="/es/">Español</option>
+      <option value="/fr/">Français</option>
+      <option value="/de/">Deutsch</option>
+    </select>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-nav" target="_blank" rel="noopener">
       <iconify-icon icon="solar:smartphone-bold" style="font-size:15px"></iconify-icon>
       <span class="btn-nav-text">Download</span>
@@ -797,7 +801,12 @@
       <div class="footer-lang">
         <a href="/">한국어</a><span class="sep">|</span>
         <span class="active">English</span><span class="sep">|</span>
-        <a href="/ja/">日本語</a>
+        <a href="/ja/">日本語</a><span class="sep">|</span>
+        <a href="/zh-CN/">简体中文</a><span class="sep">|</span>
+        <a href="/zh-TW/">繁體中文</a><span class="sep">|</span>
+        <a href="/es/">Español</a><span class="sep">|</span>
+        <a href="/fr/">Français</a><span class="sep">|</span>
+        <a href="/de/">Deutsch</a>
       </div>
     </div>
     <div class="footer-links">

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/assets/logo.png">
+<title>隱私權政策 — TapTapBible</title>
+<meta name="description" content="TapTapBible 隱私權政策">
+<link rel="canonical" href="https://taptapbible.kukudev.com/zh-TW/privacy.html">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data:; connect-src https://cdn.jsdelivr.net;">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--canvas:#FFFFFF;--surface:#F5F8FC;--surface2:#EDF2F8;--hairline:#E3E9F0;--ink:#16202E;--ink-strong:#2C3A4B;--ink-muted:#5E6E80;--ink-subtle:#8A98A8;--font-pre:'Pretendard Variable','Pretendard','Noto Sans TC',-apple-system,BlinkMacSystemFont,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--primary-hover);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
+.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
+.lang-select{font-family:var(--font-pre);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface2);border:1px solid var(--hairline);border-radius:9px;padding:7px 30px 7px 12px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E6E80' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:13px}
+.doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
+.content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
+.content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
+.content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
+.content h4{font-size:15px;font-weight:700;margin:20px 0 8px;color:var(--ink-strong)}
+.content p{font-size:15px;color:var(--ink-strong);margin:0 0 12px;line-height:1.85}
+.content ol,.content ul{margin:0 0 14px;padding-left:24px}
+.content li{font-size:15px;color:var(--ink-strong);margin:0 0 7px;line-height:1.8}
+.content ol ol,.content ol ul,.content ul ul,.content ul ol{margin:7px 0 6px}
+.content strong{font-weight:700;color:var(--ink)}
+.content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
+.content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
+.tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
+.content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
+.content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
+.content tbody tr:last-child td{border-bottom:none}.content tbody tr:nth-child(even){background:var(--surface)}
+.footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
+.footer-inner{max-width:840px;margin:0 auto}
+.footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary-hover)}
+.footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
+.footer-copy{font-size:12px;color:var(--ink-subtle)}
+@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/zh-TW/" class="nav-logo"><img src="/assets/logo.png" alt="TapTapBible"><span>TapTapBible</span></a>
+  <div class="nav-right">
+    <a href="/zh-TW/" class="nav-back">首頁</a>
+    <select class="lang-select" onchange="if(this.value)location.href=this.value" aria-label="Language"><option value="/privacy.html">한국어</option><option value="/en/privacy.html">English</option><option value="/ja/privacy.html">日本語</option><option value="/zh-CN/privacy.html">简体中文</option><option value="/zh-TW/privacy.html" selected>繁體中文</option><option value="/es/privacy.html">Español</option><option value="/fr/privacy.html">Français</option><option value="/de/privacy.html">Deutsch</option></select>
+  </div>
+</nav>
+<main class="doc"><div class="content">
+<h1>TapTap Bible 隱私權政策</h1>
+<p>最後更新： 2025年9月24日</p>
+<p>生效日期： 2025年9月24日</p>
+<p>獨立開發者 kukuDev（「營運方」）非常重視 TapTap Bible 行動應用程式（「應用程式」或「服務」）使用者（「您」）的隱私權保護。本隱私權政策說明我如何收集、使用、揭露和保護您的資訊。使用本服務即表示您同意本隱私權政策中所述的做法。</p>
+<h2>1. 我們收集的資訊</h2>
+<p>當您使用本服務時，營運方會收集各種類型的資訊。</p>
+<h3>1.1. 您直接提供的資訊</h3>
+<p>只有當您在登入狀態下（即非訪客模式）使用服務時，以下資訊才會被收集並儲存在伺服器上。</p>
+<ul>
+<li><strong>帳戶資訊：</strong> 當您透過 Google 或 Apple 社交登入建立帳戶時收集的資訊。這包括您的電子郵件地址、姓名（如果由您的 Google/Apple 帳戶提供）、個人資料圖片 URL 和 Firebase 使用者 ID (UID)。本應用程式不提供單獨的個人資料圖片上傳功能。</li>
+<li><strong>個人資料資訊：</strong> 包括您設定的暱稱。暱稱用於在群組活動中識別您的身份。</li>
+<li><strong>使用者內容：</strong></li>
+<ul>
+<li><strong>抄寫記錄：</strong> 包括您抄寫的聖經經文的版本代碼、聖經代碼、章節、經文、首次抄寫時間、最後抄寫時間以及總抄寫次數。</li>
+<li><strong>書籤：</strong> 包括您新增書籤的經文的版本代碼、聖經代碼、章節、經文、個人備忘錄、建立時間和更新時間。</li>
+<li><strong>設定資訊：</strong> 包括您在應用程式內設定的個人化偏好，例如主題、語言、通知設定（包括提醒時間）以及抄寫字體/行距。</li>
+<li><strong>同意記錄：</strong> 為遵守資料保護法律（例如 GDPR、CCPA、韓國個人資訊保護法），將記錄您對服務條款和隱私權政策的同意情況、同意時間、同意版本、IP 位址和使用者代理資訊。IP 位址僅用於法律同意記錄證明，不用於任何其他目的。</li>
+</ul>
+</ul>
+<h3>1.2. 自動收集的資訊</h3>
+<ul>
+<li><strong>使用資料：</strong> 有關您如何存取和使用應用程式的資訊（例如存取日期和時間、使用的功能、造訪的頁面、應用程式崩潰報告）。</li>
+<li><strong>裝置資訊：</strong> 有關您用於存取應用程式的裝置的資訊（例如裝置型號、作業系統、裝置識別碼、應用程式版本）。</li>
+<li><strong>日誌資料：</strong> 應用程式使用期間產生的系統日誌資訊，例如錯誤、警告和偵錯訊息。</li>
+<li><strong>裝置安全狀態：</strong> 收集安全檢查結果，例如您的裝置是否已越獄/root、是否啟用了開發者模式以及是否正在使用模擬器。</li>
+</ul>
+<h3>1.3. 從第三方收集的資訊</h3>
+<ul>
+<li>如果您透過 Google 或 Apple 帳戶登入，營運方可能會從該服務收到建立帳戶所需的資訊，例如您的姓名、電子郵件地址和個人資料圖片 URL。</li>
+</ul>
+<h2>2. 我們如何使用您的資訊</h2>
+<p>營運方將收集的資訊用於以下目的：</p>
+<h3>2.1. 提供和營運服務</h3>
+<p>提供應用程式的核心功能（聖經抄寫、書籤、群組活動），並提供帳戶管理和技術支援。</p>
+<h3>2.2. 改進和開發服務</h3>
+<p>分析使用模式以改進應用程式的功能、性能、使用者體驗，並開發新功能。</p>
+<h3>2.3. 提供個人化體驗</h3>
+<p>根據您的設定（主題、字體等）和使用歷史（進度）提供客製化內容和體驗。</p>
+<h3>2.4. 溝通</h3>
+<p>提供重要的服務相關公告、更新、安全警示以及對客戶支援請求的回應。</p>
+<h3>2.5. 啟用群組功能</h3>
+<p>實現與群組內其他成員的協作和進度共享（暱稱、部分抄寫記錄、活動時間軸）。</p>
+<h3>2.6. 廣告</h3>
+<p>透過 Google AdMob 等第三方廣告合作夥伴提供非個人化或個人化廣告。</p>
+<h3>2.7. 安全和詐欺預防</h3>
+<p>維護服務的安全，偵測和預防詐欺和未經授權的活動，並識別和應對裝置安全漏洞（例如越獄/root）。</p>
+<h3>2.8. 遵守法律義務</h3>
+<p>遵守適用的法律、法規或法律程序（例如保留同意記錄）。</p>
+<h3>2.9. 統計和分析</h3>
+<p>對服務使用情況進行彙總統計分析，以了解市場趨勢並支援業務決策。</p>
+<h2>3. 資訊的共享和揭露</h2>
+<p>營運方僅在以下情況下共享或揭露您的個人資訊：</p>
+<h3>3.1. 徵得您的同意</h3>
+<p>當您明確同意共享您的個人資訊時。</p>
+<h3>3.2. 群組成員</h3>
+<p>如果您加入群組，您的暱稱、抄寫進度（總抄寫經文數、連續抄寫天數等）和群組內活動（時間軸事件）將向該群組的其他成員揭露。您的個人備忘錄不會在群組內共享。</p>
+<h3>3.3. 服務提供商</h3>
+<p>我們可能會與以下支援我們業務營運的第三方服務提供商共享資訊。這些提供商只能在代表營運方執行服務所需的範圍內存取資訊，並受嚴格的保密義務約束：</p>
+<ul>
+<li><strong>Firebase:</strong> 提供服務的核心基礎設施，包括使用者身份驗證、資料庫（Cloud Firestore）、伺服器託管（Cloud Functions）、崩潰報告等。</li>
+<li><strong>Google AdMob:</strong> 廣告投放</li>
+</ul>
+<h3>3.4. 法律要求</h3>
+<p>根據法律、法規或法律程序（例如法院命令或傳票）的要求，或在認為有必要保護營運方的權利、財產或安全時。</p>
+<h3>3.5. 業務轉讓</h3>
+<p>您的資訊可能會在合併、收購、資產出售或破產等業務交易中被轉移。</p>
+<h3>3.6. 匿名化或彙總資訊</h3>
+<p>我們可能會與合作夥伴、研究人員或其他第三方共享無法用於識別個人的匿名化或彙總資訊。</p>
+<h2>4. 資料儲存和保留期限</h2>
+<h3>4.1.</h3>
+<p>營運方在您保持活動帳戶並使用服務期間保留您的個人資訊。</p>
+<h3>4.2.</h3>
+<p>如果您刪除帳戶，所有個人身份資訊，包括您的抄寫記錄、書籤和群組活動記錄，將在適用法律要求的情況外，被及時永久刪除。</p>
+<h3>4.3.</h3>
+<p>某些資訊，如為遵守法律義務所需的同意記錄，可能會根據適用法律規定的期限安全儲存。</p>
+<h2>5. 資料安全</h2>
+<p>營運方採取合理的安全措施來保護您的個人資訊免遭未經授權的存取、揭露、更改或銷毀。這些措施包括 Firebase 的安全功能、資料加密和存取控制。但是，沒有任何透過網際網路或電子儲存的傳輸方法是 100% 安全的，因此營運方無法保證您資訊的絕對安全。</p>
+<h2>6. 您的權利</h2>
+<p>您對您的個人資訊擁有以下權利：</p>
+<h3>6.1. 存取和更正</h3>
+<p>您有權存取和更正您的帳戶資訊。請注意，暱稱一旦設定後無法更改，請謹慎選擇。</p>
+<h3>6.2. 刪除</h3>
+<p>您可以透過刪除帳戶永久刪除所有個人身份資訊。刪除帳戶時，包括您的抄寫記錄和書籤在內的所有資料將被不可逆轉地刪除。</p>
+<h3>6.3. 資料存取權</h3>
+<p>您有權將您的資料同步並儲存在伺服器上。本應用程式不提供單獨的「資料匯出」功能，但您可以在登入後使用「資料同步」功能將資料儲存到伺服器，並從多個裝置存取。</p>
+<h3>6.4. 通知設定</h3>
+<p>您可以透過應用程式內設定選單自由控制抄寫提醒通知的接收和時間。本應用程式不傳送用於行銷目的的通知。</p>
+<h3>6.5. 提出申訴</h3>
+<p>您有權向您所在司法管轄區的相關資料保護機構提出申訴。</p>
+<h2>7. 兒童隱私</h2>
+<p>本服務不針對 16 歲以下的兒童。營運方不會故意收集 16 歲以下兒童的個人身份資訊。如果我們發現有 16 歲以下的兒童向我們提供了個人資訊，我們將採取措施從我們的記錄中刪除此類資訊。</p>
+<h2>8. 國際資料傳輸</h2>
+<p>您的資訊可能會儲存和處理在位於您所在國家、省、州或其他政府管轄區之外的電腦上。如果您居住在韓國以外，請注意，管轄營運方收集、傳輸和處理資訊的資料保護法律可能與您所在司法管轄區的法律不同。同意本隱私權政策並提交您的資訊即表示您同意此傳輸。營運方將採取一切合理必要的措施，確保您的資料得到安全處理並符合本隱私權政策。</p>
+<h2>9. 本隱私權政策的變更</h2>
+<p>營運方可能會不時更新本隱私權政策。如果發生重大變更，我們將在變更生效前至少 30 天透過應用程式內公告、電子郵件或其他合理方式通知您。微小變更（例如拼字錯誤更正）可能會在不另行通知的情況下更新。請定期檢閱本頁面頂部的「最後更新」日期。</p>
+<h2>10. 聯絡我們</h2>
+<p>如果您對本隱私權政策有任何疑問，請聯繫：support@kukudev.com</p>
+</div></main>
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-links"><a href="/zh-TW/privacy.html">隱私權政策</a><a href="/zh-TW/terms.html">服務條款</a><a href="https://kukudev.com/" target="_blank" rel="noopener">kukuDev</a></div>
+  <div class="footer-biz">kukuDev &nbsp;|&nbsp; Representative: O Jaeseok &nbsp;|&nbsp; Business registration no.: 390-68-00863<br>Mail-order business report no.: 2026-Incheon Yeonsu-gu-1196<br>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea<br>電子郵件: <span id="ce"></span></div>
+  <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+</div></footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('ce');if(el)el.textContent=u+'\x40'+d;})();</script>
+</body>
+</html>

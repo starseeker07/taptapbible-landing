@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="/assets/logo.png">
+<title>Politique de Confidentialité — TapTapBible</title>
+<meta name="description" content="TapTapBible Politique de Confidentialité">
+<link rel="canonical" href="https://taptapbible.kukudev.com/fr/privacy.html">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; connect-src https://cdn.jsdelivr.net;">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--canvas:#FFFFFF;--surface:#F5F8FC;--surface2:#EDF2F8;--hairline:#E3E9F0;--ink:#16202E;--ink-strong:#2C3A4B;--ink-muted:#5E6E80;--ink-subtle:#8A98A8;--font-pre:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--primary-hover);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
+.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
+.lang-select{font-family:var(--font-pre);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface2);border:1px solid var(--hairline);border-radius:9px;padding:7px 30px 7px 12px;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E6E80' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:13px}
+.doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
+.content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
+.content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
+.content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
+.content h4{font-size:15px;font-weight:700;margin:20px 0 8px;color:var(--ink-strong)}
+.content p{font-size:15px;color:var(--ink-strong);margin:0 0 12px;line-height:1.85}
+.content ol,.content ul{margin:0 0 14px;padding-left:24px}
+.content li{font-size:15px;color:var(--ink-strong);margin:0 0 7px;line-height:1.8}
+.content ol ol,.content ol ul,.content ul ul,.content ul ol{margin:7px 0 6px}
+.content strong{font-weight:700;color:var(--ink)}
+.content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
+.content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
+.tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
+.content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
+.content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
+.content tbody tr:last-child td{border-bottom:none}.content tbody tr:nth-child(even){background:var(--surface)}
+.footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
+.footer-inner{max-width:840px;margin:0 auto}
+.footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary-hover)}
+.footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
+.footer-copy{font-size:12px;color:var(--ink-subtle)}
+@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/fr/" class="nav-logo"><img src="/assets/logo.png" alt="TapTapBible"><span>TapTapBible</span></a>
+  <div class="nav-right">
+    <a href="/fr/" class="nav-back">Accueil</a>
+    <select class="lang-select" onchange="if(this.value)location.href=this.value" aria-label="Language"><option value="/privacy.html">한국어</option><option value="/en/privacy.html">English</option><option value="/ja/privacy.html">日本語</option><option value="/zh-CN/privacy.html">简体中文</option><option value="/zh-TW/privacy.html">繁體中文</option><option value="/es/privacy.html">Español</option><option value="/fr/privacy.html" selected>Français</option><option value="/de/privacy.html">Deutsch</option></select>
+  </div>
+</nav>
+<main class="doc"><div class="content">
+<h1>Politique de Confidentialité de TapTap Bible</h1>
+<p>Dernière mise à jour : 24 septembre 2025</p>
+<p>Date d'entrée en vigueur : 24 septembre 2025</p>
+<p>Le développeur indépendant kukuDev ("Opérateur") prend très au sérieux la protection de la vie privée des utilisateurs ("vous") de l'application mobile TapTap Bible ("App" ou "Service"). Cette Politique de Confidentialité décrit la manière dont je collecte, utilise, divulgue et protège vos informations. En utilisant le Service, vous consentez aux pratiques décrites dans cette Politique de Confidentialité.</p>
+<h2>1. Informations que Nous Collectons</h2>
+<p>L'Opérateur collecte différents types d'informations lorsque vous utilisez le Service.</p>
+<h3>1.1. Informations que Vous Fournissez Directement</h3>
+<p>Les informations suivantes ne sont collectées et stockées sur le serveur que lorsque vous utilisez le Service en étant connecté (c'est-à-dire pas en mode invité).</p>
+<ul>
+<li><strong>Informations de Compte :</strong> Informations collectées lorsque vous créez un compte via la connexion sociale Google ou Apple. Celles-ci incluent votre adresse e-mail, votre nom (si fourni par votre compte Google/Apple), l'URL de votre photo de profil et votre identifiant utilisateur Firebase (UID). Cette application ne fournit pas de fonctionnalité de téléchargement de photo de profil séparée.</li>
+<li><strong>Informations de Profil :</strong> Celles-ci incluent le surnom que vous définissez. Le surnom est utilisé pour vous identifier dans les activités de groupe.</li>
+<li><strong>Contenu Utilisateur :</strong></li>
+<ul>
+<li><strong>Enregistrements de Transcription :</strong> Comprend le code de version, le code du livre de la Bible, le chapitre, le verset, la première heure de transcription, la dernière heure de transcription et le nombre total de transcriptions des versets bibliques que vous avez transcrits.</li>
+<li><strong>Signets :</strong> Comprend le code de version, le code du livre de la Bible, le chapitre, le verset, la note personnelle, l'heure de création et l'heure de mise à jour des versets que vous avez mis en signet.</li>
+<li><strong>Informations de Paramètres :</strong> Comprend vos préférences personnalisées définies dans l'application, telles que le thème, la langue, les paramètres de notification (y compris l'heure de rappel) et la police/l'interligne de transcription.</li>
+<li><strong>Enregistrements de Consentement :</strong> Pour se conformer aux lois sur la protection des données (par ex., RGPD, CCPA, Loi sur la protection des informations personnelles de Corée), votre consentement aux Conditions d'utilisation et à la Politique de confidentialité, l'heure du consentement, la version du consentement, l'adresse IP et les informations de l'agent utilisateur sont enregistrés. L'adresse IP est collectée uniquement à des fins de preuve légale du consentement et n'est pas utilisée à d'autres fins.</li>
+</ul>
+</ul>
+<h3>1.2. Informations Collectées Automatiquement</h3>
+<ul>
+<li><strong>Données d'Utilisation :</strong> Informations sur la manière dont vous accédez et utilisez l'application (par ex., dates et heures d'accès, fonctionnalités utilisées, pages visitées, rapports de plantage de l'application).</li>
+<li><strong>Informations sur l'Appareil :</strong> Informations sur l'appareil que vous utilisez pour accéder à l'application (par ex., modèle d'appareil, système d'exploitation, identifiants de l'appareil, version de l'application).</li>
+<li><strong>Données de Journal :</strong> Informations de journal système générées lors de l'utilisation de l'application, telles que les erreurs, les avertissements et les messages de débogage.</li>
+<li><strong>État de Sécurité de l'Appareil :</strong> Les résultats des contrôles de sécurité sont collectés, par exemple si votre appareil est rooté/jailbreaké, si le mode développeur est activé et si un émulateur est utilisé.</li>
+</ul>
+<h3>1.3. Informations Collectées auprès de Tiers</h3>
+<ul>
+<li>Si vous vous connectez via un compte Google ou Apple, l'Opérateur peut recevoir les informations nécessaires à la création du compte de ce service, telles que votre nom, votre adresse e-mail et l'URL de votre photo de profil.</li>
+</ul>
+<h2>2. Comment Nous Utilisons Vos Informations</h2>
+<p>L'Opérateur utilise les informations collectées aux fins suivantes :</p>
+<h3>2.1. Pour Fournir et Exploiter le Service</h3>
+<p>Pour fournir les fonctionnalités de base de l'application (transcription de la Bible, signets, activités de groupe) et pour offrir une gestion de compte et un support technique.</p>
+<h3>2.2. Pour Améliorer et Développer le Service</h3>
+<p>Pour analyser les modèles d'utilisation afin d'améliorer les fonctionnalités, les performances, l'expérience utilisateur de l'application et de développer de nouvelles fonctionnalités.</p>
+<h3>2.3. Pour Fournir une Expérience Personnalisée</h3>
+<p>Pour fournir un contenu et des expériences personnalisés en fonction de vos paramètres (thème, police, etc.) et de votre historique d'utilisation (progrès).</p>
+<h3>2.4. Communication</h3>
+<p>Pour fournir des annonces importantes liées au service, des mises à jour, des alertes de sécurité et des réponses aux demandes de support client.</p>
+<h3>2.5. Pour Activer les Fonctionnalités de Groupe</h3>
+<p>Pour permettre la collaboration et le partage des progrès avec d'autres membres au sein d'un groupe (surnom, parties des enregistrements de transcription, chronologie des activités).</p>
+<h3>2.6. Publicité</h3>
+<p>Pour fournir des publicités non personnalisées ou personnalisées par l'intermédiaire de partenaires publicitaires tiers comme Google AdMob.</p>
+<h3>2.7. Sécurité et Prévention de la Fraude</h3>
+<p>Pour maintenir la sécurité du Service, détecter et prévenir la fraude et les activités non autorisées, et identifier et répondre aux vulnérabilités de sécurité des appareils (par ex., rootage/jailbreak).</p>
+<h3>2.8. Pour se Conformer aux Obligations Légales</h3>
+<p>Pour se conformer aux lois, réglementations ou processus juridiques applicables (par ex., conserver les enregistrements de consentement).</p>
+<h3>2.9. Statistiques et Analyses</h3>
+<p>Pour effectuer une analyse statistique agrégée de l'utilisation du service afin de comprendre les tendances du marché et de soutenir les décisions commerciales.</p>
+<h2>3. Partage et Divulgation d'Informations</h2>
+<p>L'Opérateur ne peut partager ou divulguer vos informations personnelles que dans les cas suivants :</p>
+<h3>3.1. Avec Votre Consentement</h3>
+<p>Lorsque vous avez explicitement consenti au partage de vos informations personnelles.</p>
+<h3>3.2. Membres du Groupe</h3>
+<p>Si vous participez à un groupe, votre surnom, vos progrès de transcription (nombre total de versets transcrits, jours consécutifs, etc.) et vos activités au sein du groupe (événements de la chronologie) seront divulgués aux autres membres de ce groupe. Vos notes personnelles ne sont pas partagées au sein du groupe.</p>
+<h3>3.3. Fournisseurs de Services</h3>
+<p>Nous pouvons partager des informations avec les fournisseurs de services tiers suivants qui soutiennent nos opérations commerciales. Ces fournisseurs ne peuvent accéder aux informations que dans la mesure nécessaire pour exécuter des services au nom de l'Opérateur et sont soumis à des obligations de confidentialité strictes :</p>
+<ul>
+<li><strong>Firebase :</strong> Fournit l'infrastructure de base du service, y compris l'authentification des utilisateurs, la base de données (Cloud Firestore), l'hébergement de serveurs (Cloud Functions), les rapports de plantage, etc.</li>
+<li><strong>Google AdMob :</strong> Diffusion de publicités.</li>
+</ul>
+<h3>3.4. Exigences Légales</h3>
+<p>Lorsque la loi, la réglementation ou une procédure judiciaire l'exige (par ex., une ordonnance du tribunal ou une assignation), ou lorsque cela est jugé nécessaire pour protéger les droits, la propriété ou la sécurité de l'Opérateur.</p>
+<h3>3.5. Transferts d'Entreprise</h3>
+<p>Vos informations peuvent être transférées dans le cadre d'une transaction commerciale telle qu'une fusion, une acquisition, une vente d'actifs ou une faillite.</p>
+<h3>3.6. Informations Anonymisées ou Agrégées</h3>
+<p>Nous pouvons partager des informations anonymisées ou agrégées qui ne peuvent pas être utilisées pour identifier une personne avec des partenaires, des chercheurs ou d'autres tiers.</p>
+<h2>4. Stockage des Données et Période de Conservation</h2>
+<h3>4.1.</h3>
+<p>L'Opérateur conserve vos informations personnelles tant que vous maintenez un compte actif et utilisez le Service.</p>
+<h3>4.2.</h3>
+<p>Si vous supprimez votre compte, toutes les informations personnellement identifiables, y compris vos enregistrements de transcription, vos signets et vos enregistrements d'activités de groupe, seront rapidement et définitivement supprimées, sauf si la loi applicable l'exige.</p>
+<h3>4.3.</h3>
+<p>Certaines informations, telles que les enregistrements de consentement, nécessaires au respect des obligations légales peuvent être stockées en toute sécurité pendant la période spécifiée par la loi applicable.</p>
+<h2>5. Sécurité des Données</h2>
+<p>L'Opérateur met en œuvre des mesures de sécurité raisonnables pour protéger vos informations personnelles contre l'accès, la divulgation, l'altération ou la destruction non autorisés. Celles-ci incluent les fonctionnalités de sécurité de Firebase, le chiffrement des données et les contrôles d'accès. Cependant, aucune méthode de transmission sur Internet ou de stockage électronique n'est sûre à 100 %, de sorte que l'Opérateur ne peut garantir la sécurité absolue de vos informations.</p>
+<h2>6. Vos Droits</h2>
+<p>Vous disposez des droits suivants concernant vos informations personnelles :</p>
+<h3>6.1. Accès et Correction</h3>
+<p>Vous avez le droit d'accéder et de corriger les informations de votre compte. Veuillez noter que les surnoms ne peuvent pas être modifiés une fois définis, veuillez donc choisir avec soin.</p>
+<h3>6.2. Suppression</h3>
+<p>Vous pouvez supprimer définitivement toutes vos informations personnellement identifiables en supprimant votre compte. Lorsque vous supprimez votre compte, toutes les données, y compris vos enregistrements de transcription et vos signets, seront supprimées de manière irréversible.</p>
+<h3>6.3. Accès aux Données</h3>
+<p>Vous avez le droit de faire synchroniser et stocker vos données sur le serveur. Cette application ne fournit pas de fonctionnalité distincte d'"exportation de données", mais vous pouvez enregistrer vos données sur le serveur et y accéder depuis plusieurs appareils en utilisant la fonction "Synchronisation des données" après vous être connecté.</p>
+<h3>6.4. Paramètres de Notification</h3>
+<p>Vous pouvez contrôler librement la réception et l'heure des notifications de rappel de transcription via le menu des paramètres de l'application. Cette application n'envoie pas de notifications à des fins de marketing.</p>
+<h3>6.5. Dépôt d'une Plainte</h3>
+<p>Vous avez le droit de déposer une plainte auprès de l'autorité de protection des données compétente dans votre juridiction.</p>
+<h2>7. Confidentialité des Enfants</h2>
+<p>Le Service n'est pas destiné aux enfants de moins de 16 ans. L'Opérateur ne collecte pas sciemment d'informations personnellement identifiables auprès d'enfants de moins de 16 ans. Si nous apprenons qu'un enfant de moins de 16 ans nous a fourni des informations personnelles, nous prendrons des mesures pour supprimer ces informations de nos registres.</p>
+<h2>8. Transfert International de Données</h2>
+<p>Vos informations peuvent être stockées et traitées sur des ordinateurs situés en dehors de votre pays, province, État ou autre juridiction gouvernementale. Si vous résidez en dehors de la République de Corée, veuillez noter que les lois sur la protection des données régissant la collecte, le transfert et le traitement des informations par l'Opérateur peuvent différer de celles de votre juridiction. En acceptant cette Politique de Confidentialité et en soumettant vos informations, vous consentez à ce transfert. L'Opérateur prendra toutes les mesures raisonnablement nécessaires pour s'assurer que vos données sont traitées en toute sécurité et conformément à cette Politique de Confidentialité.</p>
+<h2>9. Modifications de cette Politique de Confidentialité</h2>
+<p>L'Opérateur peut mettre à jour cette Politique de Confidentialité de temps à autre. En cas de modifications importantes, nous vous en informerons par le biais d'une annonce dans l'application, d'un e-mail ou par d'autres moyens raisonnables au moins 30 jours avant l'entrée en vigueur des modifications. Les modifications mineures (par ex., corrections de fautes de frappe) peuvent être mises à jour sans préavis. Veuillez consulter périodiquement la date de "Dernière mise à jour" en haut de cette page.</p>
+<h2>10. Contact</h2>
+<p>Si vous avez des questions sur cette Politique de Confidentialité, veuillez contacter : support@kukudev.com</p>
+</div></main>
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-links"><a href="/fr/privacy.html">Politique de Confidentialité</a><a href="/fr/terms.html">Conditions d'Utilisation</a><a href="https://kukudev.com/" target="_blank" rel="noopener">kukuDev</a></div>
+  <div class="footer-biz">kukuDev &nbsp;|&nbsp; Representative: O Jaeseok &nbsp;|&nbsp; Business registration no.: 390-68-00863<br>Mail-order business report no.: 2026-Incheon Yeonsu-gu-1196<br>Address: 6F, Room 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea<br>E-mail: <span id="ce"></span></div>
+  <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+</div></footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('ce');if(el)el.textContent=u+'\x40'+d;})();</script>
+</body>
+</html>

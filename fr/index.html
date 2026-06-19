@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,41 +7,41 @@
   <meta name="author" content="TapTapBible">
   <link rel="icon" type="image/png" href="/assets/logo.png">
   <link rel="apple-touch-icon" href="/assets/logo.png">
-  <title>タップタップバイブル — 一文字ずつ写す聖書 書き写しアプリ</title>
-  <meta name="description" content="一文字ずつ聖書を書き写すアプリ、タップタップバイブル。ログイン不要ですぐ始められ、進捗や連続記録で毎日みことばを心に刻めます。オフライン対応、Android 無料。">
-  <meta name="keywords" content="タップタップバイブル, TapTapBible, 聖書 書き写し, 聖書アプリ, 写経, みことば, デボーション, 聖書 暗唱">
+  <title>TapTapBible — L'habitude quotidienne de transcrire la Bible</title>
+  <meta name="description" content="TapTapBible, l'application de transcription biblique lettre par lettre. Commencez sans connexion, suivez votre progression et vos séries pour méditer la Parole chaque jour. Disponible hors ligne, téléchargement gratuit sur Android.">
+  <meta name="keywords" content="TapTapBible, transcription Bible, écriture biblique, méditation Parole, application Bible, lecture Bible, écriture sainte, app Bible Android">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TapTapBible">
-  <meta property="og:title" content="タップタップバイブル — 一文字ずつ写す聖書 書き写しアプリ">
-  <meta property="og:description" content="一文字ずつ聖書を書き写し。ログイン不要ですぐ始めて、毎日みことばを心に刻みましょう。">
-  <meta property="og:image" content="https://taptapbible.kukudev.com/assets/images/og_ja.png">
+  <meta property="og:title" content="TapTapBible — L'habitude quotidienne de transcrire la Bible">
+  <meta property="og:description" content="Transcription biblique lettre par lettre. Commencez sans connexion et méditez la Parole chaque jour.">
+  <meta property="og:image" content="https://taptapbible.kukudev.com/assets/images/og_fr.png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="500">
-  <meta property="og:url" content="https://taptapbible.kukudev.com/ja/">
-  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://taptapbible.kukudev.com/fr/">
+  <meta property="og:locale" content="fr_FR">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="タップタップバイブル — 一文字ずつ写す聖書 書き写しアプリ">
-  <meta name="twitter:description" content="一文字ずつ聖書を書き写し。ログイン不要ですぐ始めましょう。">
-  <meta name="twitter:image" content="https://taptapbible.kukudev.com/assets/images/og_ja.png">
+  <meta name="twitter:title" content="TapTapBible — L'habitude quotidienne de transcrire la Bible">
+  <meta name="twitter:description" content="Transcription biblique lettre par lettre. Commencez sans connexion dès maintenant.">
+  <meta name="twitter:image" content="https://taptapbible.kukudev.com/assets/images/og_fr.png">
 
   <!-- hreflang -->
   <link rel="alternate" hreflang="ko" href="https://taptapbible.kukudev.com/">
   <link rel="alternate" hreflang="en" href="https://taptapbible.kukudev.com/en/">
   <link rel="alternate" hreflang="ja" href="https://taptapbible.kukudev.com/ja/">
   <link rel="alternate" hreflang="x-default" href="https://taptapbible.kukudev.com/">
-  <link rel="canonical" href="https://taptapbible.kukudev.com/ja/">
+  <link rel="canonical" href="https://taptapbible.kukudev.com/fr/">
 
   <!-- CSP -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://code.iconify.design; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https://api.iconify.design; connect-src https://api.iconify.design https://cdn.jsdelivr.net;">
 
-  <!-- Fonts: Pretendard (UI) + Noto Serif JP (みことば) -->
+  <!-- Fonts: Pretendard (UI) + Noto Serif (Bible verses) -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Iconify Solar -->
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" crossorigin="anonymous"></script>
@@ -66,7 +66,7 @@
       --ink-subtle: #8A98A8;
       --todo: #C9D4E0;
       --font-pre: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-serif: 'Noto Serif JP', Georgia, 'Times New Roman', serif;
+      --font-serif: 'Noto Serif', Georgia, 'Times New Roman', serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -190,13 +190,13 @@
       background: radial-gradient(circle, rgba(33,150,243,.18) 0%, transparent 68%);
     }
 
-    /* ─── MOCKUP CARDS (スクリーンショット代替) ─── */
+    /* ─── MOCKUP CARDS (스크린샷 대체) ─── */
     .mock { position: relative; z-index: 1; }
     .card {
       background: #fff; border: 1px solid var(--hairline); border-radius: 24px;
       box-shadow: 0 24px 60px rgba(22,32,46,.12), 0 6px 16px rgba(22,32,46,.05);
     }
-    /* 書き写しデモ */
+    /* 필사 데모 */
     .m-trans { width: 376px; max-width: 86vw; padding: 30px 30px 26px; }
     .m-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
     .m-ref { color: var(--primary-hover); font-weight: 800; font-size: 14px; letter-spacing: .02em; display: inline-flex; align-items: center; gap: 6px; }
@@ -214,7 +214,7 @@
     .m-meta { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--ink-muted); }
     .m-meta b { color: var(--ink-strong); }
 
-    /* 統計カード */
+    /* 통계 카드 */
     .m-stats { width: 360px; max-width: 86vw; padding: 28px 30px; }
     .m-ring { display: flex; align-items: center; gap: 22px; }
     .ring {
@@ -232,7 +232,7 @@
     .m-statgrid .s .n { font-size: 20px; font-weight: 800; color: var(--primary-hover); }
     .m-statgrid .s .l { font-size: 12.5px; color: var(--ink-muted); margin-top: 2px; }
 
-    /* 節カード (ブックマーク) */
+    /* 구절 카드 (북마크) */
     .m-verse-card { width: 360px; max-width: 86vw; padding: 0; overflow: hidden; }
     .m-vc-top {
       padding: 28px 28px 24px; color: #fff; position: relative;
@@ -245,7 +245,7 @@
     .m-vc-memo iconify-icon { color: var(--accent); font-size: 18px; margin-top: 2px; flex: 0 0 auto; }
     .m-vc-memo p { font-size: 14px; color: var(--ink-muted); line-height: 1.6; }
 
-    /* 同期カード */
+    /* 동기화 카드 */
     .m-sync { width: 360px; max-width: 86vw; padding: 30px; text-align: center; }
     .m-sync-row { display: flex; align-items: center; justify-content: center; gap: 14px; }
     .m-dev {
@@ -264,7 +264,7 @@
     .m-sync-cap { margin-top: 20px; font-size: 14px; color: var(--ink-muted); }
     .m-sync-cap b { color: var(--ink-strong); }
 
-    /* グループカード */
+    /* 그룹 카드 */
     .m-group { width: 360px; max-width: 86vw; padding: 28px 30px; }
     .m-group-h { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
     .m-group-ic { width: 46px; height: 46px; border-radius: 14px; background: var(--primary-tint); color: var(--primary-hover); display: flex; align-items: center; justify-content: center; font-size: 24px; flex: 0 0 auto; }
@@ -499,11 +499,11 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "TapTapBible",
-    "alternateName": "タップタップバイブル",
+    "alternateName": "TapTapBible",
     "operatingSystem": "Android",
     "applicationCategory": "LifestyleApplication",
-    "description": "一文字ずつ聖書を書き写すアプリ。ログイン不要ですぐ始められ、進捗や連続記録で毎日みことばを心に刻めます。",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+    "description": "Application de transcription biblique lettre par lettre. Commencez sans connexion et méditez la Parole chaque jour grâce à la progression et aux séries quotidiennes.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
     "installUrl": "https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible",
     "author": { "@type": "Organization", "name": "kukuDev" }
   }
@@ -513,29 +513,29 @@
 
 <!-- ─── NAV ─── -->
 <nav class="nav">
-  <a href="/ja/" class="nav-logo">
-    <img src="/assets/logo.png" alt="タップタップバイブル ロゴ">
-    <span>タップタップバイブル</span>
+  <a href="/fr/" class="nav-logo">
+    <img src="/assets/logo.png" alt="TapTapBible logo">
+    <span>TapTapBible</span>
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#about">聖書 書き写し</a>
-      <a href="#how">使い方</a>
-      <a href="#features">主な機能</a>
+      <a href="#about">Transcription biblique</a>
+      <a href="#how">Comment ça marche</a>
+      <a href="#features">Fonctionnalités</a>
     </div>
     <select class="lang-select" onchange="if(this.value)location.href=this.value" aria-label="Language">
       <option value="/">한국어</option>
       <option value="/en/">English</option>
-      <option value="/ja/" selected>日本語</option>
+      <option value="/ja/">日本語</option>
       <option value="/zh-CN/">简体中文</option>
       <option value="/zh-TW/">繁體中文</option>
       <option value="/es/">Español</option>
-      <option value="/fr/">Français</option>
+      <option value="/fr/" selected>Français</option>
       <option value="/de/">Deutsch</option>
     </select>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-nav" target="_blank" rel="noopener">
       <iconify-icon icon="solar:smartphone-bold" style="font-size:15px"></iconify-icon>
-      <span class="btn-nav-text">ダウンロード</span>
+      <span class="btn-nav-text">Télécharger</span>
     </a>
   </div>
 </nav>
@@ -543,25 +543,25 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> 毎日一節 聖書 書き写し</span>
-    <h1 class="hero-title">みことばを指先で<br><span class="hi">一文字ずつ刻む</span></h1>
-    <p class="hero-sub">タップタップバイブルで聖書をそのまま書き写しましょう。<br>ログイン不要ですぐ始められ、進捗と連続記録で毎日続けられます。</p>
+    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> Transcription biblique quotidienne</span>
+    <h1 class="hero-title">La Parole gravée<br><span class="hi">lettre par lettre</span></h1>
+    <p class="hero-sub">Avec TapTapBible, transcrivez la Bible en la recopiant fidèlement.<br>Commencez sans connexion dès maintenant et restez assidu chaque jour grâce à votre progression et vos séries.</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
-      Google Play でダウンロード
+      Télécharger sur Google Play
     </a>
-    <p class="hero-note">Android · 無料 · オフライン対応</p>
+    <p class="hero-note">Android · Gratuit · Disponible hors ligne</p>
   </div>
   <div class="hero-right" aria-hidden="true">
     <div class="hero-stage">
       <div class="mock card m-trans">
         <div class="m-head">
-          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> ヨハネ 3:16</span>
-          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12日 連続</span>
+          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> Jean 3:16</span>
+          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12 jours de suite</span>
         </div>
-        <p class="m-verse"><span class="done">神はそのひとり子を賜わったほどに、世を愛して下さった。それは御子を信じる者がひとりも滅びないで</span><span class="m-cursor"></span><span class="todo"> 永遠の命を得るためである。</span></p>
+        <p class="m-verse"><span class="done">Car Dieu a tant aimé le monde qu'il a donné son Fils unique</span><span class="m-cursor"></span><span class="todo"> afin que quiconque croit en lui ne périsse point</span></p>
         <div class="m-bar"><i></i></div>
-        <div class="m-meta"><span>今日 <b>3</b>節目を書き写し中</span><span><b>64%</b> 完了</span></div>
+        <div class="m-meta"><span>Verset <b>3</b> en cours</span><span><b>64%</b> complété</span></div>
       </div>
     </div>
   </div>
@@ -571,24 +571,24 @@
 <section class="privacy" id="about">
   <div class="privacy-inner">
     <div class="privacy-head" data-animate>
-      <h2>気軽に始めて、記録は<span style="color:#90CAF9">安全に</span></h2>
-      <p>ログイン不要のゲストモードで今すぐ書き写しを始められます。アカウントを作ると、すべての書き写し記録・ブックマーク・統計が安全にバックアップされ、複数の端末でそのまま続けられます。</p>
+      <h2>Commencez sans pression, vos données en <span style="color:#90CAF9">sécurité</span></h2>
+      <p>Démarrez immédiatement en mode invité, sans créer de compte. Inscrivez-vous et toutes vos transcriptions, signets et statistiques seront sauvegardés en toute sécurité, accessibles depuis tous vos appareils.</p>
     </div>
     <div class="privacy-grid">
       <div class="privacy-card" data-animate data-delay="1">
         <div class="pc-icon"><iconify-icon icon="solar:bolt-bold"></iconify-icon></div>
-        <h3>ログイン不要ですぐ開始</h3>
-        <p>ゲストモードでインストール直後から書き写しを始められます。すべての記録はデバイスに安全に保存されます。</p>
+        <h3>Commencez sans connexion</h3>
+        <p>En mode invité, lancez votre transcription personnelle dès l'installation. Toutes vos données sont stockées en sécurité sur votre appareil.</p>
       </div>
       <div class="privacy-card" data-animate data-delay="2">
         <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
-        <h3>オフラインでも書き写し</h3>
-        <p>インターネットがなくても聖書の書き写しは続けられます。オンラインに戻ると、それまでの記録が自動で安全に同期されます。</p>
+        <h3>Transcrivez hors ligne</h3>
+        <p>Pas besoin d'internet pour transcrire la Bible. Dès que vous vous reconnectez, toutes vos données se synchronisent automatiquement et en toute sécurité.</p>
       </div>
       <div class="privacy-card" data-animate data-delay="3">
         <div class="pc-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-        <h3>安全なバックアップ・同期</h3>
-        <p>ログインすると書き写し記録・ブックマーク・統計がアカウントに安全にバックアップされ、機種変更後も続きから始められます。</p>
+        <h3>Sauvegarde et synchronisation</h3>
+        <p>Connectez-vous et vos transcriptions, signets et statistiques sont sauvegardés sur votre compte. Changez d'appareil sans perdre votre progression.</p>
       </div>
     </div>
   </div>
@@ -598,32 +598,32 @@
 <section class="how" id="how">
   <div class="how-outer">
     <div class="how-head" data-animate>
-      <span class="section-tag">使い方</span>
-      <h2 class="section-title">3ステップで始められます</h2>
+      <span class="section-tag">Comment ça marche</span>
+      <h2 class="section-title">Trois étapes suffisent</h2>
     </div>
     <div class="steps">
       <div class="step" data-animate data-delay="1">
         <div class="step-ill"><iconify-icon icon="solar:book-bookmark-bold"></iconify-icon><span class="bigverse">1</span></div>
         <div class="step-body">
           <div class="step-num">1</div>
-          <h3>節を選びます</h3>
-          <p>66巻の聖書から今日黙想したい節を選んでください。お好みの翻訳でみことばを読めます。</p>
+          <h3>Choisissez un verset</h3>
+          <p>Sélectionnez le passage à méditer parmi les 66 livres de la Bible. Lisez la Parole dans la traduction de votre choix.</p>
         </div>
       </div>
       <div class="step" data-animate data-delay="2">
         <div class="step-ill"><iconify-icon icon="solar:pen-new-square-bold"></iconify-icon><span class="bigverse">2</span></div>
         <div class="step-body">
           <div class="step-num">2</div>
-          <h3>一文字ずつ書き写します</h3>
-          <p>画面のみことばをそのまま入力します。正しければ文字が埋まり、間違いはすぐに知らせてくれます。</p>
+          <h3>Recopiez lettre par lettre</h3>
+          <p>Saisissez fidèlement le texte affiché à l'écran. Chaque bonne lettre s'affiche aussitôt ; les erreurs sont signalées instantanément.</p>
         </div>
       </div>
       <div class="step" data-animate data-delay="3">
         <div class="step-ill"><iconify-icon icon="solar:graph-up-bold"></iconify-icon><span class="bigverse">3</span></div>
         <div class="step-body">
           <div class="step-num">3</div>
-          <h3>記録が積み重なります</h3>
-          <p>進捗・連続記録・統計が自動で蓄積され、毎日みことばを刻む習慣が生まれます。</p>
+          <h3>Votre progression s'accumule</h3>
+          <p>Progression, séries et statistiques se construisent automatiquement pour vous aider à ancrer chaque jour la Parole dans votre vie.</p>
         </div>
       </div>
     </div>
@@ -634,31 +634,31 @@
 <section class="features" id="features">
   <div class="features-outer">
     <div class="features-head" data-animate>
-      <span class="section-tag">主な機能</span>
-      <h2 class="section-title">タップタップバイブルが特別な理由</h2>
+      <span class="section-tag">Fonctionnalités</span>
+      <h2 class="section-title">Ce qui rend TapTapBible unique</h2>
     </div>
 
     <!-- F1 -->
     <div class="frow">
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:pen-new-square-bold"></iconify-icon></div>
-        <h3 class="feat-title">一文字ずつ<span class="hi">正確に</span>書き写す</h3>
-        <p class="feat-desc">画面のみことばをそのまま入力すると、正誤をリアルタイムで知らせてくれます。ゆっくり一文字ずつ刻むことで、自然にみことばへ集中できます。</p>
+        <h3 class="feat-title">Transcription <span class="hi">précise</span> lettre par lettre</h3>
+        <p class="feat-desc">En recopiant fidèlement le texte affiché, vous recevez un retour en temps réel sur chaque lettre. En avançant lentement, vous vous concentrez naturellement sur la Parole.</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> リアルタイム正誤フィードバック</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 複数の翻訳に対応</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 再び黙想できる再書き写し</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Retour immédiat correct / incorrect</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Plusieurs traductions disponibles</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Re-transcription pour approfondir</li>
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
         <div class="mock card m-trans">
           <div class="m-head">
-            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> 詩篇 119:105</span>
-            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12日 連続</span>
+            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> Psaume 119:105</span>
+            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12 jours de suite</span>
           </div>
-          <p class="m-verse"><span class="done">あなたのみ言葉はわが足のともしび</span><span class="m-cursor"></span><span class="todo"> わが道の光です</span></p>
+          <p class="m-verse"><span class="done">Ta parole est une lampe à mes pieds, et une lumière sur mon sentier</span><span class="m-cursor"></span><span class="todo"> elle guide mes pas chaque jour</span></p>
           <div class="m-bar"><i></i></div>
-          <div class="m-meta"><span>一文字ずつ書き写し中</span><span><b>64%</b></span></div>
+          <div class="m-meta"><span>Transcription en cours</span><span><b>64%</b></span></div>
         </div>
       </div>
     </div>
@@ -669,24 +669,24 @@
         <div class="mock card m-stats">
           <div class="m-ring">
             <div class="ring"><span>23<small>%</small></span></div>
-            <div class="ring-label"><b>聖書全体の進捗</b>1,189 / 31,102節 完了</div>
+            <div class="ring-label"><b>Progression de la Bible entière</b>1 189 / 31 102 versets transcrits</div>
           </div>
           <div class="m-statgrid">
-            <div class="s"><div class="n">12日</div><div class="l">連続記録</div></div>
-            <div class="s"><div class="n">1,240節</div><div class="l">書き写した節</div></div>
-            <div class="s"><div class="n">38時間</div><div class="l">累計時間</div></div>
-            <div class="s"><div class="n">27巻</div><div class="l">始めた書</div></div>
+            <div class="s"><div class="n">12 j.</div><div class="l">Série en cours</div></div>
+            <div class="s"><div class="n">1 240 v.</div><div class="l">Versets transcrits</div></div>
+            <div class="s"><div class="n">38 h.</div><div class="l">Temps total</div></div>
+            <div class="s"><div class="n">27 livres</div><div class="l">Livres commencés</div></div>
           </div>
         </div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
-        <h3 class="feat-title">進捗と<span class="hi">連続記録</span>で続けられる</h3>
-        <p class="feat-desc">聖書全体の進捗、連続日数、書き写した節数と時間が一目でわかります。毎日の小さな黙想が目に見える習慣になります。</p>
+        <h3 class="feat-title">Progression et <span class="hi">séries</span> pour persévérer</h3>
+        <p class="feat-desc">Progression globale, séries quotidiennes, nombre de versets et temps de transcription se cumulent en un coup d'œil. Chaque petite méditation devient une habitude visible.</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 聖書全体の進捗表示</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 連続記録（ストリーク）</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 書き写した節・時間の統計</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Progression de la Bible entière</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Séries quotidiennes (streak)</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Statistiques versets et temps</li>
         </ul>
       </div>
     </div>
@@ -695,19 +695,19 @@
     <div class="frow">
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:bookmark-bold"></iconify-icon></div>
-        <h3 class="feat-title">心に響いた節を<span class="hi">大切に</span>保存</h3>
-        <p class="feat-desc">黙想中に心に残った節はブックマークに保存し、自分だけのメモを添えられます。いつでも開いて繰り返し味わうことができます。</p>
+        <h3 class="feat-title"><span class="hi">Gardez</span> les versets qui vous touchent</h3>
+        <p class="feat-desc">Enregistrez les versets qui vous ont marqué en signet et ajoutez vos propres notes. Retrouvez-les à tout moment pour les méditer à nouveau.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
         <div class="mock card m-verse-card">
           <div class="m-vc-top">
             <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
-            <p class="m-vc-q">主はわたしの牧者であって、わたしには乏しいことがない</p>
-            <p class="m-vc-ref">詩篇 23:1</p>
+            <p class="m-vc-q">L'Éternel est mon berger: je ne manquerai de rien</p>
+            <p class="m-vc-ref">Psaume 23:1</p>
           </div>
           <div class="m-vc-memo">
             <iconify-icon icon="solar:pen-bold"></iconify-icon>
-            <p>不安なときにいつも開く節。今日もこの約束にすがることにした。</p>
+            <p>Le verset que je rouvre à chaque moment d'inquiétude. Aujourd'hui encore, je m'y accroche.</p>
           </div>
         </div>
       </div>
@@ -718,23 +718,23 @@
       <div class="feat-mock" data-animate data-delay="1">
         <div class="mock card m-sync">
           <div class="m-sync-row">
-            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>スマホ</small></div>
+            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>Téléphone</small></div>
             <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
             <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
             <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>タブレット</small></div>
+            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>Tablette</small></div>
           </div>
-          <p class="m-sync-cap"><b>どの端末でも続けられる。</b><br>記録は安全に同期されます。</p>
+          <p class="m-sync-cap"><b>Continuez sur tous vos appareils.</b><br>Vos transcriptions se synchronisent en toute sécurité.</p>
         </div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-        <h3 class="feat-title">ログイン不要で開始、<span class="hi">ログインで同期</span></h3>
-        <p class="feat-desc">ゲストモードで気軽に始めましょう。バックアップや複数端末での同期が必要になったらログインするだけで、端末上の記録が安全にアカウントへ移行されます。</p>
+        <h3 class="feat-title">Démarrez sans compte, <span class="hi">connectez-vous pour synchroniser</span></h3>
+        <p class="feat-desc">Commencez librement en mode invité. Lorsque vous avez besoin d'une sauvegarde ou d'une synchronisation multi-appareils, connectez-vous : vos données existantes sont transférées en toute sécurité sur votre compte.</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google・Apple かんたんログイン</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 複数端末で続きから再開</li>
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 既存記録の自動マージ</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Connexion Google · Apple en un clic</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Continuez sur tous vos appareils</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Fusion automatique des données existantes</li>
         </ul>
       </div>
     </div>
@@ -743,24 +743,24 @@
     <div class="frow">
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-        <h3 class="feat-title">みんなで<span class="hi">グループ書き写し</span></h3>
-        <p class="feat-desc">家族やコミュニティとグループを作り、一緒にみことばを書き写しましょう。お互いの継続を応援しながら、一人よりも長く続けられます。</p>
+        <h3 class="feat-title">Transcription <span class="hi">en groupe</span></h3>
+        <p class="feat-desc">Créez un groupe avec votre famille ou votre communauté et transcrivez la Parole ensemble. Encouragez-vous mutuellement et persévérez plus longtemps qu'en solo.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
         <div class="mock card m-group">
           <div class="m-group-h">
             <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-            <div class="t"><b>夜明けの黙想会</b><span>一緒に詩篇を書き写し中</span></div>
+            <div class="t"><b>Méditation du matin</b><span>Transcription des Psaumes en groupe</span></div>
           </div>
           <div class="m-avatars">
-            <i style="background:#42A5F5">恵</i>
-            <i style="background:#E91E63">花</i>
-            <i style="background:#66BB6A">純</i>
-            <i style="background:#FFA726">聖</i>
+            <i style="background:#42A5F5">E</i>
+            <i style="background:#E91E63">H</i>
+            <i style="background:#66BB6A">J</i>
+            <i style="background:#FFA726">S</i>
             <i class="more">+8</i>
           </div>
           <div class="m-group-bar"><i></i></div>
-          <p class="m-group-cap">今日 <b>12人</b>が一緒に書き写しました</p>
+          <p class="m-group-cap">Aujourd'hui <b>12 membres</b> ont transcrit ensemble</p>
         </div>
       </div>
     </div>
@@ -771,10 +771,10 @@
 <div class="specs-outer">
   <div class="specs-card" data-animate>
     <div class="specs-list">
-      <div class="row"><div class="k">対応OS</div><div class="v">Android</div></div>
-      <div class="row"><div class="k">価格</div><div class="v">無料（広告あり）</div></div>
-      <div class="row"><div class="k">オフライン</div><div class="v">書き写し対応</div></div>
-      <div class="row"><div class="k">対応言語</div><div class="v">8言語</div></div>
+      <div class="row"><div class="k">Système</div><div class="v">Android</div></div>
+      <div class="row"><div class="k">Prix</div><div class="v">Gratuit (avec publicités)</div></div>
+      <div class="row"><div class="k">Hors ligne</div><div class="v">Transcription disponible</div></div>
+      <div class="row"><div class="k">Langues</div><div class="v">8 langues</div></div>
     </div>
   </div>
 </div>
@@ -783,12 +783,12 @@
 <div class="cta-outer">
   <div class="cta-card" data-animate>
     <div class="cta-text">
-      <h2>今日の一節、今すぐ始めましょう</h2>
-      <p>タップタップバイブルで毎日みことばを指先に刻んでいきましょう。</p>
+      <h2>Votre verset du jour — commencez maintenant</h2>
+      <p>Avec TapTapBible, gravez la Parole dans votre cœur, lettre par lettre, chaque jour.</p>
     </div>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta-light" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
-      Google Play で無料ダウンロード
+      Téléchargement gratuit sur Google Play
     </a>
   </div>
 </div>
@@ -797,27 +797,28 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-top">
-      <span class="footer-logo"><img src="/assets/logo.png" alt="タップタップバイブル ロゴ"><span>タップタップバイブル</span></span>
+      <span class="footer-logo"><img src="/assets/logo.png" alt="TapTapBible logo"><span>TapTapBible</span></span>
       <div class="footer-lang">
         <a href="/">한국어</a><span class="sep">|</span>
         <a href="/en/">English</a><span class="sep">|</span>
-        <span class="active">日本語</span><span class="sep">|</span>
+        <a href="/ja/">日本語</a><span class="sep">|</span>
         <a href="/zh-CN/">简体中文</a><span class="sep">|</span>
         <a href="/zh-TW/">繁體中文</a><span class="sep">|</span>
         <a href="/es/">Español</a><span class="sep">|</span>
-        <a href="/fr/">Français</a><span class="sep">|</span>
+        <span class="active">Français</span><span class="sep">|</span>
         <a href="/de/">Deutsch</a>
       </div>
     </div>
     <div class="footer-links">
-      <a href="/privacy.html">プライバシーポリシー</a>
-      <a href="/terms.html">利用規約</a>
+      <a href="/fr/privacy.html">Politique de Confidentialité</a>
+      <a href="/fr/terms.html">Conditions d'Utilisation</a>
       <a href="https://kukudev.com/">kukuDev</a>
     </div>
     <div class="footer-biz">
-      kukuDev（ククデブ）&nbsp;·&nbsp; 代表 オ・ジェソク &nbsp;·&nbsp; 事業者登録番号 390-68-00863<br>
-      通信販売業 2026-Incheon Yeonsu-gu-1196 &nbsp;·&nbsp; 大韓民国 仁川広域市 延寿区 龍潭路111, 6階 6649号<br>
-      メール: <span id="contact-email"></span>
+      Business name: kukuDev &nbsp;|&nbsp; Representative: Jaeseok Oh &nbsp;|&nbsp; Business registration number: 390-68-00863<br>
+      Mail-order business report number: 2026-Incheon Yeonsu-gu-1196<br>
+      Address: 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea, 6F #6649<br>
+      Email: <span id="contact-email"></span>
     </div>
     <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
   </div>
