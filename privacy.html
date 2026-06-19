@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<title>개인정보처리방침 — TapTapBible</title>
+<meta name="description" content="TapTapBible 개인정보처리방침">
+<link rel="canonical" href="https://taptapbible.kukudev.com/privacy.html">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self' 'unsafe-inline'; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; connect-src https://cdn.jsdelivr.net;">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#2196F3;--primary-hover:#1976D2;--primary-tint:#E3F2FD;--secondary:#10367D;--canvas:#FFFFFF;--surface:#F9FAFB;--surface2:#F2F4F6;--hairline:#E5E8EB;--ink:#191F28;--ink-strong:#333D4B;--ink-muted:#4E5968;--ink-subtle:#8B95A1;--font-pre:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--canvas);color:var(--ink);font-family:var(--font-pre);line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--primary);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:60px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--hairline)}
+.nav-logo{display:flex;align-items:center;gap:9px}.nav-logo img{height:26px}.nav-logo span{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.4px}
+.nav-right{display:flex;align-items:center;gap:14px}
+.nav-back{font-size:14px;font-weight:600;color:var(--ink-muted)}.nav-back:hover{color:var(--ink);text-decoration:none}
+.lang-toggle{display:flex;align-items:center;gap:2px;font-size:13px}
+.lang-toggle a,.lang-toggle span.active{padding:5px 8px;border-radius:7px}
+.lang-toggle a{color:var(--ink-subtle)}.lang-toggle a:hover{color:var(--ink);text-decoration:none;background:var(--surface2)}
+.lang-toggle .active{color:var(--ink);font-weight:700}.lang-sep{color:var(--hairline);font-size:11px}
+.doc{max-width:840px;margin:0 auto;padding:56px 32px 80px}
+.doc-head{padding-bottom:28px;margin-bottom:36px;border-bottom:1px solid var(--hairline)}
+.doc-head .tag{display:inline-flex;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);background:var(--primary-tint);border:1px solid rgba(33,150,243,.18);padding:5px 12px;border-radius:9999px;margin-bottom:14px}
+.content h1{font-size:30px;font-weight:800;letter-spacing:-0.6px;line-height:1.3;margin:0 0 6px}
+.content h2{font-size:22px;font-weight:800;letter-spacing:-0.4px;line-height:1.35;margin:44px 0 14px;padding-top:8px;color:var(--ink)}
+.content h3{font-size:17px;font-weight:700;line-height:1.45;margin:28px 0 10px;color:var(--ink-strong)}
+.content h4{font-size:15px;font-weight:700;margin:20px 0 8px;color:var(--ink-strong)}
+.content p{font-size:15px;color:var(--ink-strong);margin:0 0 12px;line-height:1.85}
+.content ol,.content ul{margin:0 0 14px;padding-left:24px}
+.content li{font-size:15px;color:var(--ink-strong);margin:0 0 7px;line-height:1.8}
+.content ol ol,.content ol ul,.content ul ul,.content ul ol{margin:7px 0 6px}
+.content strong{font-weight:700;color:var(--ink)}
+.content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--surface2);color:var(--primary-hover);padding:2px 6px;border-radius:6px}
+.content hr{border:none;border-top:1px solid var(--hairline);margin:36px 0}
+.content a{color:var(--primary)}
+.tbl-wrap{overflow-x:auto;margin:0 0 20px;border:1px solid var(--hairline);border-radius:14px}
+.content table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:520px}
+.content thead th{background:var(--surface);color:var(--ink);font-weight:700;text-align:left;padding:12px 14px;border-bottom:1px solid var(--hairline);white-space:nowrap}
+.content tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline);color:var(--ink-strong);vertical-align:top;line-height:1.7}
+.content tbody tr:last-child td{border-bottom:none}
+.content tbody tr:nth-child(even){background:var(--surface)}
+.footer{background:var(--surface);border-top:1px solid var(--hairline);padding:40px 32px}
+.footer-inner{max-width:840px;margin:0 auto}
+.footer-links{display:flex;gap:20px;font-size:13px;margin-bottom:20px;flex-wrap:wrap}
+.footer-links a{color:var(--ink-muted);font-weight:500}.footer-links a:hover{color:var(--primary)}
+.footer-biz{font-size:12px;color:var(--ink-subtle);line-height:2;padding-top:20px;border-top:1px solid var(--hairline);margin-bottom:14px}
+.footer-copy{font-size:12px;color:var(--ink-subtle)}
+@media (max-width:768px){.nav{padding:0 16px}.doc{padding:40px 20px 64px}.content h1{font-size:25px}.content h2{font-size:20px}.footer{padding:32px 20px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="assets/logo.png" alt="TapTapBible"><span>탭탭바이블</span></a>
+  <div class="nav-right">
+    <a href="/" class="nav-back">홈으로</a>
+    <div class="lang-toggle"><span class="active">한국어</span><span class="lang-sep">|</span><a href="/en/">English</a><span class="lang-sep">|</span><a href="/ja/">日本語</a></div>
+  </div>
+</nav>
+<main class="doc">
+  <div class="content">
+<h1>탭탭바이블 개인정보처리방침</h1>
+<p>최종 업데이트: 2026년 6월 19일</p>
+<p>시행일: 2026년 6월 19일</p>
+<p>kukuDev("운영자")는 탭탭바이블(TapTapBible) 모바일 애플리케이션("앱" 또는 "서비스") 이용자의 개인정보를 중요하게 생각합니다. 본 개인정보처리방침은 서비스 이용 과정에서 어떤 정보가 기기 안에 저장되고, 어떤 정보가 운영 또는 제3자 서비스 제공을 위해 전송·처리되는지 설명합니다.</p>
+<hr>
+<h2>1. 핵심 원칙</h2>
+<ol>
+<li>앱은 <strong>로그인 없이 사용하는 게스트 모드</strong>를 제공하며, 게스트 모드에서 생성한 필사 기록·북마크·통계는 <strong>이용자의 기기(로컬)에만 저장</strong>되고 운영자 서버로 전송되지 않습니다.</li>
+<li>이용자가 백업·동기화·그룹 필사 등 계정 기반 기능을 사용하기 위해 로그인하면, 해당 데이터가 운영자가 사용하는 클라우드 서버(Google Firebase)로 전송·보관됩니다.</li>
+<li>운영자는 서비스 제공에 필요한 최소한의 정보만을 처리하며, 광고 등 일부 기능은 각 제공자의 정책에 따라 동작합니다.</li>
+</ol>
+<h2>2. 수집하는 정보</h2>
+<h3>2.1. 게스트 모드(로그인 없이 사용)</h3>
+<ul>
+<li>필사 기록, 북마크와 메모, 통계, 연속 기록, 앱 설정은 <strong>기기 내 로컬 데이터베이스에만 저장</strong>되며 운영자 서버로 전송되지 않습니다.</li>
+</ul>
+<h3>2.2. 계정 로그인 시</h3>
+<ul>
+<li><strong>계정 식별 정보</strong>: Google 또는 Apple 로그인 시 제공되는 계정 고유 식별자(UID)와 이메일 주소. Apple 로그인의 경우 이용자가 이메일 가리기를 선택할 수 있습니다.</li>
+<li><strong>서비스 이용 데이터</strong>: 필사 기록, 북마크와 메모, 통계, 연속 기록 등 이용자가 생성한 데이터가 계정에 연동되어 클라우드(Firebase)에 저장·동기화됩니다.</li>
+<li><strong>그룹 필사 데이터</strong>: 그룹을 만들거나 참여하는 경우, 표시 이름(닉네임)과 필사 진행 상황 등 일부 정보가 같은 그룹 구성원에게 공유될 수 있습니다.</li>
+</ul>
+<h3>2.3. 광고 및 진단 정보</h3>
+<ul>
+<li><strong>광고 식별자(Ad ID)</strong>: 앱은 Google AdMob을 통해 광고를 게재하며, 이 과정에서 광고 식별자가 Google 광고 네트워크로 전송됩니다.</li>
+<li><strong>진단·이용 정보</strong>: 앱의 안정적 운영과 오·남용 방지를 위해, 기기·앱 버전 정보, 비정상 종료(크래시) 기록, App Check 토큰 등이 처리될 수 있습니다.</li>
+</ul>
+<h2>3. 수집하지 않는 정보</h2>
+<ul>
+<li>운영자는 별도의 회원가입 양식을 통해 이름·전화번호·주소 등을 직접 수집하지 않습니다(로그인은 Google·Apple 인증 제공자를 통해 이뤄집니다).</li>
+<li>게스트 모드 이용자의 필사 본문·기록은 운영자 서버로 전송되지 않습니다.</li>
+</ul>
+<h2>4. 정보의 이용 목적</h2>
+<ul>
+<li>성경 필사 기능 및 진행률·통계·연속 기록 제공</li>
+<li>계정 기반 백업과 여러 기기 간 동기화</li>
+<li>그룹 필사 기능 제공</li>
+<li>광고 게재 및 서비스 운영</li>
+<li>오류 분석, 보안, 오·남용 방지</li>
+</ul>
+<h2>5. 제3자 서비스 및 처리 위탁</h2>
+<p>서비스 제공을 위해 다음의 제3자 서비스를 이용합니다. 각 제공자는 자체 개인정보처리방침에 따라 정보를 처리합니다.</p>
+<div class="tbl-wrap"><table>
+<thead><tr><th style="text-align:left">제공자</th><th style="text-align:left">이용 목적</th><th style="text-align:left">처리되는 정보</th></tr></thead>
+<tbody>
+<tr><td style="text-align:left">Google Firebase (Authentication, Firestore, Functions, App Check)</td><td style="text-align:left">로그인·데이터 동기화·서버 처리·오·남용 방지</td><td style="text-align:left">계정 식별자, 동기화 데이터, 진단 정보</td></tr>
+<tr><td style="text-align:left">Google AdMob</td><td style="text-align:left">광고 게재</td><td style="text-align:left">광고 식별자, 기기 정보</td></tr>
+<tr><td style="text-align:left">Google Sign-In</td><td style="text-align:left">Google 계정 로그인</td><td style="text-align:left">계정 식별자, 이메일</td></tr>
+<tr><td style="text-align:left">Apple Sign In</td><td style="text-align:left">Apple 계정 로그인</td><td style="text-align:left">계정 식별자, 이메일(가리기 가능)</td></tr>
+</tbody></table></div>
+<h2>6. 광고에 대한 안내</h2>
+<ul>
+<li>앱은 무료로 제공되며 광고를 포함합니다.</li>
+<li>광고 식별자는 Google 광고 네트워크로 전송되어 광고 또는 마케팅 목적으로 이용·공유될 수 있습니다.</li>
+<li>이용자는 기기의 설정에서 광고 식별자를 재설정하거나 맞춤 광고를 제한할 수 있습니다.</li>
+</ul>
+<h2>7. 국외 이전</h2>
+<p>운영자가 이용하는 Firebase 등 클라우드 서비스의 서버는 대한민국 외의 국가에 위치할 수 있습니다. 계정 로그인 시 동기화되는 데이터는 해당 서버에 저장·처리될 수 있습니다.</p>
+<h2>8. 보관 및 파기</h2>
+<ol>
+<li>게스트 모드 데이터는 이용자가 앱을 삭제하거나 기기 데이터를 삭제하면 함께 삭제됩니다.</li>
+<li>계정에 연동된 데이터는 이용자가 계정을 탈퇴하면 서버에서 영구적으로 삭제되며 복구할 수 없습니다.</li>
+<li>광고·진단 정보는 각 제3자 서비스의 보관 정책과 운영자 설정에 따라 보관됩니다.</li>
+<li>법령에 따라 보관이 필요한 정보는 해당 법령에서 정한 기간 동안 보관한 뒤 파기합니다.</li>
+</ol>
+<h2>9. 이용자의 권리와 행사 방법</h2>
+<ol>
+<li>이용자는 앱 내 기능을 통해 필사 기록·북마크·통계 등 자신의 데이터를 직접 관리할 수 있습니다.</li>
+<li>이용자는 앱 삭제 또는 기기의 앱 데이터 삭제를 통해 로컬 데이터를 삭제할 수 있습니다.</li>
+<li>로그인 이용자는 앱 내 계정 탈퇴 기능을 통해 계정과 서버에 저장된 데이터의 삭제를 요청할 수 있습니다.</li>
+<li>광고 식별자 재설정·맞춤 광고 제한은 기기 설정에서 관리할 수 있습니다.</li>
+</ol>
+<h2>10. 아동의 개인정보</h2>
+<p>본 서비스는 일반 이용자를 대상으로 하며, 운영자는 만 14세 미만 아동의 개인정보를 알면서 수집하지 않습니다. 보호자는 자녀의 서비스 이용을 관리할 수 있으며, 아동의 정보가 수집된 것으로 확인되면 지체 없이 삭제합니다.</p>
+<h2>11. 보안</h2>
+<ul>
+<li>로컬에 저장되는 민감한 설정값은 기기의 보안 저장소(Keystore/Keychain)를 통해 보호됩니다.</li>
+<li>서버와의 통신은 암호화된 채널을 통해 이뤄지며, App Check 등으로 비정상 접근을 차단합니다.</li>
+<li>다만 어떠한 방식도 절대적인 보안을 보장할 수는 없습니다.</li>
+</ul>
+<h2>12. 성경 본문에 관한 안내</h2>
+<p>앱에서 제공하는 성경 본문의 저작권은 각 번역본의 권리자에게 있으며, 앱은 이용자의 개인 묵상과 필사 목적의 범위에서 본문을 제공합니다.</p>
+<h2>13. 방침의 변경</h2>
+<p>본 개인정보처리방침은 법령이나 서비스 변경에 따라 개정될 수 있으며, 중요한 변경이 있을 경우 앱 또는 본 페이지를 통해 사전에 고지합니다.</p>
+<h2>14. 문의처</h2>
+<p>개인정보 처리에 관한 문의는 아래로 연락해 주세요.</p>
+<ul>
+<li>운영자: kukuDev</li>
+<li>이메일: support@kukudev.com</li>
+</ul>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-links"><a href="/privacy.html">개인정보처리방침</a><a href="/terms.html">이용약관</a><a href="https://kukudev.com/" target="_blank" rel="noopener">쿠쿠데브</a></div>
+    <div class="footer-biz">상호명: 쿠쿠데브(kukuDev) &nbsp;|&nbsp; 대표자: 오재석 &nbsp;|&nbsp; 사업자등록번호: 390-68-00863<br>통신판매업 신고번호: 제2026-인천연수구-1196호<br>주소: 인천광역시 연수구 용담로 111, 6층 6649호<br>이메일: <span id="contact-email"></span></div>
+    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+  </div>
+</footer>
+<script>(function(){var u='\x73\x75\x70\x70\x6f\x72\x74',d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';var el=document.getElementById('contact-email');if(el)el.textContent=u+'\x40'+d;})();</script>
+</body>
+</html>
