@@ -183,7 +183,11 @@
     .btn-cta:hover { opacity: .96; transform: translateY(-2px); }
     .hero-note { margin-top: 14px; font-size: 13px; color: var(--ink-subtle); }
 
-    .hero-right { position: absolute; right: 0; top: 64px; bottom: 0; width: 52%; z-index: 1; overflow: hidden; }
+    .hero-right {
+      position: absolute; inset: 64px 0 0; z-index: 1; overflow: hidden; pointer-events: none;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 38%, rgba(0,0,0,.22) 44%, #000 53%, #000 100%);
+      mask-image: linear-gradient(90deg, transparent 0%, transparent 38%, rgba(0,0,0,.22) 44%, #000 53%, #000 100%);
+    }
     .hero-stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
     .hero-stage::before {
       content: ''; position: absolute; width: 460px; height: 460px; border-radius: 50%;
@@ -321,22 +325,30 @@
     .how-outer { max-width: 1180px; margin: 0 auto; padding: 100px 80px; }
     .how-head { text-align: center; margin-bottom: 56px; }
     .how-head .section-tag { margin-left: auto; margin-right: auto; }
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+    .steps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; align-items: stretch;
+      background: var(--canvas); border: 1px solid var(--hairline); border-radius: 28px;
+      overflow: hidden; box-shadow: 0 24px 70px rgba(22,32,46,.08);
+    }
     .step {
-      background: var(--canvas); border: 1px solid var(--hairline); border-radius: 24px; overflow: hidden;
-      transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .3s; box-shadow: 0 1px 2px rgba(22,32,46,.04);
+      position: relative; min-height: 276px; padding: 38px 36px;
+      border-right: 1px solid var(--hairline); background: transparent;
+      transition: background .25s ease;
     }
-    .step:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(22,32,46,.1); }
-    .step-ill { height: 300px; overflow: hidden; position: relative; background: #EDF2F8; }
-    .step-ill img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-    .step-ill::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 -44px 38px -32px rgba(22,32,46,.14); pointer-events: none; }
-    .step-body { padding: 26px 28px 30px; }
+    .step:last-child { border-right: 0; }
+    .step:hover { background: #FAFCFF; }
+    .step-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 42px; }
+    .step-icon {
+      display: flex; align-items: center; justify-content: flex-start;
+      color: var(--primary-hover); font-size: 34px; line-height: 1;
+    }
     .step-num {
-      display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--primary-hover)); color: #fff; font-size: 14px; font-weight: 800; margin-bottom: 14px;
+      color: rgba(33,150,243,.18); font-size: 52px; font-weight: 800; line-height: .8;
+      letter-spacing: -3px; font-variant-numeric: tabular-nums;
     }
-    .step h3 { font-size: 19px; font-weight: 700; margin-bottom: 9px; }
-    .step p { font-size: 15px; color: var(--ink-muted); line-height: 1.7; }
+    .step-body { padding: 0; }
+    .step h3 { font-size: 21px; font-weight: 800; margin-bottom: 11px; }
+    .step p { font-size: 15.5px; color: var(--ink-muted); line-height: 1.75; }
 
     /* ─── FEATURES ─── */
     .features { padding: 104px 0; position: relative; overflow: hidden; }
@@ -370,36 +382,117 @@
     .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
     /* ─── PHONE MOCKUP (사실적 프레임) ─── */
     .phone {
-      position: relative; width: 258px; padding: 10px; border-radius: 46px;
-      background: linear-gradient(145deg, #eceef2 0%, #d2d6dd 47%, #b4b9c3 100%);
+      position: relative; width: 258px; padding: 6px; border-radius: 45px;
+      background: linear-gradient(145deg, #636970 0%, #111419 3%, #030406 44%, #15191e 95%, #555b62 100%);
       box-shadow:
-        0 52px 86px -22px rgba(22,32,46,.36),
-        0 18px 34px -12px rgba(22,32,46,.20),
-        inset 0 1.5px 1px rgba(255,255,255,.92),
-        inset 0 -2px 4px rgba(0,0,0,.12),
-        inset 0 0 0 1px rgba(255,255,255,.4);
+        0 60px 96px -28px rgba(3,7,18,.64),
+        0 24px 40px -18px rgba(3,7,18,.54),
+        inset 0 1px 1px rgba(255,255,255,.56),
+        inset 0 -1px 2px rgba(0,0,0,.9),
+        0 0 0 1px rgba(0,0,0,.82);
       transform: rotate(-4deg); transition: transform .5s cubic-bezier(.16,1,.3,1); z-index: 1;
     }
-    .phone::before { content:''; position:absolute; left:-2px; top:20%; width:3px; height:7%; border-radius:3px;
-      background: linear-gradient(90deg,#9aa0ab,#cdd2da); box-shadow:-1px 0 2px rgba(0,0,0,.18); }
-    .phone::after { content:''; position:absolute; right:-2px; top:25%; width:3px; height:12%; border-radius:3px;
-      background: linear-gradient(270deg,#9aa0ab,#cdd2da); box-shadow:1px 0 2px rgba(0,0,0,.18); }
+    .phone::before { content:''; position:absolute; left:-3px; top:20%; width:3px; height:9%; border-radius:3px;
+      background: linear-gradient(90deg,#111419,#555b62); box-shadow:-1px 0 2px rgba(0,0,0,.46); }
+    .phone::after { content:''; position:absolute; right:-3px; top:26%; width:3px; height:13%; border-radius:3px;
+      background: linear-gradient(270deg,#111419,#555b62); box-shadow:1px 0 2px rgba(0,0,0,.46); }
     .phone:hover { transform: rotate(0deg) translateY(-8px); }
     .phone.tilt-r { transform: rotate(4deg); }
     .phone.tilt-r:hover { transform: rotate(0deg) translateY(-8px); }
     .phone-screen { position: relative; aspect-ratio: 600 / 1208; border-radius: 38px; overflow: hidden; background: #fff;
-      box-shadow: inset 0 0 0 3px #0b0e13; }
+      box-shadow: inset 0 0 0 2px #020305, inset 0 0 0 3px rgba(255,255,255,.08); }
     .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-    .phone-screen::before { content: ''; position: absolute; top: 11px; left: 50%; transform: translateX(-50%);
-      width: 80px; height: 23px; border-radius: 13px; background: #0b0e13; z-index: 3; box-shadow: 0 0 0 1px rgba(0,0,0,.35); }
+    .phone-screen::before { content: ''; position: absolute; top: 9px; left: 50%; transform: translateX(-50%);
+      width: 68px; height: 21px; border-radius: 13px; background: linear-gradient(180deg,#020305,#101318); z-index: 3;
+      box-shadow: 0 1px 1px rgba(255,255,255,.1), 0 0 0 1px rgba(0,0,0,.75); }
     .hero-phone { width: 322px; transform: rotate(-5deg); }
     .hero-phone:hover { transform: rotate(-2deg) translateY(-8px); }
-    /* 히어로 그리드 씬 (#40: 비스듬한 카드 그리드 + 중앙 폰) */
-    .hero-scene { position: relative; width: 100%; height: 100%; min-height: 600px; overflow: hidden; }
-    .hg-bg { position: absolute; inset: -20%; transform: rotate(-20deg); display: grid; grid-template-columns: repeat(3, 174px); gap: 26px; justify-content: center; align-content: center; }
-    .hgc { width: 174px; aspect-ratio: 1080 / 2240; object-fit: cover; object-position: top; border-radius: 26px; background: #fff; box-shadow: 0 18px 40px rgba(22,32,46,.13); }
-    .hg-phone { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(-20deg); width: 250px; z-index: 5; transition: transform .5s cubic-bezier(.16,1,.3,1); }
-    .hg-phone:hover { transform: translate(-50%,-53%) rotate(-20deg); }
+    /* 히어로 디바이스 씬 */
+    .hero-scene {
+      position: relative; width: 100%; height: 100%; min-height: 600px; overflow: hidden;
+      isolation: isolate;
+    }
+    .hero-scene::before {
+      content: ''; position: absolute; inset: 0; z-index: 0;
+      background: radial-gradient(circle at 75% 46%, rgba(255,255,255,.92) 0%, rgba(255,255,255,.46) 28%, transparent 62%);
+    }
+    .hg-board {
+      --scene-scale: 1;
+      position: absolute; left: 75%; top: 50%; width: 760px; height: 760px; z-index: 1;
+      transform: translate(-50%,-50%) rotate(20deg) scale(var(--scene-scale));
+      transform-origin: center;
+    }
+    .hgc {
+      --tile-x: 0px; --tile-y: 0px; --tile-delay: 0s;
+      position: absolute; left: 50%; top: 50%; width: 206px; aspect-ratio: 600 / 1208;
+      overflow: hidden; border-radius: 30px; background: #fff; z-index: 1;
+      border: 1px solid rgba(255,255,255,.9);
+      box-shadow: 0 48px 82px -24px rgba(3,7,18,.50), 0 18px 32px -16px rgba(3,7,18,.38);
+      transform: translate(-50%,-50%) translate(var(--tile-x),var(--tile-y));
+      animation: hero-tile-enter .9s cubic-bezier(.16,1,.3,1) var(--tile-delay) backwards;
+    }
+    .hgc img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hgc--home { --tile-x: 0px; --tile-y: -475px; --tile-delay: .18s; }
+    .hgc--bookmark { --tile-x: 255px; --tile-y: -235px; --tile-delay: .28s; }
+    .hgc--group { --tile-x: -255px; --tile-y: 235px; --tile-delay: .38s; }
+    .hgc--more { --tile-x: 255px; --tile-y: 235px; --tile-delay: .48s; }
+    .hg-phone {
+      position: absolute; top: 50%; left: 50%; width: 250px; z-index: 4;
+      transform: translate(-50%,-50%);
+      transition: transform .5s cubic-bezier(.16,1,.3,1);
+      animation: hero-phone-enter 1s cubic-bezier(.16,1,.3,1) .08s backwards;
+    }
+    .hero-scene .hg-phone {
+      padding: 6px; border-radius: 45px;
+      background: linear-gradient(145deg, #636970 0%, #111419 3%, #030406 44%, #15191e 95%, #555b62 100%);
+      box-shadow:
+        0 70px 108px -30px rgba(3,7,18,.74),
+        0 28px 46px -18px rgba(3,7,18,.62),
+        inset 0 1px 1px rgba(255,255,255,.56),
+        inset 0 -1px 2px rgba(0,0,0,.9),
+        0 0 0 1px rgba(0,0,0,.82);
+    }
+    .hero-scene .hg-phone::before {
+      left: -3px; top: 20%; width: 3px; height: 9%;
+      background: linear-gradient(90deg,#111419,#555b62); box-shadow: -1px 0 2px rgba(0,0,0,.46);
+    }
+    .hero-scene .hg-phone::after {
+      right: -3px; top: 26%; width: 3px; height: 13%;
+      background: linear-gradient(270deg,#111419,#555b62); box-shadow: 1px 0 2px rgba(0,0,0,.46);
+    }
+    .hero-scene .hg-phone .phone-screen {
+      border-radius: 38px;
+      box-shadow: inset 0 0 0 2px #020305, inset 0 0 0 3px rgba(255,255,255,.08);
+    }
+    .hero-scene .hg-phone .phone-screen::before {
+      top: 9px; width: 68px; height: 21px; border-radius: 13px;
+      background: linear-gradient(180deg,#020305,#101318);
+      box-shadow: 0 1px 1px rgba(255,255,255,.1), 0 0 0 1px rgba(0,0,0,.75);
+    }
+    .hero-scene .hg-phone .phone-screen::after {
+      content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      background: linear-gradient(115deg, rgba(255,255,255,.11) 0%, transparent 17%, transparent 82%, rgba(255,255,255,.05) 100%);
+    }
+    .hg-phone:hover { transform: translate(-50%,-50%) scale(1.015); }
+    @keyframes hero-tile-enter {
+      0% {
+        opacity: 0; filter: blur(8px);
+        transform: translate(-50%,-50%) translate(var(--tile-x),var(--tile-y)) translateY(54px) scale(.94);
+      }
+      62% { opacity: 1; filter: blur(0); }
+      100% {
+        opacity: 1; filter: none;
+        transform: translate(-50%,-50%) translate(var(--tile-x),var(--tile-y));
+      }
+    }
+    @keyframes hero-phone-enter {
+      0% { opacity: 0; filter: blur(8px); transform: translate(-50%,-44%) scale(.88); }
+      58% { opacity: 1; filter: blur(0); }
+      100% { opacity: 1; filter: none; transform: translate(-50%,-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hgc, .hg-phone { animation: none; }
+    }
 
     /* ─── SPECS ─── */
     .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
@@ -464,6 +557,7 @@
     @media (max-width: 1024px) {
       .hero-left { padding: 60px 40px; }
       .hero-title { font-size: 46px; }
+      .hg-board { --scene-scale: .84; }
       .privacy-inner, .how-outer, .features-outer, .specs-outer, .cta-outer { padding-left: 48px; padding-right: 48px; }
       .frow { gap: 48px; }
       .feat-title { font-size: 27px; }
@@ -479,17 +573,17 @@
 
       .hero { padding-top: 56px; min-height: auto; flex-direction: column-reverse; }
       .hero-left { width: 100%; padding: 36px 22px 14px; }
-      .hero-title { font-size: 36px; letter-spacing: -1.2px; }
-      .hero-sub { font-size: 17px; margin-bottom: 30px; }
+      .hero-title { font-size: 36px; letter-spacing: -1.2px; word-break: normal; overflow-wrap: anywhere; }
+      .hero-title .hi { display: block; word-break: normal; overflow-wrap: anywhere; text-wrap: wrap; }
+      .hero-sub { font-size: 17px; margin-bottom: 30px; word-break: normal; overflow-wrap: anywhere; }
       .btn-cta { font-size: 16px; padding: 16px 26px; align-self: stretch; justify-content: center; }
       .hero-note { text-align: center; }
-      .hero-right { position: relative; width: 100%; height: auto; top: auto; padding: 40px 22px 8px; }
+      .hero-right { position: relative; inset: auto; width: 100%; height: auto; padding: 28px 0 0; -webkit-mask-image: none; mask-image: none; }
       .hero-stage { position: relative; }
       .hero-stage::before { width: 320px; height: 320px; }
-      .hero-scene { min-height: 460px; }
-      .hg-bg { grid-template-columns: repeat(3, 130px); gap: 18px; }
-      .hgc { width: 130px; }
-      .hg-phone { width: 206px; }
+      .hero-scene { min-height: 440px; }
+      .hero-scene::before { background: radial-gradient(circle at 50% 46%, rgba(255,255,255,.92) 0%, rgba(255,255,255,.42) 32%, transparent 70%); }
+      .hg-board { --scene-scale: .72; left: 50%; }
 
       .section-title, .privacy-head h2, .cta-card h2 { font-size: 30px; }
       .privacy-inner { padding: 64px 22px; }
@@ -499,7 +593,10 @@
 
       .how-outer { padding: 64px 22px; }
       .how-head { margin-bottom: 36px; }
-      .steps { grid-template-columns: 1fr; gap: 16px; }
+      .steps { grid-template-columns: 1fr; }
+      .step { min-height: 0; padding: 30px; border-right: 0; border-bottom: 1px solid var(--hairline); }
+      .step:last-child { border-bottom: 0; }
+      .step-top { margin-bottom: 24px; }
 
       .features { padding: 64px 0; }
       .features-outer { padding: 0 22px; }
@@ -522,6 +619,8 @@
     }
     @media (max-width: 400px) {
       .hero-title { font-size: 31px; }
+      .hero-scene { min-height: 410px; }
+      .hg-board { --scene-scale: .68; }
       .section-title, .privacy-head h2, .cta-card h2 { font-size: 25px; }
       .m-trans, .m-stats, .m-verse-card, .m-sync, .m-group { width: 100%; }
     }
@@ -585,7 +684,15 @@
     <p class="hero-note">Android · Gratis · Sin conexión disponible</p>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="hero-scene"><div class="hg-bg"><img class="hgc" src="../assets/shots/es/home.jpg" alt=""><img class="hgc" src="../assets/shots/es/bookmark.jpg" alt=""><img class="hgc" src="../assets/shots/es/group.jpg" alt=""><img class="hgc" src="../assets/shots/es/more.jpg" alt=""><img class="hgc" src="../assets/shots/es/home.jpg" alt=""><img class="hgc" src="../assets/shots/es/bookmark.jpg" alt=""><img class="hgc" src="../assets/shots/es/group.jpg" alt=""><img class="hgc" src="../assets/shots/es/more.jpg" alt=""><img class="hgc" src="../assets/shots/es/home.jpg" alt=""></div><div class="phone hg-phone"><div class="phone-screen"><img src="../assets/shots/es/transcription.jpg" alt=""></div></div></div>
+    <div class="hero-scene">
+      <div class="hg-board">
+        <div class="hgc hgc--home"><img src="../assets/shots/es/home.jpg" alt=""></div>
+        <div class="hgc hgc--bookmark"><img src="../assets/shots/es/bookmark.jpg" alt=""></div>
+        <div class="hgc hgc--group"><img src="../assets/shots/es/group.jpg" alt=""></div>
+        <div class="hgc hgc--more"><img src="../assets/shots/es/more.jpg" alt=""></div>
+        <div class="phone hg-phone"><div class="phone-screen"><img src="../assets/shots/es/transcription.jpg" alt=""></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -625,25 +732,31 @@
     </div>
     <div class="steps">
       <div class="step" data-animate data-delay="1">
-        <div class="step-ill"><img src="../assets/shots/es/home.jpg" alt=""></div>
+        <div class="step-top">
+          <div class="step-icon"><iconify-icon icon="solar:book-2-bold-duotone"></iconify-icon></div>
+          <div class="step-num">01</div>
+        </div>
         <div class="step-body">
-          <div class="step-num">1</div>
           <h3>Elige un versículo</h3>
           <p>Selecciona el pasaje que quieres meditar hoy de los 66 libros de la Biblia. Elige la traducción que prefieras.</p>
         </div>
       </div>
       <div class="step" data-animate data-delay="2">
-        <div class="step-ill"><img src="../assets/shots/es/transcription.jpg" alt=""></div>
+        <div class="step-top">
+          <div class="step-icon"><iconify-icon icon="solar:pen-new-square-bold-duotone"></iconify-icon></div>
+          <div class="step-num">02</div>
+        </div>
         <div class="step-body">
-          <div class="step-num">2</div>
           <h3>Transcribe letra a letra</h3>
           <p>Escribe el texto tal como aparece en pantalla. Cada letra correcta se resalta al momento; los errores se indican de inmediato.</p>
         </div>
       </div>
       <div class="step" data-animate data-delay="3">
-        <div class="step-ill"><img src="../assets/shots/es/group.jpg" alt=""></div>
+        <div class="step-top">
+          <div class="step-icon"><iconify-icon icon="solar:chart-2-bold-duotone"></iconify-icon></div>
+          <div class="step-num">03</div>
+        </div>
         <div class="step-body">
-          <div class="step-num">3</div>
           <h3>Acumula tu progreso</h3>
           <p>Tu progreso, racha y estadísticas crecen automáticamente, ayudándote a convertir la meditación diaria en un hábito.</p>
         </div>
