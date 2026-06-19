@@ -371,6 +371,20 @@
     .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
     .frow.rev .feat-mock .mock { transform: rotate(2deg); }
     .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
+    /* ─── PHONE MOCKUP (실제 스크린샷) ─── */
+    .phone {
+      position: relative; width: 256px; background: #0E141B; border-radius: 40px; padding: 9px;
+      box-shadow: 0 30px 60px rgba(22,32,46,.24), 0 10px 22px rgba(22,32,46,.12);
+      transform: rotate(-4deg); transition: transform .45s cubic-bezier(.16,1,.3,1); z-index: 1;
+    }
+    .phone::after { content:''; position:absolute; top:18px; left:50%; transform:translateX(-50%); width:46px; height:5px; border-radius:9px; background:rgba(255,255,255,.25); z-index:2; }
+    .phone:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone.tilt-r { transform: rotate(4deg); }
+    .phone.tilt-r:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone-screen { aspect-ratio: 1080 / 2240; border-radius: 32px; overflow: hidden; background: #fff; }
+    .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hero-phone { width: 304px; transform: rotate(-5deg); }
+    .hero-phone:hover { transform: rotate(-2deg) translateY(-6px); }
 
     /* ─── SPECS ─── */
     .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
@@ -519,7 +533,7 @@
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#about">Bible transcription</a>
+      <a href="#about">About</a>
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
     </div>
@@ -543,9 +557,8 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> Daily Scripture Transcription</span>
-    <h1 class="hero-title">Engrave God's Word<br><span class="hi">One Tap at a Time</span></h1>
-    <p class="hero-sub">Copy scripture character by character with TapTapBible.<br>Start right now without logging in, and build a daily habit with progress tracking and streaks.</p>
+    <h1 class="hero-title">One verse a day,<br>a <span class="hi">small but mighty habit</span></h1>
+    <p class="hero-sub">TapTapBible is a Bible transcription app that builds a daily habit of copying Scripture and meditating deeply on the Word. In the middle of a busy day, pause for a moment and engrave the Word in your heart, one character at a time.</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
       Download on Google Play
@@ -553,17 +566,7 @@
     <p class="hero-note">Android · Free · Offline supported</p>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="hero-stage">
-      <div class="mock card m-trans">
-        <div class="m-head">
-          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> John 3:16</span>
-          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12-day streak</span>
-        </div>
-        <p class="m-verse"><span class="done">For God so loved the world, that he gave his only begotten Son,</span><span class="m-cursor"></span><span class="todo"> that whosoever believeth in him should not perish</span></p>
-        <div class="m-bar"><i></i></div>
-        <div class="m-meta"><span>Copying verse <b>3</b> today</span><span><b>64%</b> complete</span></div>
-      </div>
-    </div>
+    <div class="hero-stage"><div class="phone hero-phone"><div class="phone-screen"><img src="/assets/shots/en/transcription.jpg" alt=""></div></div></div>
   </div>
 </section>
 
@@ -581,7 +584,7 @@
         <p>Jump right into personal transcription the moment you install, using guest mode. All your records are stored safely on your device.</p>
       </div>
       <div class="privacy-card" data-animate data-delay="2">
-        <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
+        <div class="pc-icon"><iconify-icon icon="solar:plain-bold"></iconify-icon></div>
         <h3>Transcribe offline too</h3>
         <p>No internet? No problem. Keep copying scripture anywhere. When you're back online, everything syncs automatically and securely.</p>
       </div>
@@ -651,33 +654,14 @@
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-trans">
-          <div class="m-head">
-            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> Psalm 119:105</span>
-            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12-day streak</span>
-          </div>
-          <p class="m-verse"><span class="done">Thy word is a lamp unto my feet,</span><span class="m-cursor"></span><span class="todo"> and a light unto my path</span></p>
-          <div class="m-bar"><i></i></div>
-          <div class="m-meta"><span>Copying character by character</span><span><b>64%</b></span></div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/en/transcription.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F2 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-stats">
-          <div class="m-ring">
-            <div class="ring"><span>23<small>%</small></span></div>
-            <div class="ring-label"><b>Whole-Bible progress</b>1,189 / 31,102 verses done</div>
-          </div>
-          <div class="m-statgrid">
-            <div class="s"><div class="n">12 days</div><div class="l">Current streak</div></div>
-            <div class="s"><div class="n">1,240</div><div class="l">Verses copied</div></div>
-            <div class="s"><div class="n">38 hrs</div><div class="l">Time spent</div></div>
-            <div class="s"><div class="n">27</div><div class="l">Books started</div></div>
-          </div>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/en/home.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
@@ -699,40 +683,21 @@
         <p class="feat-desc">Bookmark any verse that touches your heart and add your own personal note alongside it. Come back anytime to read it again and let it sink deeper.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-verse-card">
-          <div class="m-vc-top">
-            <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
-            <p class="m-vc-q">The LORD is my shepherd; I shall not want.</p>
-            <p class="m-vc-ref">Psalm 23:1</p>
-          </div>
-          <div class="m-vc-memo">
-            <iconify-icon icon="solar:pen-bold"></iconify-icon>
-            <p>The verse I return to whenever my heart is anxious. Holding on to this promise today.</p>
-          </div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/en/bookmark.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F4 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-sync">
-          <div class="m-sync-row">
-            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>Phone</small></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>Tablet</small></div>
-          </div>
-          <p class="m-sync-cap"><b>Pick up on any device.</b><br>Your records sync safely.</p>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/en/more.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
         <h3 class="feat-title">Start without login, <span class="hi">sync when you're ready</span></h3>
         <p class="feat-desc">Dive in as a guest with zero friction. Whenever you want backup or multi-device sync, simply log in — your existing records migrate safely to your account.</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google &amp; Apple sign-in</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Easy Google sign-in</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Continue on any device</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Automatic record merge</li>
         </ul>
@@ -747,37 +712,14 @@
         <p class="feat-desc">Create a group with family or your community and copy scripture side by side. Cheering each other on makes it far easier to keep going than going it alone.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-group">
-          <div class="m-group-h">
-            <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-            <div class="t"><b>Dawn Devotion Group</b><span>Copying Psalms together</span></div>
-          </div>
-          <div class="m-avatars">
-            <i style="background:#42A5F5">A</i>
-            <i style="background:#E91E63">H</i>
-            <i style="background:#66BB6A">J</i>
-            <i style="background:#FFA726">S</i>
-            <i class="more">+8</i>
-          </div>
-          <div class="m-group-bar"><i></i></div>
-          <p class="m-group-cap"><b>12 people</b> transcribed together today</p>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/en/group.jpg" alt=""></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ─── SPECS ─── -->
-<div class="specs-outer">
-  <div class="specs-card" data-animate>
-    <div class="specs-list">
-      <div class="row"><div class="k">Platform</div><div class="v">Android</div></div>
-      <div class="row"><div class="k">Price</div><div class="v">Free (ad-supported)</div></div>
-      <div class="row"><div class="k">Offline</div><div class="v">Transcription supported</div></div>
-      <div class="row"><div class="k">Languages</div><div class="v">8 languages</div></div>
-    </div>
-  </div>
-</div>
+
 
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">

@@ -372,6 +372,21 @@
     .frow.rev .feat-mock .mock { transform: rotate(2deg); }
     .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
 
+    /* ─── PHONE MOCKUP (실제 스크린샷) ─── */
+    .phone {
+      position: relative; width: 256px; background: #0E141B; border-radius: 40px; padding: 9px;
+      box-shadow: 0 30px 60px rgba(22,32,46,.24), 0 10px 22px rgba(22,32,46,.12);
+      transform: rotate(-4deg); transition: transform .45s cubic-bezier(.16,1,.3,1); z-index: 1;
+    }
+    .phone::after { content:''; position:absolute; top:18px; left:50%; transform:translateX(-50%); width:46px; height:5px; border-radius:9px; background:rgba(255,255,255,.25); z-index:2; }
+    .phone:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone.tilt-r { transform: rotate(4deg); }
+    .phone.tilt-r:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone-screen { aspect-ratio: 1080 / 2240; border-radius: 32px; overflow: hidden; background: #fff; }
+    .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hero-phone { width: 304px; transform: rotate(-5deg); }
+    .hero-phone:hover { transform: rotate(-2deg) translateY(-6px); }
+
     /* ─── SPECS ─── */
     .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
     .specs-card {
@@ -519,7 +534,7 @@
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#about">성경 필사</a>
+      <a href="#about">앱 소개</a>
       <a href="#how">이용 방법</a>
       <a href="#features">주요 기능</a>
     </div>
@@ -543,9 +558,8 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> 하루 한 줄 성경 필사</span>
-    <h1 class="hero-title">말씀을 손끝으로<br><span class="hi">한 글자씩 새기다</span></h1>
-    <p class="hero-sub">탭탭바이블과 함께 성경을 그대로 따라 써요.<br>로그인 없이 지금 바로 시작하고, 진행률과 연속 기록으로 매일 꾸준히 이어가세요.</p>
+    <h1 class="hero-title">하루 한 줄,<br>내 영혼을 살리는 <span class="hi">작지만 위대한 습관</span></h1>
+    <p class="hero-sub">탭탭바이블은 매일 성경을 필사하며 말씀을 깊이 묵상하는 습관을 만들어가는 성경 필사 앱입니다. 분주한 일상 속, 잠시 멈춰 말씀을 한 글자씩 마음에 새겨보세요.</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
       Google Play에서 다운로드
@@ -554,14 +568,8 @@
   </div>
   <div class="hero-right" aria-hidden="true">
     <div class="hero-stage">
-      <div class="mock card m-trans">
-        <div class="m-head">
-          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> 요한복음 3:16</span>
-          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12일 연속</span>
-        </div>
-        <p class="m-verse"><span class="done">하나님이 세상을 이처럼 사랑하사 독생자를</span><span class="m-cursor"></span><span class="todo"> 주셨으니 이는 그를 믿는 자마다 멸망하지 않고</span></p>
-        <div class="m-bar"><i></i></div>
-        <div class="m-meta"><span>오늘 <b>3</b>절째 필사 중</span><span><b>64%</b> 완료</span></div>
+      <div class="phone hero-phone">
+        <div class="phone-screen"><img src="assets/shots/ko/transcription.jpg" alt="탭탭바이블 필사 화면"></div>
       </div>
     </div>
   </div>
@@ -581,7 +589,7 @@
         <p>게스트 모드로 설치하자마자 개인 필사를 바로 시작할 수 있어요. 모든 기록은 내 기기에 안전하게 저장됩니다.</p>
       </div>
       <div class="privacy-card" data-animate data-delay="2">
-        <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
+        <div class="pc-icon"><iconify-icon icon="solar:plain-bold"></iconify-icon></div>
         <h3>오프라인에서도 필사</h3>
         <p>인터넷이 없어도 성경 필사는 계속돼요. 다시 온라인이 되면 그동안의 기록이 자동으로 안전하게 동기화됩니다.</p>
       </div>
@@ -651,33 +659,14 @@
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-trans">
-          <div class="m-head">
-            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> 시편 119:105</span>
-            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12일 연속</span>
-          </div>
-          <p class="m-verse"><span class="done">주의 말씀은 내 발에 등이요</span><span class="m-cursor"></span><span class="todo"> 내 길에 빛이니이다</span></p>
-          <div class="m-bar"><i></i></div>
-          <div class="m-meta"><span>한 글자씩 따라 쓰는 중</span><span><b>64%</b></span></div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="assets/shots/ko/transcription.jpg" alt="필사 화면"></div></div>
       </div>
     </div>
 
     <!-- F2 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-stats">
-          <div class="m-ring">
-            <div class="ring"><span>23<small>%</small></span></div>
-            <div class="ring-label"><b>전체 성경 진행률</b>1,189 / 31,102절 필사 완료</div>
-          </div>
-          <div class="m-statgrid">
-            <div class="s"><div class="n">12일</div><div class="l">연속 필사</div></div>
-            <div class="s"><div class="n">1,240절</div><div class="l">총 필사 구절</div></div>
-            <div class="s"><div class="n">38시간</div><div class="l">누적 필사 시간</div></div>
-            <div class="s"><div class="n">27권</div><div class="l">시작한 성경</div></div>
-          </div>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="assets/shots/ko/home.jpg" alt="진행률·통계 화면"></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
@@ -699,40 +688,21 @@
         <p class="feat-desc">묵상하다 마음에 남는 구절은 북마크로 저장하고, 나만의 메모를 함께 남길 수 있어요. 언제든 다시 펼쳐 보며 곱씹을 수 있습니다.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-verse-card">
-          <div class="m-vc-top">
-            <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
-            <p class="m-vc-q">여호와는 나의 목자시니 내게 부족함이 없으리로다</p>
-            <p class="m-vc-ref">시편 23:1</p>
-          </div>
-          <div class="m-vc-memo">
-            <iconify-icon icon="solar:pen-bold"></iconify-icon>
-            <p>마음이 불안할 때마다 펼쳐 보는 구절. 오늘도 이 약속을 붙들기로.</p>
-          </div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="assets/shots/ko/bookmark.jpg" alt="북마크 화면"></div></div>
       </div>
     </div>
 
     <!-- F4 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-sync">
-          <div class="m-sync-row">
-            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>휴대폰</small></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>태블릿</small></div>
-          </div>
-          <p class="m-sync-cap"><b>모든 기기에서 이어 쓰기.</b><br>필사 기록이 안전하게 동기화돼요.</p>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="assets/shots/ko/more.jpg" alt="데이터 동기화 화면"></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
         <h3 class="feat-title">로그인 없이 시작, <span class="hi">로그인하면 동기화</span></h3>
         <p class="feat-desc">게스트 모드로 부담 없이 시작하세요. 백업이나 여러 기기 동기화가 필요할 때 로그인하면, 기기에 있던 기록이 안전하게 계정으로 옮겨집니다.</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google·Apple 간편 로그인</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google 간편 로그인</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 여러 기기에서 이어 쓰기</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 기존 기록 자동 병합</li>
         </ul>
@@ -747,37 +717,11 @@
         <p class="feat-desc">가족이나 공동체와 그룹을 만들어 함께 말씀을 필사해요. 서로의 꾸준함을 응원하며 혼자보다 오래 이어갈 수 있습니다.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-group">
-          <div class="m-group-h">
-            <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-            <div class="t"><b>새벽 묵상 모임</b><span>함께 시편을 필사하는 중</span></div>
-          </div>
-          <div class="m-avatars">
-            <i style="background:#42A5F5">은</i>
-            <i style="background:#E91E63">하</i>
-            <i style="background:#66BB6A">준</i>
-            <i style="background:#FFA726">서</i>
-            <i class="more">+8</i>
-          </div>
-          <div class="m-group-bar"><i></i></div>
-          <p class="m-group-cap">오늘 <b>12명</b>이 함께 필사했어요</p>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="assets/shots/ko/group.jpg" alt="그룹 필사 화면"></div></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ─── SPECS ─── -->
-<div class="specs-outer">
-  <div class="specs-card" data-animate>
-    <div class="specs-list">
-      <div class="row"><div class="k">운영체제</div><div class="v">Android</div></div>
-      <div class="row"><div class="k">가격</div><div class="v">무료 (광고 포함)</div></div>
-      <div class="row"><div class="k">오프라인</div><div class="v">필사 지원</div></div>
-      <div class="row"><div class="k">지원 언어</div><div class="v">8개 언어</div></div>
-    </div>
-  </div>
-</div>
 
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">

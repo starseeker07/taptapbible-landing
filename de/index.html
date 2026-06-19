@@ -371,6 +371,20 @@
     .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
     .frow.rev .feat-mock .mock { transform: rotate(2deg); }
     .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
+    /* ─── PHONE MOCKUP (실제 스크린샷) ─── */
+    .phone {
+      position: relative; width: 256px; background: #0E141B; border-radius: 40px; padding: 9px;
+      box-shadow: 0 30px 60px rgba(22,32,46,.24), 0 10px 22px rgba(22,32,46,.12);
+      transform: rotate(-4deg); transition: transform .45s cubic-bezier(.16,1,.3,1); z-index: 1;
+    }
+    .phone::after { content:''; position:absolute; top:18px; left:50%; transform:translateX(-50%); width:46px; height:5px; border-radius:9px; background:rgba(255,255,255,.25); z-index:2; }
+    .phone:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone.tilt-r { transform: rotate(4deg); }
+    .phone.tilt-r:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone-screen { aspect-ratio: 1080 / 2240; border-radius: 32px; overflow: hidden; background: #fff; }
+    .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hero-phone { width: 304px; transform: rotate(-5deg); }
+    .hero-phone:hover { transform: rotate(-2deg) translateY(-6px); }
 
     /* ─── SPECS ─── */
     .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
@@ -519,7 +533,7 @@
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#about">Bibel abschreiben</a>
+      <a href="#about">Über die App</a>
       <a href="#how">So funktioniert's</a>
       <a href="#features">Funktionen</a>
     </div>
@@ -543,9 +557,8 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> Täglich ein Vers abschreiben</span>
-    <h1 class="hero-title">Gottes Wort<br><span class="hi">Zeichen für Zeichen</span></h1>
-    <p class="hero-sub">Schreibe die Bibel mit TapTapBible Zeichen für Zeichen nach.<br>Ohne Anmeldung sofort loslegen und mit Fortschritt und Streak täglich dranbleiben.</p>
+    <h1 class="hero-title">Ein Vers am Tag,<br>eine <span class="hi">kleine, große Gewohnheit</span></h1>
+    <p class="hero-sub">TapTapBible ist eine Bibel-Abschreib-App, die dir hilft, täglich die Heilige Schrift abzuschreiben und tief über das Wort nachzudenken. Halte mitten im hektischen Alltag einen Moment inne und präge dir das Wort Zeichen für Zeichen ins Herz.</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
       Bei Google Play herunterladen
@@ -553,17 +566,7 @@
     <p class="hero-note">Android · Kostenlos · Offline verfügbar</p>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="hero-stage">
-      <div class="mock card m-trans">
-        <div class="m-head">
-          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> Johannes 3:16</span>
-          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12 Tage Streak</span>
-        </div>
-        <p class="m-verse"><span class="done">Also hat Gott die Welt geliebt, dass er seinen eingeborenen Sohn gab</span><span class="m-cursor"></span><span class="todo"> auf dass alle, die an ihn glauben</span></p>
-        <div class="m-bar"><i></i></div>
-        <div class="m-meta"><span>Vers <b>3</b> heute abgeschrieben</span><span><b>64%</b> abgeschlossen</span></div>
-      </div>
-    </div>
+    <div class="hero-stage"><div class="phone hero-phone"><div class="phone-screen"><img src="/assets/shots/de/transcription.jpg" alt=""></div></div></div>
   </div>
 </section>
 
@@ -581,7 +584,7 @@
         <p>Im Gästemodus kannst du direkt nach der Installation mit dem Abschreiben beginnen. Alle Einträge werden sicher auf deinem Gerät gespeichert.</p>
       </div>
       <div class="privacy-card" data-animate data-delay="2">
-        <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
+        <div class="pc-icon"><iconify-icon icon="solar:plain-bold"></iconify-icon></div>
         <h3>Auch offline abschreiben</h3>
         <p>Kein Internet? Kein Problem. Das Abschreiben läuft weiter. Sobald du wieder online bist, werden alle Einträge automatisch sicher synchronisiert.</p>
       </div>
@@ -651,33 +654,14 @@
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-trans">
-          <div class="m-head">
-            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> Psalm 119:105</span>
-            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12 Tage Streak</span>
-          </div>
-          <p class="m-verse"><span class="done">Dein Wort ist meines Fußes Leuchte</span><span class="m-cursor"></span><span class="todo"> und ein Licht auf meinem Wege</span></p>
-          <div class="m-bar"><i></i></div>
-          <div class="m-meta"><span>Zeichen für Zeichen tippen</span><span><b>64%</b></span></div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/de/transcription.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F2 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-stats">
-          <div class="m-ring">
-            <div class="ring"><span>23<small>%</small></span></div>
-            <div class="ring-label"><b>Gesamtfortschritt Bibel</b>1.189 / 31.102 Verse abgeschrieben</div>
-          </div>
-          <div class="m-statgrid">
-            <div class="s"><div class="n">12 Tage</div><div class="l">Streak</div></div>
-            <div class="s"><div class="n">1.240 Verse</div><div class="l">abgeschrieben</div></div>
-            <div class="s"><div class="n">38 Std.</div><div class="l">Gesamtzeit</div></div>
-            <div class="s"><div class="n">27 Bücher</div><div class="l">begonnen</div></div>
-          </div>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/de/home.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
@@ -699,40 +683,21 @@
         <p class="feat-desc">Verse, die dich bewegen, kannst du als Lesezeichen speichern und mit einer persönlichen Notiz versehen. Jederzeit wieder aufrufen und nachsinnen.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-verse-card">
-          <div class="m-vc-top">
-            <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
-            <p class="m-vc-q">Der HERR ist mein Hirte; mir wird nichts mangeln</p>
-            <p class="m-vc-ref">Psalm 23:1</p>
-          </div>
-          <div class="m-vc-memo">
-            <iconify-icon icon="solar:pen-bold"></iconify-icon>
-            <p>Dieser Vers gibt mir Halt, wann immer ich mich unruhig fühle. Heute nehme ich diese Verheißung neu an.</p>
-          </div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/de/bookmark.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F4 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-sync">
-          <div class="m-sync-row">
-            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>Handy</small></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>Tablet</small></div>
-          </div>
-          <p class="m-sync-cap"><b>Auf allen Geräten weiterschreiben.</b><br>Deine Abschriften werden sicher synchronisiert.</p>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/de/more.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
         <h3 class="feat-title">Ohne Anmeldung starten, <span class="hi">mit Anmeldung synchronisieren</span></h3>
         <p class="feat-desc">Starte entspannt im Gästemodus. Wenn du Backup oder Gerätesynchronisation brauchst, melde dich einfach an – deine bisherigen Einträge werden sicher ins Konto übertragen.</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Schnelle Anmeldung mit Google oder Apple</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Einfache Google-Anmeldung</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Auf mehreren Geräten weiterschreiben</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Vorhandene Einträge automatisch zusammenführen</li>
         </ul>
@@ -747,37 +712,14 @@
         <p class="feat-desc">Gründe eine Gruppe mit Familie oder Gemeinschaft und schreibt gemeinsam Bibelverse ab. Gegenseitige Ermutigung hilft, länger dranzubleiben als allein.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-group">
-          <div class="m-group-h">
-            <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-            <div class="t"><b>Morgenandacht-Gruppe</b><span>Gemeinsam die Psalmen abschreiben</span></div>
-          </div>
-          <div class="m-avatars">
-            <i style="background:#42A5F5">E</i>
-            <i style="background:#E91E63">H</i>
-            <i style="background:#66BB6A">J</i>
-            <i style="background:#FFA726">S</i>
-            <i class="more">+8</i>
-          </div>
-          <div class="m-group-bar"><i></i></div>
-          <p class="m-group-cap">Heute haben <b>12 Personen</b> gemeinsam abgeschrieben</p>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/de/group.jpg" alt=""></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ─── SPECS ─── -->
-<div class="specs-outer">
-  <div class="specs-card" data-animate>
-    <div class="specs-list">
-      <div class="row"><div class="k">Betriebssystem</div><div class="v">Android</div></div>
-      <div class="row"><div class="k">Preis</div><div class="v">Kostenlos (werbefinanziert)</div></div>
-      <div class="row"><div class="k">Offline</div><div class="v">Abschreiben möglich</div></div>
-      <div class="row"><div class="k">Sprachen</div><div class="v">8 Sprachen</div></div>
-    </div>
-  </div>
-</div>
+
 
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">

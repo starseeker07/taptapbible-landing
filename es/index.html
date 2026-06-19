@@ -371,6 +371,20 @@
     .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
     .frow.rev .feat-mock .mock { transform: rotate(2deg); }
     .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
+    /* ─── PHONE MOCKUP (실제 스크린샷) ─── */
+    .phone {
+      position: relative; width: 256px; background: #0E141B; border-radius: 40px; padding: 9px;
+      box-shadow: 0 30px 60px rgba(22,32,46,.24), 0 10px 22px rgba(22,32,46,.12);
+      transform: rotate(-4deg); transition: transform .45s cubic-bezier(.16,1,.3,1); z-index: 1;
+    }
+    .phone::after { content:''; position:absolute; top:18px; left:50%; transform:translateX(-50%); width:46px; height:5px; border-radius:9px; background:rgba(255,255,255,.25); z-index:2; }
+    .phone:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone.tilt-r { transform: rotate(4deg); }
+    .phone.tilt-r:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone-screen { aspect-ratio: 1080 / 2240; border-radius: 32px; overflow: hidden; background: #fff; }
+    .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hero-phone { width: 304px; transform: rotate(-5deg); }
+    .hero-phone:hover { transform: rotate(-2deg) translateY(-6px); }
 
     /* ─── SPECS ─── */
     .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
@@ -519,7 +533,7 @@
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#about">Transcripción bíblica</a>
+      <a href="#about">Acerca de</a>
       <a href="#how">Cómo funciona</a>
       <a href="#features">Funciones</a>
     </div>
@@ -543,9 +557,8 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> Transcripción bíblica diaria</span>
-    <h1 class="hero-title">La Palabra,<br><span class="hi">letra a letra</span></h1>
-    <p class="hero-sub">Transcribe la Biblia con TapTapBible.<br>Empieza ahora mismo sin iniciar sesión y mantén el hábito cada día con tu progreso y tu racha.</p>
+    <h1 class="hero-title">Un versículo al día,<br>un <span class="hi">hábito pequeño pero grande</span></h1>
+    <p class="hero-sub">TapTapBible es una app de transcripción bíblica que crea el hábito diario de copiar las Escrituras y meditar profundamente en la Palabra. En medio del ajetreo diario, detente un momento y graba la Palabra en tu corazón, letra a letra.</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
       Descargar en Google Play
@@ -553,17 +566,7 @@
     <p class="hero-note">Android · Gratis · Sin conexión disponible</p>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="hero-stage">
-      <div class="mock card m-trans">
-        <div class="m-head">
-          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> Juan 3:16</span>
-          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12 días seguidos</span>
-        </div>
-        <p class="m-verse"><span class="done">Porque de tal manera amó Dios al mundo, que ha dado á su Hijo unigénito</span><span class="m-cursor"></span><span class="todo"> para que todo aquel que en él cree no se pierda</span></p>
-        <div class="m-bar"><i></i></div>
-        <div class="m-meta"><span>Transcribiendo versículo <b>3</b></span><span><b>64%</b> completado</span></div>
-      </div>
-    </div>
+    <div class="hero-stage"><div class="phone hero-phone"><div class="phone-screen"><img src="/assets/shots/es/transcription.jpg" alt=""></div></div></div>
   </div>
 </section>
 
@@ -581,7 +584,7 @@
         <p>Con el modo invitado puedes comenzar a transcribir en cuanto instalas la app. Todo tu progreso se guarda de forma segura en tu dispositivo.</p>
       </div>
       <div class="privacy-card" data-animate data-delay="2">
-        <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
+        <div class="pc-icon"><iconify-icon icon="solar:plain-bold"></iconify-icon></div>
         <h3>Transcribe sin conexión</h3>
         <p>Sin internet también puedes transcribir. Cuando vuelvas a conectarte, todo lo que hayas escrito se sincronizará automáticamente de forma segura.</p>
       </div>
@@ -651,33 +654,14 @@
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-trans">
-          <div class="m-head">
-            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> Salmo 119:105</span>
-            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12 días seguidos</span>
-          </div>
-          <p class="m-verse"><span class="done">Lámpara es á mis pies tu palabra, y lumbrera á mi camino</span><span class="m-cursor"></span><span class="todo"> es tu palabra</span></p>
-          <div class="m-bar"><i></i></div>
-          <div class="m-meta"><span>Transcribiendo letra a letra</span><span><b>64%</b></span></div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/es/transcription.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F2 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-stats">
-          <div class="m-ring">
-            <div class="ring"><span>23<small>%</small></span></div>
-            <div class="ring-label"><b>Progreso total de la Biblia</b>1.189 / 31.102 versículos completados</div>
-          </div>
-          <div class="m-statgrid">
-            <div class="s"><div class="n">12 días</div><div class="l">Racha actual</div></div>
-            <div class="s"><div class="n">1.240 vers.</div><div class="l">Total transcrito</div></div>
-            <div class="s"><div class="n">38 horas</div><div class="l">Tiempo acumulado</div></div>
-            <div class="s"><div class="n">27 libros</div><div class="l">Libros comenzados</div></div>
-          </div>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/es/home.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
@@ -699,40 +683,21 @@
         <p class="feat-desc">Marca como favorito los versículos que más te impacten durante la meditación y añade tus propias notas. Puedes volver a ellos cuando quieras para releerlos.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-verse-card">
-          <div class="m-vc-top">
-            <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
-            <p class="m-vc-q">Jehová es mi pastor; nada me faltará</p>
-            <p class="m-vc-ref">Salmo 23:1</p>
-          </div>
-          <div class="m-vc-memo">
-            <iconify-icon icon="solar:pen-bold"></iconify-icon>
-            <p>El versículo al que vuelvo cada vez que siento ansiedad. Hoy también decido aferrarme a esta promesa.</p>
-          </div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/es/bookmark.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F4 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-sync">
-          <div class="m-sync-row">
-            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>Teléfono</small></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>Tablet</small></div>
-          </div>
-          <p class="m-sync-cap"><b>Continúa en cualquier dispositivo.</b><br>Tus transcripciones se sincronizan de forma segura.</p>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/es/more.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
         <h3 class="feat-title">Empieza sin cuenta, <span class="hi">sincroniza al iniciar sesión</span></h3>
         <p class="feat-desc">Comienza sin presión en modo invitado. Cuando necesites copia de seguridad o sincronización entre dispositivos, inicia sesión y todo tu historial se trasladará de forma segura a tu cuenta.</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Inicio rápido con Google o Apple</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Inicio de sesión con Google</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Continúa en varios dispositivos</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Fusión automática del historial existente</li>
         </ul>
@@ -747,37 +712,14 @@
         <p class="feat-desc">Crea un grupo con tu familia o comunidad y transcribid la Biblia juntos. Animaros mutuamente os ayudará a mantener el hábito durante más tiempo que solos.</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-group">
-          <div class="m-group-h">
-            <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-            <div class="t"><b>Grupo de meditación matutina</b><span>Transcribiendo Salmos juntos</span></div>
-          </div>
-          <div class="m-avatars">
-            <i style="background:#42A5F5">A</i>
-            <i style="background:#E91E63">M</i>
-            <i style="background:#66BB6A">J</i>
-            <i style="background:#FFA726">L</i>
-            <i class="more">+8</i>
-          </div>
-          <div class="m-group-bar"><i></i></div>
-          <p class="m-group-cap">Hoy <b>12 personas</b> han transcrito juntas</p>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/es/group.jpg" alt=""></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ─── SPECS ─── -->
-<div class="specs-outer">
-  <div class="specs-card" data-animate>
-    <div class="specs-list">
-      <div class="row"><div class="k">Sistema operativo</div><div class="v">Android</div></div>
-      <div class="row"><div class="k">Precio</div><div class="v">Gratis (con anuncios)</div></div>
-      <div class="row"><div class="k">Sin conexión</div><div class="v">Transcripción disponible</div></div>
-      <div class="row"><div class="k">Idiomas</div><div class="v">8 idiomas</div></div>
-    </div>
-  </div>
-</div>
+
 
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">

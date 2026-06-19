@@ -371,6 +371,20 @@
     .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
     .frow.rev .feat-mock .mock { transform: rotate(2deg); }
     .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
+    /* ─── PHONE MOCKUP (실제 스크린샷) ─── */
+    .phone {
+      position: relative; width: 256px; background: #0E141B; border-radius: 40px; padding: 9px;
+      box-shadow: 0 30px 60px rgba(22,32,46,.24), 0 10px 22px rgba(22,32,46,.12);
+      transform: rotate(-4deg); transition: transform .45s cubic-bezier(.16,1,.3,1); z-index: 1;
+    }
+    .phone::after { content:''; position:absolute; top:18px; left:50%; transform:translateX(-50%); width:46px; height:5px; border-radius:9px; background:rgba(255,255,255,.25); z-index:2; }
+    .phone:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone.tilt-r { transform: rotate(4deg); }
+    .phone.tilt-r:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone-screen { aspect-ratio: 1080 / 2240; border-radius: 32px; overflow: hidden; background: #fff; }
+    .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hero-phone { width: 304px; transform: rotate(-5deg); }
+    .hero-phone:hover { transform: rotate(-2deg) translateY(-6px); }
 
     /* ─── SPECS ─── */
     .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
@@ -519,7 +533,7 @@
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#about">抄写圣经</a>
+      <a href="#about">应用介绍</a>
       <a href="#how">使用方法</a>
       <a href="#features">主要功能</a>
     </div>
@@ -543,9 +557,8 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> 每日一节圣经抄写</span>
-    <h1 class="hero-title">用指尖铭记<br><span class="hi">逐字书写神的话语</span></h1>
-    <p class="hero-sub">与 TapTapBible 一起，一字一字地跟写圣经。<br>无需登录，立即开始，通过进度和连续记录每天坚持下去。</p>
+    <h1 class="hero-title">每天一节，<br>滋养灵魂的<span class="hi">微小而伟大的习惯</span></h1>
+    <p class="hero-sub">TapTapBible 是一款圣经抄写应用，帮助你养成每天抄写圣经、深入默想话语的习惯。在忙碌的日常中，停下片刻，一字一句地将话语刻在心里。</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
       在 Google Play 上下载
@@ -553,17 +566,7 @@
     <p class="hero-note">Android · 免费安装 · 支持离线</p>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="hero-stage">
-      <div class="mock card m-trans">
-        <div class="m-head">
-          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> 约翰福音 3:16</span>
-          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 连续12天</span>
-        </div>
-        <p class="m-verse"><span class="done">神爱世人，甚至将他的独生子赐给他们，</span><span class="m-cursor"></span><span class="todo">叫一切信他的，不致灭亡</span></p>
-        <div class="m-bar"><i></i></div>
-        <div class="m-meta"><span>正在抄写第 <b>3</b> 节</span><span><b>64%</b> 完成</span></div>
-      </div>
-    </div>
+    <div class="hero-stage"><div class="phone hero-phone"><div class="phone-screen"><img src="/assets/shots/zh-CN/transcription.jpg" alt=""></div></div></div>
   </div>
 </section>
 
@@ -581,7 +584,7 @@
         <p>以访客模式安装后即可立刻开始个人抄写。所有记录安全保存在您的设备上。</p>
       </div>
       <div class="privacy-card" data-animate data-delay="2">
-        <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
+        <div class="pc-icon"><iconify-icon icon="solar:plain-bold"></iconify-icon></div>
         <h3>离线也能抄写</h3>
         <p>没有网络也可以继续圣经抄写。恢复在线后，期间的记录将自动安全同步。</p>
       </div>
@@ -651,33 +654,14 @@
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-trans">
-          <div class="m-head">
-            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> 诗篇 119:105</span>
-            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 连续12天</span>
-          </div>
-          <p class="m-verse"><span class="done">你的话是我脚前的灯，</span><span class="m-cursor"></span><span class="todo">是我路上的光</span></p>
-          <div class="m-bar"><i></i></div>
-          <div class="m-meta"><span>正在逐字跟写</span><span><b>64%</b></span></div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/zh-CN/transcription.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F2 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-stats">
-          <div class="m-ring">
-            <div class="ring"><span>23<small>%</small></span></div>
-            <div class="ring-label"><b>全本圣经进度</b>已完成 1,189 / 31,102 节</div>
-          </div>
-          <div class="m-statgrid">
-            <div class="s"><div class="n">连续12天</div><div class="l">连续抄写</div></div>
-            <div class="s"><div class="n">1,240节</div><div class="l">累计抄写节数</div></div>
-            <div class="s"><div class="n">38小时</div><div class="l">累计抄写时间</div></div>
-            <div class="s"><div class="n">27卷</div><div class="l">已开始的圣经书卷</div></div>
-          </div>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/zh-CN/home.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
@@ -699,40 +683,21 @@
         <p class="feat-desc">默想时令您动容的经文，可以书签收藏并附上个人笔记。随时翻阅，反复品味神的话语。</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-verse-card">
-          <div class="m-vc-top">
-            <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
-            <p class="m-vc-q">耶和华是我的牧者，我必不致缺乏</p>
-            <p class="m-vc-ref">诗篇 23:1</p>
-          </div>
-          <div class="m-vc-memo">
-            <iconify-icon icon="solar:pen-bold"></iconify-icon>
-            <p>每当心里不安时就打开的经文。今天也要紧紧抓住这个应许。</p>
-          </div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/zh-CN/bookmark.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F4 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-sync">
-          <div class="m-sync-row">
-            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>手机</small></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>平板</small></div>
-          </div>
-          <p class="m-sync-cap"><b>在所有设备上继续抄写。</b><br>抄写记录安全同步。</p>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/zh-CN/more.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
         <h3 class="feat-title">无需登录即开始，<span class="hi">登录后即同步</span></h3>
         <p class="feat-desc">以访客模式轻松开始。需要备份或多设备同步时登录，设备上的记录将安全迁移到账户。</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google · Apple 快捷登录</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google 一键登录</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 多设备无缝继续</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 既有记录自动合并</li>
         </ul>
@@ -747,37 +712,14 @@
         <p class="feat-desc">与家人或团契创建小组，一起抄写神的话语。互相鼓励对方的坚持，比独自一人走得更远。</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-group">
-          <div class="m-group-h">
-            <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-            <div class="t"><b>晨祷默想小组</b><span>正在一起抄写诗篇</span></div>
-          </div>
-          <div class="m-avatars">
-            <i style="background:#42A5F5">恩</i>
-            <i style="background:#E91E63">夏</i>
-            <i style="background:#66BB6A">俊</i>
-            <i style="background:#FFA726">书</i>
-            <i class="more">+8</i>
-          </div>
-          <div class="m-group-bar"><i></i></div>
-          <p class="m-group-cap">今天 <b>12 人</b>一起抄写了</p>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/zh-CN/group.jpg" alt=""></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ─── SPECS ─── -->
-<div class="specs-outer">
-  <div class="specs-card" data-animate>
-    <div class="specs-list">
-      <div class="row"><div class="k">操作系统</div><div class="v">Android</div></div>
-      <div class="row"><div class="k">价格</div><div class="v">免费（含广告）</div></div>
-      <div class="row"><div class="k">离线</div><div class="v">支持抄写</div></div>
-      <div class="row"><div class="k">支持语言</div><div class="v">8 种语言</div></div>
-    </div>
-  </div>
-</div>
+
 
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">

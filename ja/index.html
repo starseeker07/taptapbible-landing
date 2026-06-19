@@ -371,6 +371,20 @@
     .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
     .frow.rev .feat-mock .mock { transform: rotate(2deg); }
     .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
+    /* ─── PHONE MOCKUP (실제 스크린샷) ─── */
+    .phone {
+      position: relative; width: 256px; background: #0E141B; border-radius: 40px; padding: 9px;
+      box-shadow: 0 30px 60px rgba(22,32,46,.24), 0 10px 22px rgba(22,32,46,.12);
+      transform: rotate(-4deg); transition: transform .45s cubic-bezier(.16,1,.3,1); z-index: 1;
+    }
+    .phone::after { content:''; position:absolute; top:18px; left:50%; transform:translateX(-50%); width:46px; height:5px; border-radius:9px; background:rgba(255,255,255,.25); z-index:2; }
+    .phone:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone.tilt-r { transform: rotate(4deg); }
+    .phone.tilt-r:hover { transform: rotate(0deg) translateY(-6px); }
+    .phone-screen { aspect-ratio: 1080 / 2240; border-radius: 32px; overflow: hidden; background: #fff; }
+    .phone-screen img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .hero-phone { width: 304px; transform: rotate(-5deg); }
+    .hero-phone:hover { transform: rotate(-2deg) translateY(-6px); }
 
     /* ─── SPECS ─── */
     .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
@@ -519,7 +533,7 @@
   </a>
   <div class="nav-right">
     <div class="nav-section-links">
-      <a href="#about">聖書 書き写し</a>
+      <a href="#about">アプリ紹介</a>
       <a href="#how">使い方</a>
       <a href="#features">主な機能</a>
     </div>
@@ -543,9 +557,8 @@
 <!-- ─── HERO ─── -->
 <section class="hero">
   <div class="hero-left" data-animate>
-    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> 毎日一節 聖書 書き写し</span>
-    <h1 class="hero-title">みことばを指先で<br><span class="hi">一文字ずつ刻む</span></h1>
-    <p class="hero-sub">タップタップバイブルで聖書をそのまま書き写しましょう。<br>ログイン不要ですぐ始められ、進捗と連続記録で毎日続けられます。</p>
+    <h1 class="hero-title">一日一節、<br>魂を生かす<span class="hi">小さくも偉大な習慣</span></h1>
+    <p class="hero-sub">タップタップバイブルは、毎日聖書を書き写し、みことばを深く黙想する習慣を育てる聖書 書き写しアプリです。忙しい日常の中で、少し立ち止まり、みことばを一文字ずつ心に刻んでみてください。</p>
     <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
       <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
       Google Play でダウンロード
@@ -553,17 +566,7 @@
     <p class="hero-note">Android · 無料 · オフライン対応</p>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="hero-stage">
-      <div class="mock card m-trans">
-        <div class="m-head">
-          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> ヨハネ 3:16</span>
-          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12日 連続</span>
-        </div>
-        <p class="m-verse"><span class="done">神はそのひとり子を賜わったほどに、世を愛して下さった。それは御子を信じる者がひとりも滅びないで</span><span class="m-cursor"></span><span class="todo"> 永遠の命を得るためである。</span></p>
-        <div class="m-bar"><i></i></div>
-        <div class="m-meta"><span>今日 <b>3</b>節目を書き写し中</span><span><b>64%</b> 完了</span></div>
-      </div>
-    </div>
+    <div class="hero-stage"><div class="phone hero-phone"><div class="phone-screen"><img src="/assets/shots/ja/transcription.jpg" alt=""></div></div></div>
   </div>
 </section>
 
@@ -581,7 +584,7 @@
         <p>ゲストモードでインストール直後から書き写しを始められます。すべての記録はデバイスに安全に保存されます。</p>
       </div>
       <div class="privacy-card" data-animate data-delay="2">
-        <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
+        <div class="pc-icon"><iconify-icon icon="solar:plain-bold"></iconify-icon></div>
         <h3>オフラインでも書き写し</h3>
         <p>インターネットがなくても聖書の書き写しは続けられます。オンラインに戻ると、それまでの記録が自動で安全に同期されます。</p>
       </div>
@@ -651,33 +654,14 @@
         </ul>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-trans">
-          <div class="m-head">
-            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> 詩篇 119:105</span>
-            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12日 連続</span>
-          </div>
-          <p class="m-verse"><span class="done">あなたのみ言葉はわが足のともしび</span><span class="m-cursor"></span><span class="todo"> わが道の光です</span></p>
-          <div class="m-bar"><i></i></div>
-          <div class="m-meta"><span>一文字ずつ書き写し中</span><span><b>64%</b></span></div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/ja/transcription.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F2 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-stats">
-          <div class="m-ring">
-            <div class="ring"><span>23<small>%</small></span></div>
-            <div class="ring-label"><b>聖書全体の進捗</b>1,189 / 31,102節 完了</div>
-          </div>
-          <div class="m-statgrid">
-            <div class="s"><div class="n">12日</div><div class="l">連続記録</div></div>
-            <div class="s"><div class="n">1,240節</div><div class="l">書き写した節</div></div>
-            <div class="s"><div class="n">38時間</div><div class="l">累計時間</div></div>
-            <div class="s"><div class="n">27巻</div><div class="l">始めた書</div></div>
-          </div>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/ja/home.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
@@ -699,40 +683,21 @@
         <p class="feat-desc">黙想中に心に残った節はブックマークに保存し、自分だけのメモを添えられます。いつでも開いて繰り返し味わうことができます。</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-verse-card">
-          <div class="m-vc-top">
-            <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
-            <p class="m-vc-q">主はわたしの牧者であって、わたしには乏しいことがない</p>
-            <p class="m-vc-ref">詩篇 23:1</p>
-          </div>
-          <div class="m-vc-memo">
-            <iconify-icon icon="solar:pen-bold"></iconify-icon>
-            <p>不安なときにいつも開く節。今日もこの約束にすがることにした。</p>
-          </div>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/ja/bookmark.jpg" alt=""></div></div>
       </div>
     </div>
 
     <!-- F4 -->
     <div class="frow rev">
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-sync">
-          <div class="m-sync-row">
-            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>スマホ</small></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
-            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
-            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>タブレット</small></div>
-          </div>
-          <p class="m-sync-cap"><b>どの端末でも続けられる。</b><br>記録は安全に同期されます。</p>
-        </div>
+        <div class="phone tilt-r"><div class="phone-screen"><img src="/assets/shots/ja/more.jpg" alt=""></div></div>
       </div>
       <div data-animate>
         <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
         <h3 class="feat-title">ログイン不要で開始、<span class="hi">ログインで同期</span></h3>
         <p class="feat-desc">ゲストモードで気軽に始めましょう。バックアップや複数端末での同期が必要になったらログインするだけで、端末上の記録が安全にアカウントへ移行されます。</p>
         <ul class="feat-list">
-          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google・Apple かんたんログイン</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Googleで簡単ログイン</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 複数端末で続きから再開</li>
           <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> 既存記録の自動マージ</li>
         </ul>
@@ -747,37 +712,14 @@
         <p class="feat-desc">家族やコミュニティとグループを作り、一緒にみことばを書き写しましょう。お互いの継続を応援しながら、一人よりも長く続けられます。</p>
       </div>
       <div class="feat-mock" data-animate data-delay="1">
-        <div class="mock card m-group">
-          <div class="m-group-h">
-            <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
-            <div class="t"><b>夜明けの黙想会</b><span>一緒に詩篇を書き写し中</span></div>
-          </div>
-          <div class="m-avatars">
-            <i style="background:#42A5F5">恵</i>
-            <i style="background:#E91E63">花</i>
-            <i style="background:#66BB6A">純</i>
-            <i style="background:#FFA726">聖</i>
-            <i class="more">+8</i>
-          </div>
-          <div class="m-group-bar"><i></i></div>
-          <p class="m-group-cap">今日 <b>12人</b>が一緒に書き写しました</p>
-        </div>
+        <div class="phone"><div class="phone-screen"><img src="/assets/shots/ja/group.jpg" alt=""></div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ─── SPECS ─── -->
-<div class="specs-outer">
-  <div class="specs-card" data-animate>
-    <div class="specs-list">
-      <div class="row"><div class="k">対応OS</div><div class="v">Android</div></div>
-      <div class="row"><div class="k">価格</div><div class="v">無料（広告あり）</div></div>
-      <div class="row"><div class="k">オフライン</div><div class="v">書き写し対応</div></div>
-      <div class="row"><div class="k">対応言語</div><div class="v">8言語</div></div>
-    </div>
-  </div>
-</div>
+
 
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">
