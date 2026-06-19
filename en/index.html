@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="TapTapBible">
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <title>TapTapBible — Copy Scripture One Tap at a Time</title>
+  <meta name="description" content="Copy the Bible one character at a time with TapTapBible. Start instantly without login, track progress and streaks, works offline. Free on Android.">
+  <meta name="keywords" content="TapTapBible, Bible transcription, Bible writing app, scripture copying, daily devotion, Bible study, verse memorization">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TapTapBible">
+  <meta property="og:title" content="TapTapBible — Copy Scripture One Tap at a Time">
+  <meta property="og:description" content="Copy scripture character by character. Start instantly without login and engrave God's word every day.">
+  <meta property="og:image" content="https://taptapbible.kukudev.com/assets/images/og_en.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:url" content="https://taptapbible.kukudev.com/en/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TapTapBible — Copy Scripture One Tap at a Time">
+  <meta name="twitter:description" content="Copy scripture character by character. Start instantly without login.">
+  <meta name="twitter:image" content="https://taptapbible.kukudev.com/assets/images/og_en.png">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="ko" href="https://taptapbible.kukudev.com/">
+  <link rel="alternate" hreflang="en" href="https://taptapbible.kukudev.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://taptapbible.kukudev.com/ja/">
+  <link rel="alternate" hreflang="x-default" href="https://taptapbible.kukudev.com/">
+  <link rel="canonical" href="https://taptapbible.kukudev.com/en/">
+
+  <!-- CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://code.iconify.design; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https://api.iconify.design; connect-src https://api.iconify.design https://cdn.jsdelivr.net;">
+
+  <!-- Fonts: Pretendard (UI) + Noto Serif (scripture) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconify Solar -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js" crossorigin="anonymous"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #2196F3;
+      --primary-hover: #1976D2;
+      --primary-deep: #1565C0;
+      --primary-tint: #E3F2FD;
+      --accent: #E91E63;
+      --secondary: #0D47A1;
+      --canvas: #FFFFFF;
+      --surface: #F5F8FC;
+      --surface2: #EDF2F8;
+      --hairline: #E3E9F0;
+      --ink: #16202E;
+      --ink-strong: #2C3A4B;
+      --ink-muted: #5E6E80;
+      --ink-subtle: #8A98A8;
+      --todo: #C9D4E0;
+      --font-pre: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Noto Serif', Georgia, 'Times New Roman', serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-pre);
+      line-height: 1.6;
+      overflow-x: hidden;
+      word-break: keep-all;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 { text-wrap: balance; word-break: keep-all; letter-spacing: -0.4px; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .hi { color: var(--primary-hover); }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 64px;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 9px; }
+    .nav-logo img { height: 28px; width: auto; }
+    .nav-logo span { font-size: 21px; font-weight: 800; color: var(--ink); letter-spacing: -0.6px; }
+
+    .nav-right { display: flex; align-items: center; gap: 18px; }
+    .nav-section-links { display: flex; align-items: center; gap: 4px; }
+    .nav-section-links a {
+      font-size: 14px; font-weight: 600; color: var(--ink-muted);
+      padding: 7px 13px; border-radius: 9px; transition: color .2s, background .2s; white-space: nowrap;
+    }
+    .nav-section-links a:hover { color: var(--ink); background: var(--surface2); }
+
+    .lang-toggle { display: flex; align-items: center; gap: 2px; font-size: 13px; }
+    .lang-toggle a, .lang-toggle span.active { padding: 5px 9px; border-radius: 7px; transition: color .2s, background .2s; }
+    .lang-toggle a { color: var(--ink-subtle); }
+    .lang-toggle a:hover { color: var(--ink); background: var(--surface2); }
+    .lang-toggle .active { color: var(--ink); font-weight: 700; }
+    .lang-sep { color: var(--hairline); padding: 0 1px; font-size: 11px; }
+
+    .lang-dropdown { position: relative; display: none; }
+    .lang-dropdown-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surface2); border: 1px solid var(--hairline); color: var(--ink);
+      font-family: var(--font-pre); font-size: 13px; font-weight: 600;
+      padding: 7px 12px; border-radius: 9px; cursor: pointer; outline: none; white-space: nowrap;
+    }
+    .lang-dropdown-menu {
+      display: none; position: absolute; top: calc(100% + 8px); right: 0;
+      background: #fff; border: 1px solid var(--hairline); border-radius: 12px; overflow: hidden;
+      min-width: 116px; box-shadow: 0 10px 30px rgba(22,32,46,.12); z-index: 200;
+    }
+    .lang-dropdown-menu.open { display: block; }
+    .lang-dropdown-item { display: block; padding: 11px 16px; font-size: 14px; color: var(--ink-muted); transition: background .15s, color .15s; }
+    .lang-dropdown-item:hover { background: var(--surface); color: var(--ink); }
+    .lang-dropdown-item.active { color: var(--primary-hover); font-weight: 700; }
+
+    .btn-nav {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+      color: #fff; font-family: var(--font-pre); font-size: 13px; font-weight: 700;
+      padding: 9px 17px; border-radius: 10px; transition: opacity .2s, transform .2s; white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(33,150,243,.32);
+    }
+    .btn-nav:hover { opacity: .92; transform: translateY(-1px); }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative; display: flex; min-height: 680px; overflow: hidden; padding-top: 64px;
+      background:
+        radial-gradient(120% 130% at 80% 30%, var(--primary-tint) 0%, rgba(227,242,253,0) 56%),
+        var(--canvas);
+    }
+    .hero-left {
+      position: relative; z-index: 2; width: 48%;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 52px 80px 80px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 7px; align-self: flex-start;
+      font-size: 13px; font-weight: 700; color: var(--primary-hover);
+      background: var(--primary-tint); border: 1px solid rgba(33,150,243,.22);
+      padding: 7px 14px; border-radius: 9999px; margin-bottom: 24px;
+    }
+    .hero-title {
+      font-size: 58px; font-weight: 800; color: var(--ink); line-height: 1.14;
+      letter-spacing: -1.8px; margin-bottom: 22px;
+    }
+    .hero-sub { font-size: 19px; font-weight: 500; color: var(--ink-muted); line-height: 1.6; margin-bottom: 38px; }
+    .btn-cta {
+      display: inline-flex; align-items: center; gap: 11px; align-self: flex-start;
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+      color: #fff; font-family: var(--font-pre); font-size: 18px; font-weight: 700;
+      padding: 18px 32px; border-radius: 9999px;
+      box-shadow: 0 10px 28px rgba(33,150,243,.36);
+      transition: opacity .2s, transform .4s cubic-bezier(.16,1,.3,1);
+    }
+    .btn-cta:hover { opacity: .96; transform: translateY(-2px); }
+    .hero-note { margin-top: 14px; font-size: 13px; color: var(--ink-subtle); }
+
+    .hero-right { position: absolute; right: 0; top: 64px; bottom: 0; width: 52%; z-index: 1; overflow: hidden; }
+    .hero-stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+    .hero-stage::before {
+      content: ''; position: absolute; width: 460px; height: 460px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(33,150,243,.18) 0%, transparent 68%);
+    }
+
+    /* ─── MOCKUP CARDS (스크린샷 대체) ─── */
+    .mock { position: relative; z-index: 1; }
+    .card {
+      background: #fff; border: 1px solid var(--hairline); border-radius: 24px;
+      box-shadow: 0 24px 60px rgba(22,32,46,.12), 0 6px 16px rgba(22,32,46,.05);
+    }
+    /* 필사 데모 */
+    .m-trans { width: 376px; max-width: 86vw; padding: 30px 30px 26px; }
+    .m-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+    .m-ref { color: var(--primary-hover); font-weight: 800; font-size: 14px; letter-spacing: .02em; display: inline-flex; align-items: center; gap: 6px; }
+    .m-chip {
+      display: inline-flex; align-items: center; gap: 5px; font-size: 12.5px; font-weight: 700; color: var(--accent);
+      background: #FCE4EC; padding: 5px 11px; border-radius: 9999px;
+    }
+    .m-verse { font-family: var(--font-serif); font-size: 22px; line-height: 1.78; font-weight: 600; letter-spacing: -.2px; }
+    .m-verse .done { color: var(--ink); }
+    .m-verse .todo { color: var(--todo); }
+    .m-cursor { display: inline-block; width: 2px; height: 0.95em; background: var(--primary); vertical-align: -2px; margin: 0 1px; animation: blink 1.1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .m-bar { margin-top: 22px; height: 9px; border-radius: 9999px; background: var(--surface2); overflow: hidden; }
+    .m-bar > i { display: block; height: 100%; width: 64%; border-radius: 9999px; background: linear-gradient(90deg, var(--primary), var(--primary-hover)); }
+    .m-meta { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--ink-muted); }
+    .m-meta b { color: var(--ink-strong); }
+
+    /* 통계 카드 */
+    .m-stats { width: 360px; max-width: 86vw; padding: 28px 30px; }
+    .m-ring { display: flex; align-items: center; gap: 22px; }
+    .ring {
+      width: 108px; height: 108px; border-radius: 50%; flex: 0 0 auto;
+      background: conic-gradient(var(--primary) 0% 23%, var(--surface2) 23% 100%);
+      display: flex; align-items: center; justify-content: center; position: relative;
+    }
+    .ring::before { content: ''; position: absolute; inset: 12px; border-radius: 50%; background: #fff; }
+    .ring span { position: relative; font-size: 24px; font-weight: 800; color: var(--ink); }
+    .ring span small { font-size: 13px; color: var(--ink-muted); font-weight: 600; }
+    .ring-label { font-size: 14px; color: var(--ink-muted); }
+    .ring-label b { display: block; font-size: 17px; color: var(--ink); font-weight: 700; margin-bottom: 2px; }
+    .m-statgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+    .m-statgrid .s { background: var(--surface); border-radius: 14px; padding: 14px 16px; }
+    .m-statgrid .s .n { font-size: 20px; font-weight: 800; color: var(--primary-hover); }
+    .m-statgrid .s .l { font-size: 12.5px; color: var(--ink-muted); margin-top: 2px; }
+
+    /* 구절 카드 (북마크) */
+    .m-verse-card { width: 360px; max-width: 86vw; padding: 0; overflow: hidden; }
+    .m-vc-top {
+      padding: 28px 28px 24px; color: #fff; position: relative;
+      background: linear-gradient(135deg, #1E88E5 0%, #1565C0 100%);
+    }
+    .m-vc-top .bk { position: absolute; top: 20px; right: 22px; font-size: 22px; color: #fff; }
+    .m-vc-q { font-family: var(--font-serif); font-size: 21px; line-height: 1.75; font-weight: 600; }
+    .m-vc-ref { margin-top: 14px; font-size: 13px; font-weight: 700; opacity: .9; letter-spacing: .03em; }
+    .m-vc-memo { padding: 18px 28px 24px; display: flex; gap: 10px; align-items: flex-start; }
+    .m-vc-memo iconify-icon { color: var(--accent); font-size: 18px; margin-top: 2px; flex: 0 0 auto; }
+    .m-vc-memo p { font-size: 14px; color: var(--ink-muted); line-height: 1.6; }
+
+    /* 동기화 카드 */
+    .m-sync { width: 360px; max-width: 86vw; padding: 30px; text-align: center; }
+    .m-sync-row { display: flex; align-items: center; justify-content: center; gap: 14px; }
+    .m-dev {
+      width: 84px; height: 84px; border-radius: 20px; display: flex; flex-direction: column; gap: 6px;
+      align-items: center; justify-content: center; background: var(--surface); border: 1px solid var(--hairline); color: var(--primary-hover);
+    }
+    .m-dev iconify-icon { font-size: 30px; }
+    .m-dev small { font-size: 11.5px; color: var(--ink-muted); font-weight: 600; }
+    .m-sync-line { color: var(--primary); font-size: 22px; }
+    .m-cloud {
+      width: 96px; height: 96px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover)); color: #fff; flex: 0 0 auto;
+      box-shadow: 0 12px 28px rgba(33,150,243,.4);
+    }
+    .m-cloud iconify-icon { font-size: 40px; }
+    .m-sync-cap { margin-top: 20px; font-size: 14px; color: var(--ink-muted); }
+    .m-sync-cap b { color: var(--ink-strong); }
+
+    /* 그룹 카드 */
+    .m-group { width: 360px; max-width: 86vw; padding: 28px 30px; }
+    .m-group-h { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+    .m-group-ic { width: 46px; height: 46px; border-radius: 14px; background: var(--primary-tint); color: var(--primary-hover); display: flex; align-items: center; justify-content: center; font-size: 24px; flex: 0 0 auto; }
+    .m-group-h .t b { font-size: 16px; color: var(--ink); display: block; }
+    .m-group-h .t span { font-size: 13px; color: var(--ink-muted); }
+    .m-avatars { display: flex; align-items: center; }
+    .m-avatars i {
+      width: 38px; height: 38px; border-radius: 50%; border: 2.5px solid #fff; margin-left: -10px;
+      display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 14px; font-weight: 700; color: #fff;
+    }
+    .m-avatars i:first-child { margin-left: 0; }
+    .m-avatars .more { background: var(--surface2); color: var(--ink-muted); }
+    .m-group-bar { margin-top: 20px; height: 9px; border-radius: 9999px; background: var(--surface2); overflow: hidden; }
+    .m-group-bar > i { display: block; height: 100%; width: 80%; border-radius: 9999px; background: linear-gradient(90deg, var(--accent), #F06292); }
+    .m-group-cap { margin-top: 12px; font-size: 13.5px; color: var(--ink-muted); }
+    .m-group-cap b { color: var(--ink-strong); }
+
+    /* ─── SECTION BASE ─── */
+    .section-tag {
+      display: inline-flex; align-items: center; font-size: 12px; font-weight: 800;
+      letter-spacing: 1.2px; text-transform: uppercase; color: var(--primary-hover);
+      background: var(--primary-tint); border: 1px solid rgba(33,150,243,.2);
+      padding: 5px 13px; border-radius: 9999px; margin-bottom: 18px;
+    }
+    .section-title { font-size: 44px; font-weight: 800; line-height: 1.18; letter-spacing: -1px; }
+
+    /* ─── DATA / TRUST BAND ─── */
+    .privacy {
+      background: linear-gradient(135deg, #0b2e6b 0%, var(--secondary) 55%, #0a3a86 100%);
+      color: #fff; position: relative; overflow: hidden;
+    }
+    .privacy::before {
+      content:''; position:absolute; top:-120px; right:-80px; width:480px; height:480px;
+      background: radial-gradient(circle, rgba(66,165,245,.28) 0%, transparent 70%); pointer-events:none;
+    }
+    .privacy-inner { max-width: 1180px; margin: 0 auto; padding: 92px 80px; position: relative; z-index: 1; }
+    .privacy-head { max-width: 760px; margin-bottom: 48px; }
+    .privacy-head h2 { font-size: 40px; font-weight: 800; line-height: 1.2; letter-spacing: -1px; margin-bottom: 16px; }
+    .privacy-head p { font-size: 18px; color: rgba(255,255,255,.74); line-height: 1.7; }
+    .privacy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .privacy-card {
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+      border-radius: 20px; padding: 30px 28px; backdrop-filter: blur(4px);
+    }
+    .privacy-card .pc-icon {
+      width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      background: rgba(66,165,245,.2); color: #90CAF9; font-size: 26px; margin-bottom: 18px;
+    }
+    .privacy-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+    .privacy-card p { font-size: 15px; color: rgba(255,255,255,.72); line-height: 1.7; }
+
+    /* ─── HOW IT WORKS ─── */
+    .how { background: var(--surface); }
+    .how-outer { max-width: 1180px; margin: 0 auto; padding: 100px 80px; }
+    .how-head { text-align: center; margin-bottom: 56px; }
+    .how-head .section-tag { margin-left: auto; margin-right: auto; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+    .step {
+      background: var(--canvas); border: 1px solid var(--hairline); border-radius: 24px; overflow: hidden;
+      transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .3s; box-shadow: 0 1px 2px rgba(22,32,46,.04);
+    }
+    .step:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(22,32,46,.1); }
+    .step-ill {
+      height: 150px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+      background: linear-gradient(135deg, var(--primary-tint) 0%, #fff 100%);
+      color: var(--primary-hover); font-size: 54px;
+    }
+    .step-ill .bigverse { position: absolute; right: -8px; bottom: -18px; font-family: var(--font-serif); font-size: 90px; font-weight: 700; color: rgba(33,150,243,.1); }
+    .step-body { padding: 26px 28px 30px; }
+    .step-num {
+      display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-hover)); color: #fff; font-size: 14px; font-weight: 800; margin-bottom: 14px;
+    }
+    .step h3 { font-size: 19px; font-weight: 700; margin-bottom: 9px; }
+    .step p { font-size: 15px; color: var(--ink-muted); line-height: 1.7; }
+
+    /* ─── FEATURES ─── */
+    .features { padding: 104px 0; position: relative; overflow: hidden; }
+    .features::before {
+      content:''; position:absolute; top:8%; left:-160px; width:520px; height:520px;
+      background: radial-gradient(circle, var(--primary-tint) 0%, transparent 70%); pointer-events:none;
+    }
+    .features-outer { max-width: 1180px; margin: 0 auto; padding: 0 80px; position: relative; }
+    .features-head { text-align: center; margin-bottom: 72px; }
+    .features-head .section-tag { margin-left: auto; margin-right: auto; }
+
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; margin-bottom: 104px; }
+    .frow:last-child { margin-bottom: 0; }
+    .feat-icon {
+      width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center;
+      background: var(--primary-tint); color: var(--primary-hover); font-size: 28px; margin-bottom: 20px;
+    }
+    .feat-title { font-size: 32px; font-weight: 800; line-height: 1.22; margin-bottom: 14px; }
+    .feat-desc { font-size: 16px; color: var(--ink-muted); line-height: 1.8; }
+    .feat-list { margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+    .feat-list li { list-style: none; display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--ink-strong); }
+    .feat-list iconify-icon { color: var(--primary); font-size: 19px; flex: 0 0 auto; margin-top: 2px; }
+    .feat-mock { display: flex; justify-content: center; align-items: center; position: relative; }
+    .feat-mock::before {
+      content:''; position:absolute; width:340px; height:340px;
+      background: radial-gradient(circle, var(--primary-tint) 0%, transparent 70%); pointer-events:none;
+    }
+    .feat-mock .mock { transform: rotate(-2deg); transition: transform .4s ease; }
+    .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
+    .frow.rev .feat-mock .mock { transform: rotate(2deg); }
+    .frow.rev .feat-mock .mock:hover { transform: rotate(0deg) translateY(-4px); }
+
+    /* ─── SPECS ─── */
+    .specs-outer { max-width: 1180px; margin: 0 auto; padding: 90px 80px 30px; }
+    .specs-card {
+      background: var(--canvas); border: 1px solid var(--hairline); border-radius: 24px;
+      padding: 40px 44px; box-shadow: 0 1px 2px rgba(22,32,46,.04);
+    }
+    .specs-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 32px; }
+    .specs-list .row .k { font-size: 13px; font-weight: 700; color: var(--ink-subtle); margin-bottom: 4px; }
+    .specs-list .row .v { font-size: 17px; font-weight: 600; color: var(--ink); }
+
+    /* ─── DOWNLOAD CTA ─── */
+    .cta-outer { max-width: 1180px; margin: 0 auto; padding: 30px 80px 70px; }
+    .cta-card {
+      position: relative; overflow: hidden; border-radius: 24px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deep) 100%);
+      padding: 34px 44px; color: #fff;
+      display: flex; align-items: center; justify-content: space-between; gap: 36px;
+    }
+    .cta-text { position: relative; z-index: 1; }
+    .cta-card::before { content:''; position:absolute; top:-100px; left:-60px; width:380px; height:380px; background: radial-gradient(circle, rgba(255,255,255,.18) 0%, transparent 70%); pointer-events:none; }
+    .cta-card::after { content:''; position:absolute; bottom:-120px; right:-60px; width:420px; height:420px; background: radial-gradient(circle, rgba(13,71,161,.4) 0%, transparent 70%); pointer-events:none; }
+    .cta-card h2 { font-size: 25px; font-weight: 800; line-height: 1.3; margin-bottom: 6px; }
+    .cta-card p { font-size: 15px; color: rgba(255,255,255,.9); }
+    .btn-cta-light {
+      display: inline-flex; align-items: center; gap: 10px; position: relative; z-index: 1; flex: 0 0 auto; white-space: nowrap;
+      background: #fff; color: var(--primary-hover); font-family: var(--font-pre); font-size: 16px; font-weight: 800;
+      padding: 15px 28px; border-radius: 9999px; box-shadow: 0 12px 30px rgba(0,0,0,.2);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .btn-cta-light:hover { transform: translateY(-2px); box-shadow: 0 16px 36px rgba(0,0,0,.26); }
+
+    /* ─── FOOTER ─── */
+    .footer { background: var(--surface); border-top: 1px solid var(--hairline); padding: 56px 80px; }
+    .footer-inner { max-width: 1180px; margin: 0 auto; }
+    .footer-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 26px; }
+    .footer-logo { display: flex; align-items: center; gap: 9px; }
+    .footer-logo img { height: 26px; }
+    .footer-logo span { font-size: 19px; font-weight: 800; color: var(--ink); }
+    .footer-lang { display: flex; align-items: center; gap: 4px; font-size: 13px; }
+    .footer-lang a { color: var(--ink-muted); padding: 4px 8px; border-radius: 6px; transition: color .2s; }
+    .footer-lang a:hover { color: var(--ink); }
+    .footer-lang .active { color: var(--ink); font-weight: 700; padding: 4px 8px; }
+    .footer-lang .sep { color: var(--hairline); font-size: 11px; }
+    .footer-links { display: flex; gap: 22px; font-size: 14px; margin-bottom: 28px; }
+    .footer-links a { color: var(--ink-muted); font-weight: 500; transition: color .2s; }
+    .footer-links a:hover { color: var(--primary-hover); }
+    .footer-biz { font-size: 12px; color: var(--ink-subtle); line-height: 2; padding-top: 24px; border-top: 1px solid var(--hairline); margin-bottom: 18px; }
+    .footer-copy { font-size: 12px; color: var(--ink-subtle); }
+
+    /* ─── SCROLL FADE ─── */
+    [data-animate] {
+      opacity: 0; transform: translateY(26px);
+      transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1);
+    }
+    [data-animate].visible { opacity: 1; transform: translateY(0); }
+    [data-delay="1"] { transition-delay: .08s; }
+    [data-delay="2"] { transition-delay: .16s; }
+    [data-delay="3"] { transition-delay: .24s; }
+
+    /* ─── TABLET ─── */
+    @media (max-width: 1024px) {
+      .hero-left { padding: 60px 40px; }
+      .hero-title { font-size: 46px; }
+      .privacy-inner, .how-outer, .features-outer, .specs-outer, .cta-outer { padding-left: 48px; padding-right: 48px; }
+      .frow { gap: 48px; }
+      .feat-title { font-size: 27px; }
+      .footer { padding: 48px; }
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      .nav { padding: 0 18px; height: 56px; }
+      .nav-section-links, .lang-toggle { display: none; }
+      .lang-dropdown { display: block; }
+      .nav-right { gap: 10px; }
+      .btn-nav .btn-nav-text { display: none; }
+
+      .hero { padding-top: 56px; min-height: auto; flex-direction: column-reverse; }
+      .hero-left { width: 100%; padding: 36px 22px 14px; }
+      .hero-title { font-size: 36px; letter-spacing: -1.2px; }
+      .hero-sub { font-size: 17px; margin-bottom: 30px; }
+      .btn-cta { font-size: 16px; padding: 16px 26px; align-self: stretch; justify-content: center; }
+      .hero-note { text-align: center; }
+      .hero-right { position: relative; width: 100%; height: auto; top: auto; padding: 40px 22px 8px; }
+      .hero-stage { position: relative; }
+      .hero-stage::before { width: 320px; height: 320px; }
+
+      .section-title, .privacy-head h2, .cta-card h2 { font-size: 30px; }
+      .privacy-inner { padding: 64px 22px; }
+      .privacy-head { margin-bottom: 32px; }
+      .privacy-head p { font-size: 16px; }
+      .privacy-grid { grid-template-columns: 1fr; gap: 14px; }
+
+      .how-outer { padding: 64px 22px; }
+      .how-head { margin-bottom: 36px; }
+      .steps { grid-template-columns: 1fr; gap: 16px; }
+
+      .features { padding: 64px 0; }
+      .features-outer { padding: 0 22px; }
+      .features-head { margin-bottom: 44px; }
+      .frow { grid-template-columns: 1fr; gap: 32px; margin-bottom: 64px; display: flex; flex-direction: column; }
+      .frow.rev { flex-direction: column-reverse; }
+      .feat-title { font-size: 26px; }
+
+      .specs-outer { padding: 56px 22px 20px; }
+      .specs-card { padding: 30px 24px; }
+      .specs-list { grid-template-columns: 1fr 1fr; gap: 18px 20px; }
+
+      .cta-outer { padding: 20px 18px 56px; }
+      .cta-card { flex-direction: column; text-align: center; gap: 18px; padding: 32px 24px; }
+      .btn-cta-light { align-self: stretch; justify-content: center; }
+
+      .footer { padding: 40px 22px; }
+      .footer-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .footer-links { flex-wrap: wrap; gap: 14px; }
+    }
+    @media (max-width: 400px) {
+      .hero-title { font-size: 31px; }
+      .section-title, .privacy-head h2, .cta-card h2 { font-size: 25px; }
+      .m-trans, .m-stats, .m-verse-card, .m-sync, .m-group { width: 100%; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TapTapBible",
+    "alternateName": "탭탭바이블",
+    "operatingSystem": "Android",
+    "applicationCategory": "LifestyleApplication",
+    "description": "Copy the Bible one character at a time. Start instantly without login, track progress and streaks, and engrave God's word every day.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" },
+    "installUrl": "https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible",
+    "author": { "@type": "Organization", "name": "kukuDev" }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav class="nav">
+  <a href="/en/" class="nav-logo">
+    <img src="/assets/logo.png" alt="TapTapBible logo">
+    <span>TapTapBible</span>
+  </a>
+  <div class="nav-right">
+    <div class="nav-section-links">
+      <a href="#about">Bible transcription</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+    </div>
+    <div class="lang-toggle">
+      <a href="/">한국어</a><span class="lang-sep">|</span>
+      <span class="active">English</span><span class="lang-sep">|</span>
+      <a href="/ja/">日本語</a>
+    </div>
+    <div class="lang-dropdown">
+      <button class="lang-dropdown-btn" onclick="toggleLang(event)">English <iconify-icon icon="solar:alt-arrow-down-bold" style="font-size:11px;opacity:.7"></iconify-icon></button>
+      <div class="lang-dropdown-menu" id="langMenu">
+        <a href="/" class="lang-dropdown-item">한국어</a>
+        <a href="/en/" class="lang-dropdown-item active">English</a>
+        <a href="/ja/" class="lang-dropdown-item">日本語</a>
+      </div>
+    </div>
+    <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-nav" target="_blank" rel="noopener">
+      <iconify-icon icon="solar:smartphone-bold" style="font-size:15px"></iconify-icon>
+      <span class="btn-nav-text">Download</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero-left" data-animate>
+    <span class="hero-badge"><iconify-icon icon="solar:notebook-bold"></iconify-icon> Daily Scripture Transcription</span>
+    <h1 class="hero-title">Engrave God's Word<br><span class="hi">One Tap at a Time</span></h1>
+    <p class="hero-sub">Copy scripture character by character with TapTapBible.<br>Start right now without logging in, and build a daily habit with progress tracking and streaks.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta" target="_blank" rel="noopener">
+      <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
+      Download on Google Play
+    </a>
+    <p class="hero-note">Android · Free · Offline supported</p>
+  </div>
+  <div class="hero-right" aria-hidden="true">
+    <div class="hero-stage">
+      <div class="mock card m-trans">
+        <div class="m-head">
+          <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> John 3:16</span>
+          <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12-day streak</span>
+        </div>
+        <p class="m-verse"><span class="done">For God so loved the world, that he gave his only begotten Son,</span><span class="m-cursor"></span><span class="todo"> that whosoever believeth in him should not perish</span></p>
+        <div class="m-bar"><i></i></div>
+        <div class="m-meta"><span>Copying verse <b>3</b> today</span><span><b>64%</b> complete</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DATA / TRUST BAND ─── -->
+<section class="privacy" id="about">
+  <div class="privacy-inner">
+    <div class="privacy-head" data-animate>
+      <h2>Start with no pressure, keep your records <span style="color:#90CAF9">safe</span></h2>
+      <p>Begin transcribing right away in guest mode — no login needed. Create an account and all your transcription history, bookmarks, and stats are securely backed up and seamlessly continue across all your devices.</p>
+    </div>
+    <div class="privacy-grid">
+      <div class="privacy-card" data-animate data-delay="1">
+        <div class="pc-icon"><iconify-icon icon="solar:bolt-bold"></iconify-icon></div>
+        <h3>Start instantly, no login</h3>
+        <p>Jump right into personal transcription the moment you install, using guest mode. All your records are stored safely on your device.</p>
+      </div>
+      <div class="privacy-card" data-animate data-delay="2">
+        <div class="pc-icon"><iconify-icon icon="solar:wifi-router-minimalistic-bold"></iconify-icon></div>
+        <h3>Transcribe offline too</h3>
+        <p>No internet? No problem. Keep copying scripture anywhere. When you're back online, everything syncs automatically and securely.</p>
+      </div>
+      <div class="privacy-card" data-animate data-delay="3">
+        <div class="pc-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
+        <h3>Secure backup &amp; sync</h3>
+        <p>Log in and your transcription records, bookmarks, and stats are safely backed up to your account — so switching phones never means losing your progress.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section class="how" id="how">
+  <div class="how-outer">
+    <div class="how-head" data-animate>
+      <span class="section-tag">How it works</span>
+      <h2 class="section-title">Just three simple steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step" data-animate data-delay="1">
+        <div class="step-ill"><iconify-icon icon="solar:book-bookmark-bold"></iconify-icon><span class="bigverse">1</span></div>
+        <div class="step-body">
+          <div class="step-num">1</div>
+          <h3>Pick a verse</h3>
+          <p>Choose the passage you want to meditate on from all 66 books of the Bible, in your preferred translation.</p>
+        </div>
+      </div>
+      <div class="step" data-animate data-delay="2">
+        <div class="step-ill"><iconify-icon icon="solar:pen-new-square-bold"></iconify-icon><span class="bigverse">2</span></div>
+        <div class="step-body">
+          <div class="step-num">2</div>
+          <h3>Copy it character by character</h3>
+          <p>Type along with the verse on screen. Each correct character fills in; mistakes are highlighted immediately.</p>
+        </div>
+      </div>
+      <div class="step" data-animate data-delay="3">
+        <div class="step-ill"><iconify-icon icon="solar:graph-up-bold"></iconify-icon><span class="bigverse">3</span></div>
+        <div class="step-body">
+          <div class="step-num">3</div>
+          <h3>Watch your records grow</h3>
+          <p>Progress, streaks, and stats build up automatically, turning each small moment of reflection into a lasting daily habit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURES ─── -->
+<section class="features" id="features">
+  <div class="features-outer">
+    <div class="features-head" data-animate>
+      <span class="section-tag">Features</span>
+      <h2 class="section-title">What makes TapTapBible special</h2>
+    </div>
+
+    <!-- F1 -->
+    <div class="frow">
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:pen-new-square-bold"></iconify-icon></div>
+        <h3 class="feat-title">Copy scripture <span class="hi">precisely</span>, one character at a time</h3>
+        <p class="feat-desc">Type along with the verse and get real-time feedback on every character. Copying slowly, letter by letter, naturally draws your full attention to the Word.</p>
+        <ul class="feat-list">
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Real-time right/wrong feedback</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Multiple Bible translations</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Re-transcribe for deeper reflection</li>
+        </ul>
+      </div>
+      <div class="feat-mock" data-animate data-delay="1">
+        <div class="mock card m-trans">
+          <div class="m-head">
+            <span class="m-ref"><iconify-icon icon="solar:book-bold"></iconify-icon> Psalm 119:105</span>
+            <span class="m-chip"><iconify-icon icon="solar:fire-bold"></iconify-icon> 12-day streak</span>
+          </div>
+          <p class="m-verse"><span class="done">Thy word is a lamp unto my feet,</span><span class="m-cursor"></span><span class="todo"> and a light unto my path</span></p>
+          <div class="m-bar"><i></i></div>
+          <div class="m-meta"><span>Copying character by character</span><span><b>64%</b></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F2 -->
+    <div class="frow rev">
+      <div class="feat-mock" data-animate data-delay="1">
+        <div class="mock card m-stats">
+          <div class="m-ring">
+            <div class="ring"><span>23<small>%</small></span></div>
+            <div class="ring-label"><b>Whole-Bible progress</b>1,189 / 31,102 verses done</div>
+          </div>
+          <div class="m-statgrid">
+            <div class="s"><div class="n">12 days</div><div class="l">Current streak</div></div>
+            <div class="s"><div class="n">1,240</div><div class="l">Verses copied</div></div>
+            <div class="s"><div class="n">38 hrs</div><div class="l">Time spent</div></div>
+            <div class="s"><div class="n">27</div><div class="l">Books started</div></div>
+          </div>
+        </div>
+      </div>
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:graph-up-bold"></iconify-icon></div>
+        <h3 class="feat-title">Stay consistent with <span class="hi">progress &amp; streaks</span></h3>
+        <p class="feat-desc">See your whole-Bible progress, current streak, total verses copied, and time spent — all at a glance. Each small daily reflection becomes a visible, lasting habit.</p>
+        <ul class="feat-list">
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Whole-Bible progress tracker</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Daily streak tracking</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Verse count &amp; time statistics</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- F3 -->
+    <div class="frow">
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:bookmark-bold"></iconify-icon></div>
+        <h3 class="feat-title"><span class="hi">Keep</span> the verses that move you</h3>
+        <p class="feat-desc">Bookmark any verse that touches your heart and add your own personal note alongside it. Come back anytime to read it again and let it sink deeper.</p>
+      </div>
+      <div class="feat-mock" data-animate data-delay="1">
+        <div class="mock card m-verse-card">
+          <div class="m-vc-top">
+            <iconify-icon class="bk" icon="solar:bookmark-bold"></iconify-icon>
+            <p class="m-vc-q">The LORD is my shepherd; I shall not want.</p>
+            <p class="m-vc-ref">Psalm 23:1</p>
+          </div>
+          <div class="m-vc-memo">
+            <iconify-icon icon="solar:pen-bold"></iconify-icon>
+            <p>The verse I return to whenever my heart is anxious. Holding on to this promise today.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F4 -->
+    <div class="frow rev">
+      <div class="feat-mock" data-animate data-delay="1">
+        <div class="mock card m-sync">
+          <div class="m-sync-row">
+            <div class="m-dev"><iconify-icon icon="solar:smartphone-bold"></iconify-icon><small>Phone</small></div>
+            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
+            <div class="m-cloud"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
+            <iconify-icon class="m-sync-line" icon="solar:alt-arrow-right-bold"></iconify-icon>
+            <div class="m-dev"><iconify-icon icon="solar:tablet-bold"></iconify-icon><small>Tablet</small></div>
+          </div>
+          <p class="m-sync-cap"><b>Pick up on any device.</b><br>Your records sync safely.</p>
+        </div>
+      </div>
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:cloud-check-bold"></iconify-icon></div>
+        <h3 class="feat-title">Start without login, <span class="hi">sync when you're ready</span></h3>
+        <p class="feat-desc">Dive in as a guest with zero friction. Whenever you want backup or multi-device sync, simply log in — your existing records migrate safely to your account.</p>
+        <ul class="feat-list">
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Google &amp; Apple sign-in</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Continue on any device</li>
+          <li><iconify-icon icon="solar:check-circle-bold"></iconify-icon> Automatic record merge</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- F5 -->
+    <div class="frow">
+      <div data-animate>
+        <div class="feat-icon"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
+        <h3 class="feat-title">Transcribe together with <span class="hi">group mode</span></h3>
+        <p class="feat-desc">Create a group with family or your community and copy scripture side by side. Cheering each other on makes it far easier to keep going than going it alone.</p>
+      </div>
+      <div class="feat-mock" data-animate data-delay="1">
+        <div class="mock card m-group">
+          <div class="m-group-h">
+            <div class="m-group-ic"><iconify-icon icon="solar:users-group-rounded-bold"></iconify-icon></div>
+            <div class="t"><b>Dawn Devotion Group</b><span>Copying Psalms together</span></div>
+          </div>
+          <div class="m-avatars">
+            <i style="background:#42A5F5">A</i>
+            <i style="background:#E91E63">H</i>
+            <i style="background:#66BB6A">J</i>
+            <i style="background:#FFA726">S</i>
+            <i class="more">+8</i>
+          </div>
+          <div class="m-group-bar"><i></i></div>
+          <p class="m-group-cap"><b>12 people</b> transcribed together today</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SPECS ─── -->
+<div class="specs-outer">
+  <div class="specs-card" data-animate>
+    <div class="specs-list">
+      <div class="row"><div class="k">Platform</div><div class="v">Android</div></div>
+      <div class="row"><div class="k">Price</div><div class="v">Free (ad-supported)</div></div>
+      <div class="row"><div class="k">Offline</div><div class="v">Transcription supported</div></div>
+      <div class="row"><div class="k">Languages</div><div class="v">8 languages</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DOWNLOAD CTA ─── -->
+<div class="cta-outer">
+  <div class="cta-card" data-animate>
+    <div class="cta-text">
+      <h2>Start with one verse today</h2>
+      <p>Let TapTapBible help you engrave God's word in your heart, one tap at a time.</p>
+    </div>
+    <a href="https://play.google.com/store/apps/details?id=com.kukuDev.taptapbible" class="btn-cta-light" target="_blank" rel="noopener">
+      <iconify-icon icon="mdi:google-play" style="font-size:21px"></iconify-icon>
+      Free Download on Google Play
+    </a>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <span class="footer-logo"><img src="/assets/logo.png" alt="TapTapBible logo"><span>TapTapBible</span></span>
+      <div class="footer-lang">
+        <a href="/">한국어</a><span class="sep">|</span>
+        <span class="active">English</span><span class="sep">|</span>
+        <a href="/ja/">日本語</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="/en/privacy.html">Privacy Policy</a>
+      <a href="/en/terms.html">Terms of Service</a>
+      <a href="https://kukudev.com/">kukuDev</a>
+    </div>
+    <div class="footer-biz">
+      kukuDev · Representative O Jaeseok · Business reg. 390-68-00863<br>
+      Mail-order 2026-Incheon Yeonsu-gu-1196 · 6F 6649, 111 Yongdam-ro, Yeonsu-gu, Incheon, Republic of Korea<br>
+      Email: <span id="contact-email"></span>
+    </div>
+    <p class="footer-copy">© 2026 kukuDev. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var u='\x73\x75\x70\x70\x6f\x72\x74', d='\x6b\x75\x6b\x75\x64\x65\x76\x2e\x63\x6f\x6d';
+    var el=document.getElementById('contact-email'); if(el) el.textContent=u+'\x40'+d;
+  })();
+  function toggleLang(e){ e.stopPropagation(); document.getElementById('langMenu').classList.toggle('open'); }
+  document.addEventListener('click', function(){ var m=document.getElementById('langMenu'); if(m) m.classList.remove('open'); });
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} }); }, { threshold:.12 });
+  document.querySelectorAll('[data-animate]').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>

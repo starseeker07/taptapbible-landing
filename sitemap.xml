@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://taptapbible.kukudev.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://taptapbible.kukudev.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taptapbible.kukudev.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://taptapbible.kukudev.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taptapbible.kukudev.com/"/>
+  </url>
+  <url><loc>https://taptapbible.kukudev.com/en/</loc></url>
+  <url><loc>https://taptapbible.kukudev.com/ja/</loc></url>
+  <url><loc>https://taptapbible.kukudev.com/privacy.html</loc></url>
+  <url><loc>https://taptapbible.kukudev.com/terms.html</loc></url>
+  <url><loc>https://taptapbible.kukudev.com/en/privacy.html</loc></url>
+  <url><loc>https://taptapbible.kukudev.com/en/terms.html</loc></url>
+  <url><loc>https://taptapbible.kukudev.com/ja/privacy.html</loc></url>
+  <url><loc>https://taptapbible.kukudev.com/ja/terms.html</loc></url>
+</urlset>
