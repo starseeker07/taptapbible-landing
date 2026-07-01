@@ -636,6 +636,9 @@
     "author": { "@type": "Organization", "name": "kukuDev" }
   }
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kukudev.com/#org","name":"kukuDev","url":"https://kukudev.com/"},{"@type":"WebSite","name":"TapTapBible","url":"https://taptapbible.kukudev.com/","inLanguage":"en","publisher":{"@id":"https://kukudev.com/#org"}}]}
+  </script>
 </head>
 <body>
 
@@ -849,6 +852,65 @@
 <!-- ─── SPECS ─── -->
 
 
+<style>
+  .faq { padding: 104px 0; background: #F5F8FC; }
+  .faq-inner { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+  .faq-head { text-align: center; margin-bottom: 44px; }
+  .faq-head .section-tag { margin-left: auto; margin-right: auto; }
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item { background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 16px; padding: 0 22px; box-shadow: 0 1px 2px rgba(22,32,46,.04); }
+  .faq-item summary { list-style: none; cursor: pointer; font-size: 17.5px; font-weight: 700; color: #16202E; padding: 21px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-chevron { flex: 0 0 auto; font-size: 22px; color: #2196F3; transition: transform .3s ease; }
+  .faq-item[open] .faq-chevron { transform: rotate(180deg); }
+  .faq-a { padding: 0 0 22px; margin: 0; color: #4A5666; font-size: 15.5px; line-height: 1.75; }
+  @media (max-width: 640px) {
+    .faq { padding: 64px 0; }
+    .faq-inner { padding: 0 18px; }
+    .faq-item summary { font-size: 16px; padding: 18px 0; }
+    .faq-a { font-size: 14.5px; }
+  }
+</style>
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-head" data-animate>
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" data-animate>
+        <summary>What is TapTapBible?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">TapTapBible is a Bible transcription app that lets you meditate on Scripture by typing each verse one character at a time. It gives real-time feedback on what you type and automatically tracks your progress and streaks, helping you build a daily habit of engaging with the Word. It's a free download on Android.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Is TapTapBible free?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">Yes. You can download TapTapBible for free on Google Play and start transcribing Scripture right away.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Do I need to sign up or log in?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">No. You can start right after installing in guest mode, with no login. You only need to sign in if you want to back up your transcriptions, bookmarks, and stats and continue across multiple devices.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Can I use it offline?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">Yes. You can keep transcribing Scripture even without an internet connection, and your records sync safely and automatically once you're back online.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Are my records kept if I switch phones?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">When you sign in, your transcriptions, bookmarks, and stats are safely backed up to your account, so they carry over even if you change phones or use several devices.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Can I transcribe together with others?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">Yes. You can create a group with family or your community to transcribe Scripture together and encourage each other to stay consistent.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is TapTapBible?","acceptedAnswer":{"@type":"Answer","text":"TapTapBible is a Bible transcription app that lets you meditate on Scripture by typing each verse one character at a time. It gives real-time feedback on what you type and automatically tracks your progress and streaks, helping you build a daily habit of engaging with the Word. It's a free download on Android."}},{"@type":"Question","name":"Is TapTapBible free?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can download TapTapBible for free on Google Play and start transcribing Scripture right away."}},{"@type":"Question","name":"Do I need to sign up or log in?","acceptedAnswer":{"@type":"Answer","text":"No. You can start right after installing in guest mode, with no login. You only need to sign in if you want to back up your transcriptions, bookmarks, and stats and continue across multiple devices."}},{"@type":"Question","name":"Can I use it offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can keep transcribing Scripture even without an internet connection, and your records sync safely and automatically once you're back online."}},{"@type":"Question","name":"Are my records kept if I switch phones?","acceptedAnswer":{"@type":"Answer","text":"When you sign in, your transcriptions, bookmarks, and stats are safely backed up to your account, so they carry over even if you change phones or use several devices."}},{"@type":"Question","name":"Can I transcribe together with others?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can create a group with family or your community to transcribe Scripture together and encourage each other to stay consistent."}}]}
+  </script>
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">
   <div class="cta-card" data-animate>

@@ -636,6 +636,9 @@
     "author": { "@type": "Organization", "name": "kukuDev" }
   }
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kukudev.com/#org","name":"kukuDev","url":"https://kukudev.com/"},{"@type":"WebSite","name":"TapTapBible","url":"https://taptapbible.kukudev.com/","inLanguage":"zh-Hans","publisher":{"@id":"https://kukudev.com/#org"}}]}
+  </script>
 </head>
 <body>
 
@@ -849,6 +852,65 @@
 <!-- ─── SPECS ─── -->
 
 
+<style>
+  .faq { padding: 104px 0; background: #F5F8FC; }
+  .faq-inner { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+  .faq-head { text-align: center; margin-bottom: 44px; }
+  .faq-head .section-tag { margin-left: auto; margin-right: auto; }
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item { background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 16px; padding: 0 22px; box-shadow: 0 1px 2px rgba(22,32,46,.04); }
+  .faq-item summary { list-style: none; cursor: pointer; font-size: 17.5px; font-weight: 700; color: #16202E; padding: 21px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-chevron { flex: 0 0 auto; font-size: 22px; color: #2196F3; transition: transform .3s ease; }
+  .faq-item[open] .faq-chevron { transform: rotate(180deg); }
+  .faq-a { padding: 0 0 22px; margin: 0; color: #4A5666; font-size: 15.5px; line-height: 1.75; }
+  @media (max-width: 640px) {
+    .faq { padding: 64px 0; }
+    .faq-inner { padding: 0 18px; }
+    .faq-item summary { font-size: 16px; padding: 18px 0; }
+    .faq-a { font-size: 14.5px; }
+  }
+</style>
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-head" data-animate>
+      <span class="section-tag">常见问题</span>
+      <h2 class="section-title">常见问题</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" data-animate>
+        <summary>TapTapBible 是什么应用？<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">TapTapBible 是一款圣经抄写应用，让你通过逐字输入每节经文来默想圣经。它会实时反馈你的输入是否正确，并自动记录你的进度和连续天数，帮助你养成每天亲近话语的习惯。可在 Android 上免费下载。</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>TapTapBible 是免费的吗？<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">是的。你可以在 Google Play 上免费下载 TapTapBible，立即开始抄写圣经。</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>一定要注册或登录吗？<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">不需要。安装后即可以访客模式直接开始抄写，无需登录。只有当你想备份抄写记录、书签和统计数据并在多台设备上继续时，才需要登录。</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>没有网络也能使用吗？<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">可以。即使没有网络连接，你也能继续抄写圣经；重新联网后，这段时间的记录会自动安全地同步。</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>更换手机后抄写记录会保留吗？<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">登录后，你的抄写记录、书签和统计数据会安全备份到账户中，因此即使更换手机或使用多台设备也能保留。</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>可以和别人一起抄写吗？<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">可以。你能与家人或团体创建群组，一起抄写圣经，互相鼓励坚持下去。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"TapTapBible 是什么应用？","acceptedAnswer":{"@type":"Answer","text":"TapTapBible 是一款圣经抄写应用，让你通过逐字输入每节经文来默想圣经。它会实时反馈你的输入是否正确，并自动记录你的进度和连续天数，帮助你养成每天亲近话语的习惯。可在 Android 上免费下载。"}},{"@type":"Question","name":"TapTapBible 是免费的吗？","acceptedAnswer":{"@type":"Answer","text":"是的。你可以在 Google Play 上免费下载 TapTapBible，立即开始抄写圣经。"}},{"@type":"Question","name":"一定要注册或登录吗？","acceptedAnswer":{"@type":"Answer","text":"不需要。安装后即可以访客模式直接开始抄写，无需登录。只有当你想备份抄写记录、书签和统计数据并在多台设备上继续时，才需要登录。"}},{"@type":"Question","name":"没有网络也能使用吗？","acceptedAnswer":{"@type":"Answer","text":"可以。即使没有网络连接，你也能继续抄写圣经；重新联网后，这段时间的记录会自动安全地同步。"}},{"@type":"Question","name":"更换手机后抄写记录会保留吗？","acceptedAnswer":{"@type":"Answer","text":"登录后，你的抄写记录、书签和统计数据会安全备份到账户中，因此即使更换手机或使用多台设备也能保留。"}},{"@type":"Question","name":"可以和别人一起抄写吗？","acceptedAnswer":{"@type":"Answer","text":"可以。你能与家人或团体创建群组，一起抄写圣经，互相鼓励坚持下去。"}}]}
+  </script>
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">
   <div class="cta-card" data-animate>

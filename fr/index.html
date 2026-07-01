@@ -636,6 +636,9 @@
     "author": { "@type": "Organization", "name": "kukuDev" }
   }
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kukudev.com/#org","name":"kukuDev","url":"https://kukudev.com/"},{"@type":"WebSite","name":"TapTapBible","url":"https://taptapbible.kukudev.com/","inLanguage":"fr","publisher":{"@id":"https://kukudev.com/#org"}}]}
+  </script>
 </head>
 <body>
 
@@ -849,6 +852,65 @@
 <!-- ─── SPECS ─── -->
 
 
+<style>
+  .faq { padding: 104px 0; background: #F5F8FC; }
+  .faq-inner { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+  .faq-head { text-align: center; margin-bottom: 44px; }
+  .faq-head .section-tag { margin-left: auto; margin-right: auto; }
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item { background: #FFFFFF; border: 1px solid #E3E9F0; border-radius: 16px; padding: 0 22px; box-shadow: 0 1px 2px rgba(22,32,46,.04); }
+  .faq-item summary { list-style: none; cursor: pointer; font-size: 17.5px; font-weight: 700; color: #16202E; padding: 21px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-chevron { flex: 0 0 auto; font-size: 22px; color: #2196F3; transition: transform .3s ease; }
+  .faq-item[open] .faq-chevron { transform: rotate(180deg); }
+  .faq-a { padding: 0 0 22px; margin: 0; color: #4A5666; font-size: 15.5px; line-height: 1.75; }
+  @media (max-width: 640px) {
+    .faq { padding: 64px 0; }
+    .faq-inner { padding: 0 18px; }
+    .faq-item summary { font-size: 16px; padding: 18px 0; }
+    .faq-a { font-size: 14.5px; }
+  }
+</style>
+
+<!-- ─── FAQ ─── -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-head" data-animate>
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Questions fréquentes</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" data-animate>
+        <summary>Qu'est-ce que TapTapBible ?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">TapTapBible est une application de recopie de la Bible qui vous permet de méditer les Écritures en saisissant chaque verset caractère par caractère. Elle donne un retour en temps réel sur ce que vous tapez et enregistre automatiquement votre progression et vos séries, vous aidant à prendre l'habitude quotidienne de fréquenter la Parole. Elle est disponible en téléchargement gratuit sur Android.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>TapTapBible est-il gratuit ?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">Oui. Vous pouvez télécharger TapTapBible gratuitement sur Google Play et commencer à recopier les Écritures immédiatement.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Dois-je créer un compte ou me connecter ?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">Non. Vous pouvez commencer juste après l'installation en mode invité, sans connexion. Vous n'avez besoin de vous connecter que si vous souhaitez sauvegarder vos recopies, vos favoris et vos statistiques et les retrouver sur plusieurs appareils.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Puis-je l'utiliser hors ligne ?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">Oui. Vous pouvez continuer à recopier les Écritures même sans connexion internet, et vos données se synchronisent en toute sécurité et automatiquement dès que vous êtes de nouveau en ligne.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Mes données sont-elles conservées si je change de téléphone ?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">Lorsque vous vous connectez, vos recopies, vos favoris et vos statistiques sont sauvegardés en toute sécurité sur votre compte : ils sont donc conservés même si vous changez de téléphone ou utilisez plusieurs appareils.</p>
+      </details>
+      <details class="faq-item" data-animate>
+        <summary>Puis-je recopier avec d'autres personnes ?<iconify-icon icon="solar:alt-arrow-down-linear" class="faq-chevron"></iconify-icon></summary>
+        <p class="faq-a">Oui. Vous pouvez créer un groupe avec votre famille ou votre communauté pour recopier les Écritures ensemble et vous encourager mutuellement à tenir la distance.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qu'est-ce que TapTapBible ?","acceptedAnswer":{"@type":"Answer","text":"TapTapBible est une application de recopie de la Bible qui vous permet de méditer les Écritures en saisissant chaque verset caractère par caractère. Elle donne un retour en temps réel sur ce que vous tapez et enregistre automatiquement votre progression et vos séries, vous aidant à prendre l'habitude quotidienne de fréquenter la Parole. Elle est disponible en téléchargement gratuit sur Android."}},{"@type":"Question","name":"TapTapBible est-il gratuit ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Vous pouvez télécharger TapTapBible gratuitement sur Google Play et commencer à recopier les Écritures immédiatement."}},{"@type":"Question","name":"Dois-je créer un compte ou me connecter ?","acceptedAnswer":{"@type":"Answer","text":"Non. Vous pouvez commencer juste après l'installation en mode invité, sans connexion. Vous n'avez besoin de vous connecter que si vous souhaitez sauvegarder vos recopies, vos favoris et vos statistiques et les retrouver sur plusieurs appareils."}},{"@type":"Question","name":"Puis-je l'utiliser hors ligne ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Vous pouvez continuer à recopier les Écritures même sans connexion internet, et vos données se synchronisent en toute sécurité et automatiquement dès que vous êtes de nouveau en ligne."}},{"@type":"Question","name":"Mes données sont-elles conservées si je change de téléphone ?","acceptedAnswer":{"@type":"Answer","text":"Lorsque vous vous connectez, vos recopies, vos favoris et vos statistiques sont sauvegardés en toute sécurité sur votre compte : ils sont donc conservés même si vous changez de téléphone ou utilisez plusieurs appareils."}},{"@type":"Question","name":"Puis-je recopier avec d'autres personnes ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Vous pouvez créer un groupe avec votre famille ou votre communauté pour recopier les Écritures ensemble et vous encourager mutuellement à tenir la distance."}}]}
+  </script>
 <!-- ─── DOWNLOAD CTA ─── -->
 <div class="cta-outer">
   <div class="cta-card" data-animate>
